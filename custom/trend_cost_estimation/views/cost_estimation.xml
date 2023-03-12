@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="cost_estimation_view_form" model="ir.ui.view">
+            <field name="name">cost.estimation.view.form</field>
+            <field name="model">cost.estimation</field>
+            <field name="arch" type="xml">
+                <form string="Cost Estimation">
+                    <header>
+                        <button name="action_waiting_approve" string="Send" class="oe_highlight"
+                                type="object" states="draft"/>
+                        <button name="action_approve" string="Approve" class="oe_highlight"
+                                type="object" states="waiting"/>
+                        <button name="action_draft" string="set to draft" class="oe_highlight"
+                                type="object" states="approve"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,waiting,approve"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="project_id" options="{'no_create': True}"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="date"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="estimation_lines" string="Estimation Lines">
+                                <field name="cost_estimation_lines_ids"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}">
+
+                                    <tree editable="bottom">
+                                        <field name="cost_estimation_id" invisible="1"/>
+                                        <field name="checked"/>
+                                        <field name="item_estimation_id"/>
+                                        <field name="service_id" required="1"/>
+                                        <field name="description"/>
+                                        <field name="standard_price" options="{'field_bg_color': '#89CFF0'}"/>
+                                        <field name="demand_quantity" options="{'field_bg_color': '#89CFF0'}"/>
+                                        <field name="sub_total" sum="sub_total"
+                                               options="{'field_bg_color': '#89CFF0'}"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="total_estimation_lines" string="Total Estimation">
+                                <field name="total_estimation_lines_ids" readonly="1" force_save="1">
+                                    <tree>
+                                        <field name="item_estimation_id"/>
+                                        <field name="total_sub_total" sum="total_sub_total"/>
+                                        <field name="total_cost" sum="standard_price" string="Actual Cost"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <field name="total_sub_total"/>
+                                            <field name="total_cost"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="cost_estimation_view_tree" model="ir.ui.view">
+            <field name="name">cost.estimation.view.tree</field>
+            <field name="model">cost.estimation</field>
+            <field name="arch" type="xml">
+                <tree string="Cost Estimation">
+                    <field name="name"/>
+                    <field name="total_cost" sum="total_cost"/>
+                    <field name="total_demand_qty" sum="total_demand_qty"/>
+                    <field name="total_done_qty" sum="total_done_qty"/>
+                    <field name="total_remaining_qty" sum="total_remaining_qty"/>
+                    <field name="total_estimation" sum="total_estimation"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="cost_estimation_action" model="ir.actions.act_window">
+            <field name="name">Cost Estimation</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">cost.estimation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+                id="cost_estimation_main_menu"
+                name="Cost Estimation"
+                parent="project.menu_main_pm"
+                action="cost_estimation_action"
+                sequence="99"
+        />
+        <menuitem
+                id="cost_estimation_menu"
+                name="Cost Estimation"
+                parent="cost_estimation_main_menu"
+                action="cost_estimation_action"
+                sequence="99"
+        />
+
+    </data>
+</odoo>

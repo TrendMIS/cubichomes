@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cost_estimation_user,access.cost.estimation.user,model_cost_estimation,trend_cost_estimation.cost_estimation_user_group,1,1,1,0
+access_cost_estimation_lines_user,access.cost.estimation.lines.user,model_cost_estimation_lines,trend_cost_estimation.cost_estimation_user_group,1,1,1,0
+access_item_estimation_user,access.item.estimation.user,model_item_estimation,trend_cost_estimation.cost_estimation_user_group,1,1,1,0
+access_cost_estimation_admin,access.cost.estimation.admin,model_cost_estimation,trend_cost_estimation.cost_estimation_admin_group,1,1,1,1
+access_cost_estimation_lines_admin,access.cost.estimation.lines.admin,model_cost_estimation_lines,trend_cost_estimation.cost_estimation_admin_group,1,1,1,1
+access_item_estimation_admin,access.item.estimation.admin,model_item_estimation,trend_cost_estimation.cost_estimation_admin_group,1,1,1,1
