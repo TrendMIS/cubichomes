@@ -28,7 +28,10 @@ class SaleOrderLine(models.Model):
         for rec in self:
             if rec.full_discount:
                 rec.discount_amount = rec.full_discount / 100 * rec.price_unit
+                print('discount', rec.discount)
                 rec.discount = rec.full_discount
+                print('discount', rec.discount_amount)
+                print('discount', rec.full_discount)
             else:
                 rec.discount_amount = 0.0
                 rec.discount = 0.0
@@ -51,7 +54,7 @@ class SaleOrderLine(models.Model):
         for line in self:
             tax_results = self.env['account.tax']._compute_taxes([line._convert_to_tax_base_line_dict()])
             totals = list(tax_results['totals'].values())[0]
-            amount_untaxed = totals['amount_untaxed'] - line.discount_amount
+            amount_untaxed = totals['amount_untaxed']
             amount_tax = totals['amount_tax']
 
             line.update({
