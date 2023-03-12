@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="cost_estimation_lines_search_view" model="ir.ui.view">
+            <field name="name">cost.estimation.lines.search</field>
+            <field name="model">cost.estimation.lines</field>
+            <field name="arch" type="xml">
+                <search string="Cost Estimation Line">
+                    <field name="cost_estimation_id" string="Cost Estimation"/>
+                    <field name="project_id" string="Project"/>
+                    <field name="item_estimation_id" string="Item"/>
+                    <field name="service_id" string="Product/Service"/>
+
+                    <filter name="create_date" string="Create Date" date="create_date"/>
+                    <separator/>
+
+                    <group expand="0" string="Group By...">
+                        <filter name="create_date" string="Create Date" domain="[]"
+                                context="{'group_by':'create_date'}"/>
+                        <filter name="cost_estimation_id" string="Cost Estimation" domain="[]"
+                                context="{'group_by':'cost_estimation_id'}"/>
+                        <filter name="project_id" string="Project" domain="[]" context="{'group_by':'project_id'}"/>
+                        <filter name="item_estimation_id" string="Item" domain="[]"
+                                context="{'group_by':'item_estimation_id'}"/>
+                        <filter name="service_id" string="Product/Service" domain="[]"
+                                context="{'group_by':'service_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="cost_estimation_lines_graph_view" model="ir.ui.view">
+            <field name="name">cost.estimation.lines.graph</field>
+            <field name="model">cost.estimation.lines</field>
+            <field name="arch" type="xml">
+                <graph string="Cost Estimation Line" type="bar">
+                    <field name="service_id" type="row"/>
+                    <field name="demand_quantity" type="measure"/>
+                    <field name="standard_price" type="measure"/>
+                    <field name="sub_total" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="cost_estimation_lines_pivot_view" model="ir.ui.view">
+            <field name="name">cost.estimation.lines.pivot</field>
+            <field name="model">cost.estimation.lines</field>
+            <field name="arch" type="xml">
+                <pivot string="Cost Estimation Line">
+                    <field name="project_id" type="row"/>
+                    <field name="demand_quantity" type="measure"/>
+                    <field name="standard_price" type="measure"/>
+                    <field name="sub_total" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+
+        <record id="cost_estimation_lines_action" model="ir.actions.act_window">
+            <field name="name">Cost Estimation Lines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">cost.estimation.lines</field>
+            <field name="view_mode">pivot,graph</field>
+            <field name="domain">[('is_total_estimation_line', '!=', True)]</field>
+            <field name="context">{'create': False, 'edit': False, 'delete': False}</field>
+        </record>
+
+        <menuitem
+                id="cost_estimation_lines_menu"
+                name="Cost Estimation Line"
+                parent="cost_estimation_main_menu"
+                action="cost_estimation_lines_action"
+                sequence="99"
+        />
+
+    </data>
+</odoo>
