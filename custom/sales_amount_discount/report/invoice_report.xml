@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document">
+
+            <div class="row" position="replace">
+                <t t-if="o.partner_shipping_id and (o.partner_shipping_id != o.partner_id)">
+                    <div class="col-6">
+                        <t t-set="information_block">
+                            <div groups="account.group_delivery_invoice_address" name="shipping_address_block">
+                                <strong>Shipping Address:</strong>
+                                <div t-field="o.partner_shipping_id"
+                                     t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
+                            </div>
+                        </t>
+                    </div>
+                    <div class="col-6" name="address_not_same_as_shipping">
+                        <t t-set="address">
+                            <address class="mb-0" t-field="o.partner_id"
+                                     t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
+                            <div t-if="o.partner_id.vat">
+                                <t t-if="o.company_id.account_fiscal_country_id.vat_label"
+                                    id="inv_tax_id_label">
+                                <span>TRN</span>
+                                </t>
+                                <t t-else="">Tax ID</t>:
+                                <span t-field="o.partner_id.vat"/>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+                <t t-elif="o.partner_shipping_id and (o.partner_shipping_id == o.partner_id)">
+                    <div class="offset-col-6 col-6" name="address_same_as_shipping">
+                        <t t-set="address">
+                            <address class="mb-0" t-field="o.partner_id"
+                                     t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
+                            <div t-if="o.partner_id.vat">
+                                <t t-if="o.company_id.account_fiscal_country_id.vat_label"
+                                    id="inv_tax_id_label" >
+                                <span>TRN</span>
+                                </t>
+                                <t t-else="">Tax ID</t>:
+                                <span t-field="o.partner_id.vat"/>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+                <t t-else="">
+                    <div class="offset-col-6 col-6" name="no_shipping">
+                        <t t-set="address">
+                            <address class="mb-0" t-field="o.partner_id"
+                                     t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
+                            <div t-if="o.partner_id.vat">
+                                <t t-if="o.company_id.account_fiscal_country_id.vat_label"
+                                   id="inv_tax_id_label" >
+                                <span>TRN</span>
+                                </t>
+                                <t t-else="">Tax ID</t>:
+                                <span t-field="o.partner_id.vat"/>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </div>
+        </template>
+
+
+        <template id="document_tax_totals_inherit" inherit_id="account.document_tax_totals">
+            <xpath expr="//tr[@class='border-black o_total']" position="after">
+                <t t-if="o.lang == 'en_US'">
+                    <tr class="border-black">
+                        <td>
+                            <strong></strong>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.amount_total_words_english"/>
+                        </td>
+                    </tr>
+                </t>
+                <t t-if="o.lang == 'ar_001'">
+                    <tr class="border-black">
+                        <td>
+                            <strong></strong>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.amount_total_words"/>
+                        </td>
+                    </tr>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>
