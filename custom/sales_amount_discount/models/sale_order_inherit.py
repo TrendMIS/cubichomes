@@ -28,10 +28,7 @@ class SaleOrderLine(models.Model):
         for rec in self:
             if rec.full_discount:
                 rec.discount_amount = rec.full_discount / 100 * rec.price_unit
-                print('discount', rec.discount)
                 rec.discount = rec.full_discount
-                print('discount', rec.discount_amount)
-                print('discount', rec.full_discount)
             else:
                 rec.discount_amount = 0.0
                 rec.discount = 0.0

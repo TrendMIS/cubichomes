@@ -50,15 +50,6 @@
                                 </td>
                             </tr>
 
-                            <tr class="border-black o_subtotal">
-                                <td>
-                                    <strong></strong>
-                                </td>
-
-                                <td class="text-end">
-                                    <span t-field="doc.amount_total_words"/>
-                                </td>
-                            </tr>
                         </table>
                     </div>
                 </div>
