@@ -8,6 +8,21 @@ class SaleOrder(models.Model):
     amount_total_words = fields.Char(compute="_get_words")
     amount_total_words_english = fields.Char(compute="_get_words")
 
+    project_id = fields.Many2one(
+        comodel_name='project.project',
+        compute='_compute_project_id',
+        string='Project',
+        required=False)
+
+    def _compute_project_id(self):
+        for rec in self:
+            project = rec.env['project.project'].search([('sale_order_id', '=', rec.id)])
+            if project:
+                rec.project_id = project.id
+            else:
+                rec.project_id = False
+
+
     @api.depends("amount_total")
     def _get_words(self):
         for record in self:
@@ -62,5 +77,4 @@ class SaleOrderLine(models.Model):
             if self.env.context.get('import_file', False) and not self.env.user.user_has_groups(
                     'account.group_account_manager'):
                 line.tax_id.invalidate_recordset(['invoice_repartition_line_ids'])
-
 
