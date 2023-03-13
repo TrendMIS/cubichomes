@@ -5,6 +5,17 @@ from num2words import num2words
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
+    sale_order_id = fields.Many2one(
+        comodel_name='sale.order',
+        string='Sale Order',
+        required=False)
+
+    project_id = fields.Many2one(
+        comodel_name='project.project',
+        string='Project',
+        related='sale_order_id.project_id',
+        required=False)
+
     amount_total_words = fields.Char(compute="_get_words")
     amount_total_words_english = fields.Char(compute="_get_words")
 
@@ -18,6 +29,19 @@ class AccountMove(models.Model):
         for record in self:
             record.amount_total_words = num2words(record.amount_total, lang="ar")
             record.amount_total_words_english = num2words(record.amount_total, lang="en")
+
+    @api.model
+    def default_get(self, field):
+        res = super(AccountMove, self).default_get(field)
+        active_model = self.env.context.get('active_model')
+        if active_model == 'sale.order' and len(self.env.context.get('active_ids', [])) <= 1:
+            sale_order = self.env[active_model].browse(self.env.context.get('active_id')).exists()
+            if sale_order:
+                res.update(
+                    sale_order_id=sale_order.id,
+                )
+
+        return res
 
 
 class AccountMoveLine(models.Model):
@@ -46,5 +70,4 @@ class AccountMoveLine(models.Model):
             else:
                 rec.discount = 0.0
                 rec.full_discount = 0.0
-
 
