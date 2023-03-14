@@ -68,6 +68,11 @@
                     <p class="m-0" t-field="o.project_id"/>
                 </div>
             </xpath>
+
+            <xpath expr="//th[@name='th_priceunit']/span" position="replace">
+                <span>Rate</span>
+            </xpath>
+
         </template>
 
         <template id="document_tax_totals_inherit" inherit_id="account.document_tax_totals">
