@@ -2,7 +2,6 @@
 <odoo>
     <data>
         <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document">
-
             <div class="row" position="replace">
                 <t t-if="o.partner_shipping_id and (o.partner_shipping_id != o.partner_id)">
                     <div class="col-6">
@@ -20,8 +19,8 @@
                                      t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
                             <div t-if="o.partner_id.vat">
                                 <t t-if="o.company_id.account_fiscal_country_id.vat_label"
-                                    id="inv_tax_id_label">
-                                <span>TRN</span>
+                                   id="inv_tax_id_label">
+                                    <span>TRN</span>
                                 </t>
                                 <t t-else="">Tax ID</t>:
                                 <span t-field="o.partner_id.vat"/>
@@ -36,8 +35,8 @@
                                      t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
                             <div t-if="o.partner_id.vat">
                                 <t t-if="o.company_id.account_fiscal_country_id.vat_label"
-                                    id="inv_tax_id_label" >
-                                <span>TRN</span>
+                                   id="inv_tax_id_label">
+                                    <span>TRN</span>
                                 </t>
                                 <t t-else="">Tax ID</t>:
                                 <span t-field="o.partner_id.vat"/>
@@ -52,8 +51,8 @@
                                      t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
                             <div t-if="o.partner_id.vat">
                                 <t t-if="o.company_id.account_fiscal_country_id.vat_label"
-                                   id="inv_tax_id_label" >
-                                <span>TRN</span>
+                                   id="inv_tax_id_label">
+                                    <span>TRN</span>
                                 </t>
                                 <t t-else="">Tax ID</t>:
                                 <span t-field="o.partner_id.vat"/>
@@ -62,8 +61,14 @@
                     </div>
                 </t>
             </div>
-        </template>
 
+            <xpath expr="//div[@name='reference']" position="after">
+                <div class="col-auto col-3 mw-100 mb-2" t-if="o.ref" name="project">
+                    <strong>Project:</strong>
+                    <p class="m-0" t-field="o.project_id"/>
+                </div>
+            </xpath>
+        </template>
 
         <template id="document_tax_totals_inherit" inherit_id="account.document_tax_totals">
             <xpath expr="//tr[@class='border-black o_total']" position="after">
@@ -89,5 +94,6 @@
                 </t>
             </xpath>
         </template>
+
     </data>
 </odoo>
