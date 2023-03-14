@@ -9,7 +9,7 @@
                 <xpath expr="//field[@name='partner_id']" position="after">
                     <field name="lang"/>
                     <field name="sale_order_id" invisible="1"/>
-                    <field name="project_id" readonly="1"/>
+                    <field name="project_id"/>
                 </xpath>
                 <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='discount']" position="before">
                     <field name="discount_amount"/>
