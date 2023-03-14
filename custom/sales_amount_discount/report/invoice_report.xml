@@ -63,7 +63,7 @@
             </div>
 
             <xpath expr="//div[@name='reference']" position="after">
-                <div class="col-auto col-3 mw-100 mb-2" t-if="o.ref" name="project">
+                <div class="col-auto col-3 mw-100 mb-2" t-if="o.project" name="project">
                     <strong>Project:</strong>
                     <p class="m-0" t-field="o.project_id"/>
                 </div>
