@@ -5,24 +5,19 @@ from num2words import num2words
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
-    sale_order_id = fields.Many2one(
-        comodel_name='sale.order',
-        string='Sale Order',
-        required=False)
-
-    project_id = fields.Many2one(
-        comodel_name='project.project',
-        string='Project',
-        related='sale_order_id.project_id',
-        required=False)
-
+    sale_order_id = fields.Many2one(comodel_name='sale.order', string='Sale Order', required=False)
+    project_id = fields.Many2one(comodel_name='project.project', string='Project')
     amount_total_words = fields.Char(compute="_get_words")
     amount_total_words_english = fields.Char(compute="_get_words")
-
     lang = fields.Selection(related='partner_id.lang', string='Language', readonly=False,
                             help="All the emails and documents sent to this contact will be translated in this language.")
-    # active_lang_count = fields.Integer(compute='_compute_active_lang_count')
 
+    @api.onchange('sale_order_id')
+    def _set_project(self):
+        if self.sale_order_id.project_id:
+            self.project_id = self.sale_order_id.project_id.id
+        else:
+            self.project_id = False
 
     @api.depends("amount_total")
     def _get_words(self):
@@ -70,4 +65,3 @@ class AccountMoveLine(models.Model):
             else:
                 rec.discount = 0.0
                 rec.full_discount = 0.0
-
