@@ -12,6 +12,17 @@
                     <field name="approval_cost"/>
                 </xpath>
 
+                <xpath expr="//button[@name='action_view_tasks']" position="before">
+                    <button name="action_view_document"
+                            type="object"
+                            title="View Documents"
+                            string="View Documents"
+                            class="btn btn-link float-end"
+                            attrs="{'invisible': [('task_count', '=', 0)]}"
+                            groups="project.group_project_milestone"
+                    />
+                </xpath>
+
             </field>
         </record>
 

@@ -7,7 +7,7 @@
     'author': "Trend Development Team",
 
     # any module necessary for this one to work correctly
-    'depends': ['sale_project'],
+    'depends': ['sale_project', 'documents'],
 
     # always loaded
     'data': [
