@@ -78,6 +78,19 @@
                 <span>%</span>
             </xpath>
 
+            <t t-if="len(payments_vals) > 0" position="replace">
+                <t t-if="len(payments_vals) > 0">
+                    <tr class="border-black">
+                        <td style="background-color:white;">
+                            <strong style="color:black;">Amount Due</strong>
+                        </td>
+                        <td class="text-end" style="background-color:white;">
+                            <span t-field="o.amount_residual" style="color:black;"/>
+                        </td>
+                    </tr>
+                </t>
+            </t>
+
         </template>
 
         <template id="document_tax_totals_inherit" inherit_id="account.document_tax_totals">
