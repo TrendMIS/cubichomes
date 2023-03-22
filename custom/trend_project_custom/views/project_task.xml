@@ -13,7 +13,11 @@
                             <group>
                                 <field name="approval_cost" attrs="{'readonly': [('paid_by_us', '=', True)]}"/>
                                 <field name="paid_by_us"/>
-                                <field name="move_line_ids" attrs="{'invisible': [('paid_by_us', '=', False)]}">
+                                <field name="move_line_ids"
+                                       domain='[("account_id.account_type", "=", "asset_cash"),
+                                                ("move_id.state", "=", "posted"),
+                                                ("move_id.project_id", "=", project_id)]'
+                                       attrs="{'invisible': [('paid_by_us', '=', False)]}">
                                     <tree>
                                         <field name="date"/>
                                         <field name="name"/>
