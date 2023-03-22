@@ -10,11 +10,24 @@
 
                 <xpath expr="//notebook" position="inside">
                     <page name="approval_cost" string="Approval Cost" attrs="{'invisible': [('milestone_id', '=', False)]}">
-                        <group>
                             <group>
-                                <field name="approval_cost"/>
+                                <field name="approval_cost" attrs="{'readonly': [('paid_by_us', '=', True)]}"/>
+                                <field name="paid_by_us"/>
+                                <field name="move_line_ids"
+                                       domain='[("account_id.account_type", "=", "asset_cash"),
+                                                ("move_id.state", "=", "posted"),
+                                                ("move_id.project_id", "=", project_id)]'
+                                       attrs="{'invisible': [('paid_by_us', '=', False)]}">
+                                    <tree>
+                                        <field name="date"/>
+                                        <field name="name"/>
+                                        <field name="move_name"/>
+                                        <field name="account_id"/>
+                                        <field name="debit"/>
+                                        <field name="credit"/>
+                                    </tree>
+                                </field>
                             </group>
-                        </group>
                     </page>
                 </xpath>
 
