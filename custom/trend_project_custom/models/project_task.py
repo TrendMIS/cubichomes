@@ -21,9 +21,8 @@ class Task(models.Model):
     def _calc_move_line_ids_domain(self):
         cash_bank_move_lines = self.env["account.move.line"].search([
             ("account_id.account_type", "=", "asset_cash"),
-            ("move_id.state", "=", "posted")
+            ("move_id.state", "=", "posted"),
+            ("move_id.project_id", "=", self.project_id.id)
         ])
-        analytical_account = self.project_id.analytic_account_id.id
-        return [line.id for line in cash_bank_move_lines
-                if line.analytic_distribution and str(analytical_account) in line.analytic_distribution]
+        return cash_bank_move_lines.ids
 
