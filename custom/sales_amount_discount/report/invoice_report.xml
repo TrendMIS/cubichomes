@@ -94,30 +94,6 @@
         </template>
 
         <template id="document_tax_totals_inherit" inherit_id="account.document_tax_totals">
-            <xpath expr="//tr[@class='border-black o_total']" position="after">
-                <t t-if="o.lang == 'en_US'">
-                    <tr class="border-black">
-                        <td style="background-color:white;">
-                            <strong></strong>
-                        </td>
-                        <td class="text-end" style="background-color:white;">
-                            <span t-field="o.amount_total_words_english" style="color:black"/>
-                            <span t-field="o.currency_id" style="color:black"/>
-                        </td>
-                    </tr>
-                </t>
-                <t t-if="o.lang == 'ar_001'">
-                    <tr class="border-black">
-                        <td style="background-color:white;">
-                            <strong></strong>
-                        </td>
-                        <td class="text-end" style="background-color:white;">
-                            <span t-field="o.amount_total_words" style="color:black"/>
-                            <span t-field="o.currency_id" style="color:black"/>
-                        </td>
-                    </tr>
-                </t>
-            </xpath>
             <xpath expr="//tr[@class='border-black o_total']" position="replace">
                 <tr class="border-black o_total">
                     <td style="background-color:grey;">
