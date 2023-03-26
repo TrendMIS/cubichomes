@@ -12,5 +12,6 @@
     # always loaded
     'data': [
         'report/invoice_report.xml',
+        'views/account_move.xml',
     ],
 }
