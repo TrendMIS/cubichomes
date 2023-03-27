@@ -15,3 +15,4 @@
         'views/account_payment.xml',
     ],
 }
+
