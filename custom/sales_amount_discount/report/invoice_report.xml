@@ -90,6 +90,16 @@
                     </tr>
                 </t>
             </t>
+            <xpath expr="//th[@name='th_quantity']/span" position="replace">
+
+                <t t-if="o.is_percentage == True">
+                    <span>Percentage</span>
+                </t>
+                <t t-else="">
+                    <span>Quantity</span>
+                </t>
+            </xpath>
+
 
         </template>
 
