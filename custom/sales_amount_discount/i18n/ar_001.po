@@ -2482,3 +2482,10 @@ msgstr "قيمة الضريبة"
 #: model_terms:ir.ui.view,arch_db:l10n_ae.report_invoice_document
 msgid "<strong>VAT Amount (AED)</strong>"
 msgstr "قيمة الضريبة"
+
+
+#. module: sales_amount_discount
+#: model_terms:ir.ui.view,arch_db:sales_amount_discount.report_invoice_document_inherit
+msgid "<span>Quantity</span>"
+msgstr "الكمية"
+
