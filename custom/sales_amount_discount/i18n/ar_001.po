@@ -2442,3 +2442,26 @@ msgstr "قيود غير مسوّاة "
 #, python-format
 msgid "vendor bills"
 msgstr "فواتير المورد "
+
+#. module: l10n_ae
+#: model_terms:ir.ui.view,arch_db:l10n_ae.report_invoice_document
+msgid "TAX"
+msgstr "ضريبية"
+
+#. module: l10n_ae
+#: model_terms:ir.ui.view,arch_db:l10n_ae.report_invoice_document
+msgid "VAT"
+msgstr "ضريبة القيمة المضافة"
+
+
+#. module: l10n_ae
+#: model:account.tax,name:l10n_ae.1_uae_purchase_tax_5
+#: model:account.tax.group,name:l10n_ae.ae_tax_group_5
+msgid "VAT 5%"
+msgstr "ضريبة 5%"
+
+
+#. module: l10n_ae
+#: model:ir.model.fields,field_description:l10n_ae.field_account_move_line__l10n_ae_vat_amount
+msgid "VAT Amount"
+msgstr "قيمة الضريبة"
