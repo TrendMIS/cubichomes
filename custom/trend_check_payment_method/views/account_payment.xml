@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="account_payment_check_payment_method" model="ir.ui.view">
+            <field name="name">account.payment.check.payment.method</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='ref']" position="after">
+                    <field name="check_no" attrs="{'invisible': [('payment_method_code', '!=', 'check_printing')]}"/>
+                    <field name="bank_id" attrs="{'invisible': [('payment_method_code', '!=', 'check_printing')]}"/>
+                    <field name="check_date" attrs="{'invisible': [('payment_method_code', '!=', 'check_printing')],
+                                                   'required': [('payment_method_code', '=', 'check_printing')]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>
