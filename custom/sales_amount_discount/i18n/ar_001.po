@@ -2465,3 +2465,20 @@ msgstr "ضريبة 5%"
 #: model:ir.model.fields,field_description:l10n_ae.field_account_move_line__l10n_ae_vat_amount
 msgid "VAT Amount"
 msgstr "قيمة الضريبة"
+
+
+#. module: sales_amount_discount
+#: model_terms:ir.ui.view,arch_db:sales_amount_discount.report_invoice_document_inherit
+msgid "<span>Percentage</span>"
+msgstr "النسبة"
+
+#. module: l10n_ae
+#: model_terms:ir.ui.view,arch_db:l10n_ae.report_invoice_document
+msgid "<span>VAT Amount</span>"
+msgstr "قيمة الضريبة"
+
+
+#. module: l10n_ae
+#: model_terms:ir.ui.view,arch_db:l10n_ae.report_invoice_document
+msgid "<strong>VAT Amount (AED)</strong>"
+msgstr "قيمة الضريبة"
