@@ -62,6 +62,10 @@
                 </t>
             </div>
 
+            <span t-if="o.move_type == 'out_invoice' and o.state == 'draft'" position="replace">
+                <span t-if="o.move_type == 'out_invoice' and o.state == 'draft'">Proforma Invoice</span>
+            </span>
+
             <xpath expr="//div[@name='reference']" position="after">
                 <div class="col-auto col-3 mw-100 mb-2" t-if="o.project_id" name="project">
                     <strong>Project:</strong>
