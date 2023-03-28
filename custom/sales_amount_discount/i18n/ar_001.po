@@ -2489,3 +2489,9 @@ msgstr "قيمة الضريبة"
 msgid "<span>Quantity</span>"
 msgstr "الكمية"
 
+
+#. module: sales_amount_discount
+#: model_terms:ir.ui.view,arch_db:sales_amount_discount.report_invoice_document_inherit
+msgid "Proforma Invoice"
+msgstr "فاتورة اولية"
+
