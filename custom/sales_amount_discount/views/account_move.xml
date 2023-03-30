@@ -7,14 +7,18 @@
             <field name="inherit_id" ref="account.view_move_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='partner_id']" position="after">
-                    <field name="lang"/>
                     <field name="sale_order_id" invisible="1"/>
                     <field name="project_id"/>
+                    <field name="is_percentage" invisible="1" />
                 </xpath>
                 <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='discount']" position="before">
                     <field name="discount_amount"/>
                     <field name="full_discount" string="Disc.%"/>
                 </xpath>
+<!--                <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='quantity']" position="replace">-->
+<!--                    <field name="quantity" string="Percentage" invisible="not context.get('is_percentage')"/>-->
+<!--                    <field name="quantity" string="Quantity" invisible="context.get('is_percentage')"/>-->
+<!--                </xpath>-->
                 <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='discount']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>

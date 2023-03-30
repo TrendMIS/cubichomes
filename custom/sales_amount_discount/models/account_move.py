@@ -1,5 +1,4 @@
 from odoo import fields, models, api
-from num2words import num2words
 
 
 class AccountMove(models.Model):
@@ -7,10 +6,32 @@ class AccountMove(models.Model):
 
     sale_order_id = fields.Many2one(comodel_name='sale.order', string='Sale Order', required=False)
     project_id = fields.Many2one(comodel_name='project.project', string='Project')
-    amount_total_words = fields.Char(compute="_get_words")
-    amount_total_words_english = fields.Char(compute="_get_words")
-    lang = fields.Selection(related='partner_id.lang', string='Language', readonly=False,
-                            help="All the emails and documents sent to this contact will be translated in this language.")
+    is_percentage = fields.Boolean(
+        string='Is_percentage',
+        compute='_compute_is_percentage',
+        required=False)
+
+    # @api.model
+    # def _get_view(self, view_id=None, view_type='form', **options):
+    #     arch, view = super()._get_view(view_id, view_type, **options)
+    #     for node in arch.xpath("//field[@name='invoice_line_ids']/tree/field[@name='quantity']"):
+    #         if self.is_percentage:
+    #             node.set = ('string', 'Percentage')
+    #         else:
+    #             node.set = ('string', 'Quantity')
+    #
+    #     return arch, view
+
+    @api.depends('invoice_line_ids')
+    def _compute_is_percentage(self):
+        for rec in self:
+            if rec.invoice_line_ids:
+                if rec.invoice_line_ids[0].quantity >= 1:
+                    rec.is_percentage = False
+                else:
+                    rec.is_percentage = True
+            else:
+                rec.is_percentage = False
 
     @api.onchange('sale_order_id')
     def _set_project(self):
@@ -18,12 +39,6 @@ class AccountMove(models.Model):
             self.project_id = self.sale_order_id.project_id.id
         else:
             self.project_id = False
-
-    @api.depends("amount_total")
-    def _get_words(self):
-        for record in self:
-            record.amount_total_words = num2words(record.amount_total, lang="ar")
-            record.amount_total_words_english = num2words(record.amount_total, lang="en")
 
     @api.model
     def default_get(self, field):
@@ -45,6 +60,10 @@ class AccountMoveLine(models.Model):
     discount_amount = fields.Float(compute='_get_discount_amount', store=True, digits=(15, 2), readonly=False)
     full_discount = fields.Float(compute='_set_discount_amount', store=True, digits=(15, 2), readonly=False)
     discount = fields.Float(digits=(15, 20))
+    is_percentage = fields.Boolean(
+        string='Is_percentage',
+        related='move_id.is_percentage',
+        required=False)
 
     @api.depends('full_discount')
     def _get_discount_amount(self):

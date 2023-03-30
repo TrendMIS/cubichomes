@@ -11,6 +11,9 @@
             <xpath expr="//field[@name='vat']" position="attributes">
                     <attribute name="string">TRN</attribute>
             </xpath>
+<!--            <xpath expr="//field[@name='street']" position="attributes">-->
+<!--                    <attribute name="translate">true</attribute>-->
+<!--            </xpath>-->
 
         </field>
     </record>
