@@ -106,6 +106,9 @@
                     <span>Quantity</span>
                 </t>
             </xpath>
+            <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'" position="replace">
+                <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">Invoice</span>
+            </span>
 
             <xpath expr="//th[@name='th_quantity']" position="attributes">
                 <attribute name="class" add="text-center" separator=" "/>
