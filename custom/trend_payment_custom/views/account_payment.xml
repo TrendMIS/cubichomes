@@ -11,12 +11,13 @@
                 <xpath expr="//sheet" position="inside">
                     <notebook>
                         <field name="move_id" invisible="True"/>
+                        <field name="company_id" invisible="True"/>
                         <page name="journal_items" string="Journal Items"
                               attrs="{'invisible': [('move_id', '=', False)]}">
                             <field name="journal_items_ids"
                                    attrs="{'readonly': [('state', 'in', ['posted', 'cancel'])]}">
                                 <tree editable="bottom" string="Journal Items">
-                                    <field name="account_id"/>
+                                    <field name="account_id" domain="[('deprecated', '=', False), ('is_off_balance', '=', False)]"/>
                                     <field name="partner_id"/>
                                     <field name="name" readonly="True"/>
                                     <field name="debit" sum="Total Debit"/>
