@@ -2446,7 +2446,7 @@ msgstr "فواتير المورد "
 #. module: l10n_ae
 #: model_terms:ir.ui.view,arch_db:l10n_ae.report_invoice_document
 msgid "TAX"
-msgstr "ضريبية"
+msgstr "TAX"
 
 #. module: l10n_ae
 #: model_terms:ir.ui.view,arch_db:l10n_ae.report_invoice_document
@@ -2493,5 +2493,10 @@ msgstr "الكمية"
 #. module: sales_amount_discount
 #: model_terms:ir.ui.view,arch_db:sales_amount_discount.report_invoice_document_inherit
 msgid "Proforma Invoice"
-msgstr "فاتورة اولية"
+msgstr "Proforma Invoice"
+
+#. module: sales_amount_discount
+#: model_terms:ir.ui.view,arch_db:sales_amount_discount.report_invoice_document_inherit
+msgid "Invoice"
+msgstr "Invoice"
 

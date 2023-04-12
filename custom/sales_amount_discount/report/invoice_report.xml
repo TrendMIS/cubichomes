@@ -73,6 +73,9 @@
                 </div>
             </xpath>
 
+            <xpath expr="//th[@name='th_priceunit']" position="attributes">
+                <attribute name="t-attf-class" add="text-center" separator=" "/>
+            </xpath>
             <xpath expr="//th[@name='th_priceunit']/span" position="replace">
                 <span>Rate</span>
             </xpath>
@@ -103,8 +106,43 @@
                     <span>Quantity</span>
                 </t>
             </xpath>
+            <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'" position="replace">
+                <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">Invoice</span>
+            </span>
+
+            <xpath expr="//th[@name='th_quantity']" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+            <xpath expr="//th[@name='th_description']" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+
+            <xpath expr="//th[@name='th_price_unit']" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+            <xpath expr="//th[@name='th_subtotal']" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+            <xpath expr="//tbody[hasclass('invoice_tbody')]" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+            <xpath expr="//td[hasclass('text-end')]" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+            <xpath expr="//td[contains(@t-attf-class, 'text-end')]" position="attributes">
+                <attribute name="t-attf-class" add="text-center" separator=" "/>
+            </xpath>
 
 
+        </template>
+
+        <template id="l10n_ae_report_invoice_document_inherit" inherit_id="l10n_ae.report_invoice_document">
+            <xpath expr="//th[@name='th_taxes']" position="attributes">
+                <attribute name="t-attf-class" add="text-center" separator=" "/>
+            </xpath>
+            <xpath expr="//th[@name='tax_amount']" position="attributes">
+                <attribute name="t-attf-class" add="text-center" separator=" "/>
+            </xpath>
         </template>
 
         <template id="document_tax_totals_inherit" inherit_id="account.document_tax_totals">
