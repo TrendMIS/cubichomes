@@ -16,7 +16,7 @@
                             <field name="journal_items_ids"
                                    attrs="{'readonly': [('state', 'in', ['posted', 'cancel'])]}">
                                 <tree editable="bottom" string="Journal Items">
-                                    <field name="account_id" domain="[('account_type', 'in', ['asset_receivable', 'liability_payable'])]"/>
+                                    <field name="account_id"/>
                                     <field name="partner_id"/>
                                     <field name="name" readonly="True"/>
                                     <field name="debit" sum="Total Debit"/>
