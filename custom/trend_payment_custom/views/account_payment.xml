@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="account_payment_view_form_inherit" model="ir.ui.view">
+            <field name="name">account.payment.view.form.inherit</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//sheet" position="inside">
+                    <notebook>
+                        <field name="move_id" invisible="True"/>
+                        <page name="journal_items" string="Journal Items"
+                              attrs="{'invisible': [('move_id', '=', False)]}">
+                            <field name="journal_items_ids"
+                                   attrs="{'readonly': [('state', 'in', ['posted', 'cancel'])]}">
+                                <tree editable="bottom" string="Journal Items">
+                                    <field name="account_id" domain="[('account_type', 'in', ['asset_receivable', 'liability_payable'])]"/>
+                                    <field name="partner_id"/>
+                                    <field name="name" readonly="True"/>
+                                    <field name="debit" sum="Total Debit"/>
+                                    <field name="credit" sum="Total Credit"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </xpath>
+
+
+            </field>
+        </record>
+
+    </data>
+</odoo>
