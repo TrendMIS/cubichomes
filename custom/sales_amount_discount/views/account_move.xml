@@ -16,8 +16,8 @@
                     <field name="full_discount" string="Disc.%"/>
                 </xpath>
 <!--                <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='quantity']" position="replace">-->
-<!--                    <field name="quantity" string="Percentage" invisible="not context.get('is_percentage')"/>-->
-<!--                    <field name="quantity" string="Quantity" invisible="context.get('is_percentage')"/>-->
+<!--                    <field name="quantity" string="Percentage" attrs="{'column_invisible':[('parent.is_percentage','!=',True)]}"/>-->
+<!--                    <field name="quantity" string="Quantity" attrs="{'column_invisible':[('parent.is_percentage','!=',False)]}"/>-->
 <!--                </xpath>-->
                 <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='discount']" position="attributes">
                     <attribute name="invisible">1</attribute>
