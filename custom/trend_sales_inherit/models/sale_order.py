@@ -19,6 +19,13 @@ class SaleOrderLine(models.Model):
     percentage = fields.Float(
         string='Percentage',
         required=False)
+
+    @api.depends('product_id', 'product_uom', 'product_uom_qty', 'percentage', 'order_id.project_value')
+    def _compute_price_unit(self):
+        for line in self:
+            line.price_unit = line.order_id.project_value * (line.percentage / 100)
+
+
     
 
 
