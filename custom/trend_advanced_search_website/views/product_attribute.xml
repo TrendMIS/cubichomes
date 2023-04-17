@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="product_attribute_view_form_website_inherit" model="ir.ui.view">
+            <field name="name">product.attribute.view.form.website.inherit</field>
+            <field name="model">product.attribute</field>
+            <field name="inherit_id" ref="product.product_attribute_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//notebook" position="inside">
+                    <page name="website" string="Website" groups="base.group_no_one">
+                        <group>
+                            <group>
+                                <field name="is_styles"/>
+                                <field name="is_bedrooms"/>
+                                <field name="is_bathrooms"/>
+                                <field name="is_floors"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>
