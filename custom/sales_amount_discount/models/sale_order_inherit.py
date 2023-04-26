@@ -37,7 +37,6 @@ class SaleOrderLine(models.Model):
     full_discount = fields.Float(compute='_set_discount_amount', store=True, digits=(15, 2), readonly=False)
     discount = fields.Float(digits=(15, 20))
 
-
     @api.depends('full_discount')
     def _get_discount_amount(self):
         for rec in self:
@@ -57,24 +56,3 @@ class SaleOrderLine(models.Model):
             else:
                 rec.discount = 0.0
                 rec.full_discount = 0.0
-
-    @api.depends('product_uom_qty', 'discount', 'price_unit', 'tax_id')
-    def _compute_amount(self):
-        """
-        Compute the amounts of the SO line.
-        """
-        for line in self:
-            tax_results = self.env['account.tax']._compute_taxes([line._convert_to_tax_base_line_dict()])
-            totals = list(tax_results['totals'].values())[0]
-            amount_untaxed = totals['amount_untaxed']
-            amount_tax = totals['amount_tax']
-
-            line.update({
-                'price_subtotal': amount_untaxed + amount_tax,
-                'price_tax': amount_tax,
-                'price_total': amount_untaxed + amount_tax,
-            })
-            if self.env.context.get('import_file', False) and not self.env.user.user_has_groups(
-                    'account.group_account_manager'):
-                line.tax_id.invalidate_recordset(['invoice_repartition_line_ids'])
-
