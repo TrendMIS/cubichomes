@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trend_advanced_search_website_trend_advanced_search_website,trend_advanced_search_website.trend_advanced_search_website,model_trend_advanced_search_website_trend_advanced_search_website,base.group_user,1,1,1,1
