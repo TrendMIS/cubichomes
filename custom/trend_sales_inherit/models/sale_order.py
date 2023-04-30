@@ -24,10 +24,10 @@ class SaleOrder(models.Model):
             raise ValidationError('There is no Eligible Line for change')
 
         for line in self.order_line.filtered(lambda l: l.is_eligible):
-            new_unit_price = self.project_value * (line.percentage / 100)
+            amount = (self.final_project_value - self.project_value) * (line.percentage / 100)
             line_data = line.copy_data({
                 'name': 'variants for project value change',
-                'price_unit': new_unit_price - line.price_unit,
+                'price_unit': amount,
                 'is_eligible': False
             })
             lst.append((0, 0, line_data[0]))
