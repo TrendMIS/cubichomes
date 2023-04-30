@@ -38,8 +38,16 @@ class SaleOrder(models.Model):
             'order_line': lst
 
         })
-        self.env['sale.order'].create(order_data)
+        sale_order = self.env['sale.order'].create(order_data)
         self.write({'lock_final': True})
+        return {
+            'type': 'ir.actions.act_window',
+            'res_model': 'sale.order',
+            'res_id': sale_order.id,
+            'view_type': 'form',
+            'view_mode': 'form',
+            'target': 'current',
+        }
 
 
 class SaleOrderLine(models.Model):
