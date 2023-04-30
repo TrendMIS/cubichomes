@@ -8,8 +8,12 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
 
-                <xpath expr="//field[@name='order_line']/tree/field[@name='price_subtotal']" position="before">
-                  <field name="untaxed_amount"/>
+                <xpath expr="//field[@name='order_line']/tree/field[@name='price_subtotal']" position="attributes">
+                    <attribute name="string">Untaxed Amount</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='order_line']/tree/field[@name='price_subtotal']" position="after">
+                    <field name="price_total"/>
                 </xpath>
 
             </field>
