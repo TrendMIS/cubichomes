@@ -2,7 +2,6 @@
 <odoo>
     <data>
 
-        <!-- Inherit Form View to Modify it -->
         <record id="sale_view_order_form_inherit" model="ir.ui.view">
             <field name="name">sale_view_order_form_inherit</field>
             <field name="model">sale.order</field>
@@ -10,22 +9,32 @@
             <field name="arch" type="xml">
 
                 <xpath expr="//field[@name='payment_term_id']" position="after">
-                    <label for="project_value"/>
+                    <field name="show_recompute_button" invisible="1"/>
+                    <field name="lock_final" invisible="1"/>
+                    <field name="project_value" attrs="{'readonly': [('state', 'not in', ['sent', 'draft'])]}"/>
+                    <label for="final_project_value"/>
                     <div class="o_row">
-                        <field name="project_value"/>
-                        <button name="action_recompute_value" type="object" string="Recompute"/>
+                        <field name="final_project_value" attrs="{'readonly': [('lock_final', '=', True)]}"/>
+                        <button name="action_recompute_value" type="object" string="Recompute"
+                                attrs="{'invisible': ['|', ('show_recompute_button', '=', False), ('lock_final', '=', True)]}"/>
                     </div>
                 </xpath>
+
                 <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="attributes">
                     <attribute name="readonly">1</attribute>
                 </xpath>
+
                 <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="before">
                     <field name="percentage"/>
                 </xpath>
+
                 <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="before">
                     <field name="is_eligible"/>
                 </xpath>
 
+                <xpath expr="//group[@name='partner_details']" position="inside">
+                    <field name="project_id" readonly="1"/>
+                </xpath>
             </field>
         </record>
 
