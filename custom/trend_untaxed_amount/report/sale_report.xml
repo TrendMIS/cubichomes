@@ -3,13 +3,18 @@
     <data>
 
         <template id="sale_order_untaxed_amount" inherit_id="sale.report_saleorder_document">
-            <xpath expr="//th[@name='th_taxes']" position="after">
-                <th name="th_untaxed_amount" class="text-end">Untaxed Amount</th>
+            <xpath expr="//th[@name='th_subtotal']" position="after">
+                <th name="th_untaxed_amount" class="text-end">Total</th>
             </xpath>
-            <xpath expr="//td[@name='td_taxes']" position="after">
-                <td name="td_untaxed_amount" class="text-end">
-                    <span t-field="line.untaxed_amount"/>
+
+            <xpath expr="//td[@name='td_subtotal']" position="after">
+                <td name="td_untaxed_amount" class="text-end o_price_total">
+                    <span t-field="line.price_total"/>
                 </td>
+            </xpath>
+
+            <xpath expr="//th[@name='th_subtotal']/span[1]" position="replace">
+                <span groups="account.group_show_line_subtotals_tax_excluded">Untaxed Amount</span>
             </xpath>
         </template>
 
