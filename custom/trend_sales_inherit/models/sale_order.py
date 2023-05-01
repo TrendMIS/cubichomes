@@ -11,6 +11,7 @@ class SaleOrder(models.Model):
     show_recompute_button = fields.Boolean(compute='_compute_show_recompute_button')
     lock_final = fields.Boolean(default=False)
     eligible_order = fields.Boolean(default=False)
+    sale_id = fields.Many2one('sale.order')
 
     @api.depends('project_value', 'final_project_value')
     def _compute_show_recompute_button(self):
@@ -33,6 +34,7 @@ class SaleOrder(models.Model):
             lst.append((0, 0, line_data[0]))
         order_data = self.copy_data({
             'origin': self.name,
+            'sale_id': self.id,
             'date_order': datetime.now(),
             'eligible_order': True,
             'order_line': lst
@@ -47,6 +49,16 @@ class SaleOrder(models.Model):
             'view_type': 'form',
             'view_mode': 'form',
             'target': 'current',
+        }
+
+    def get_related_sale(self):
+        return {
+            'name': 'Related Orders/Quotations',
+            'view_type': 'form',
+            'domain': [('id', '=', self.sale_id.id)],
+            'view_mode': 'tree,form',
+            'res_model': 'sale.order',
+            'type': 'ir.actions.act_window',
         }
 
 
