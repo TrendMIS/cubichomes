@@ -11,17 +11,6 @@ class AccountMove(models.Model):
         compute='_compute_is_percentage',
         required=False)
 
-    # @api.model
-    # def _get_view(self, view_id=None, view_type='form', **options):
-    #     arch, view = super()._get_view(view_id, view_type, **options)
-    #     for node in arch.xpath("//field[@name='invoice_line_ids']/tree/field[@name='quantity']"):
-    #         if self.is_percentage:
-    #             node.set = ('string', 'Percentage')
-    #         else:
-    #             node.set = ('string', 'Quantity')
-    #
-    #     return arch, view
-
     @api.depends('invoice_line_ids')
     def _compute_is_percentage(self):
         for rec in self:

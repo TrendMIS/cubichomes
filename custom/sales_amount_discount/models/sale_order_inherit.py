@@ -13,6 +13,7 @@ class SaleOrder(models.Model):
         compute='_compute_project_id',
         string='Project',
         required=False)
+    lang = fields.Selection(related='partner_id.lang', string='Language', readonly=False, reaquired=True)
 
     def _compute_project_id(self):
         for rec in self:

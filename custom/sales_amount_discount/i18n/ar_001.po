@@ -191,6 +191,13 @@ msgstr ""
 msgid "<span>Rate</span>"
 msgstr "<span>معدل</span>"
 
+
+#. module: sales_amount_discount
+#: model_terms:ir.ui.view,arch_db:sales_amount_discount.sale_order_invoice
+msgid "Rate"
+msgstr "معدل"
+
+
 #. module: sales_amount_discount
 #: model_terms:ir.ui.view,arch_db:sales_amount_discount.report_invoice_document_inherit
 msgid "<span>TRN</span>"

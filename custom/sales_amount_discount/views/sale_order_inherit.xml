@@ -5,17 +5,23 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
+
                 <xpath expr="//field[@name='partner_id']" position="after">
                     <field name="project_id" invisible="1"/>
                 </xpath>
+
                 <xpath expr="//field[@name='order_line']/tree/field[@name='discount']" position="before">
                     <field name="discount_amount"/>
                     <field name="full_discount" string="Disc.%"/>
                 </xpath>
+
                 <xpath expr="//field[@name='order_line']/tree/field[@name='discount']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
 
+                <xpath expr="//group[@name='partner_details']" position="inside">
+                    <field name="lang" required="1"/>
+                </xpath>
             </field>
         </record>
     </data>
