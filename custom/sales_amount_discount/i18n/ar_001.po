@@ -2512,3 +2512,7 @@ msgstr "Proforma Invoice"
 msgid "Invoice"
 msgstr "Invoice"
 
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "Order #"
+msgstr "رقم أمر البيع "
