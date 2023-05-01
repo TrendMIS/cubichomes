@@ -8,61 +8,32 @@
             </xpath>
 
             <xpath expr="//th[@name='th_priceunit']" position="after">
-                <th name="th_digit_discount" class="text-end">Discount</th>
-                <th name="th_full_discount" class="text-end">Disc %</th>
+                <th name="th_digit_discount" class="text-center">Discount</th>
+                <th name="th_full_discount" class="text-center">Disc %</th>
             </xpath>
 
             <xpath expr="//th[@name='th_description']" position="before">
-                <th name="th_sequence" class="text-start">Seq</th>
+                <th name="th_sequence" class="text-center">Seq</th>
             </xpath>
 
             <xpath expr="//td[@name='td_priceunit']" position="after">
-                <td name="td_digit_discount" class="text-end">
+                <td name="td_digit_discount" class="text-center">
                     <span t-field="line.discount_amount"/>
                 </td>
-                <td name="td_full_discount" class="text-end">
+                <td name="td_full_discount" class="text-center">
                     <span t-field="line.full_discount"/>
                 </td>
             </xpath>
 
             <xpath expr="//td[@name='td_name']" position="before">
-                <td name="td_seq">
+                <td name="td_seq" class="text-center">
                     <span t-out="sequence"/>
                     <t t-set="sequence" t-value="sequence + 1"/>
                 </td>
             </xpath>
 
-            <xpath expr="//div[@id='total']" position="replace">
-                <div id="total" class="row" name="total">
-                    <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'} ms-auto">
-                        <table class="table table-sm">
-                            <tr class="border-black o_subtotal">
-                                <td>
-                                    <strong>Total</strong>
-                                </td>
-
-                                <td class="text-end">
-                                    <span t-field="doc.amount_total"/>
-                                </td>
-                            </tr>
-
-                            <tr class="border-black o_subtotal">
-                                <td>
-                                    <strong></strong>
-                                </td>
-
-                                <td class="text-end">
-                                    <span t-field="doc.amount_total_words_english"/>
-                                </td>
-                            </tr>
-
-                        </table>
-                    </div>
-                </div>
-            </xpath>
-
             <xpath expr="//th[@name='th_priceunit']" position="replace">
-                <th name="th_priceunit" class="text-end">Rate</th>
+                <th name="th_priceunit" class="text-center">Rate</th>
             </xpath>
 
             <xpath expr="//t/t[@t-set='address']" position="replace">
@@ -77,6 +48,38 @@
                         <span t-field="doc.partner_id.vat"/>
                     </p>
                 </t>
+            </xpath>
+
+            <xpath expr="//th[@name='th_description']" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+
+            <xpath expr="//th[@name='th_quantity']" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+
+            <xpath expr="//th[@name='th_taxes']" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+
+            <xpath expr="//td[@name='td_name']" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+
+            <xpath expr="//td[@name='td_quantity']" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+
+            <xpath expr="//td[@name='td_priceunit']" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+
+            <xpath expr="//td[@name='td_taxes']" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
+            </xpath>
+
+            <xpath expr="//td[@name='td_subtotal']" position="attributes">
+                <attribute name="class" add="text-center" separator=" "/>
             </xpath>
 
         </template>
