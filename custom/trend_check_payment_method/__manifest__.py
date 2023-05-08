@@ -13,5 +13,6 @@
     'data': [
         'data/account_method.xml',
         'views/account_payment.xml',
+        'report/check_report.xml',
     ],
 }

@@ -191,6 +191,13 @@ msgstr ""
 msgid "<span>Rate</span>"
 msgstr "<span>معدل</span>"
 
+
+#. module: sales_amount_discount
+#: model_terms:ir.ui.view,arch_db:sales_amount_discount.sale_order_invoice
+msgid "Rate"
+msgstr "معدل"
+
+
 #. module: sales_amount_discount
 #: model_terms:ir.ui.view,arch_db:sales_amount_discount.report_invoice_document_inherit
 msgid "<span>TRN</span>"
@@ -1915,6 +1922,11 @@ msgstr "الاقتراحات"
 msgid "TRN"
 msgstr "ضريبة القيمة المضافة"
 
+#. module: sales_amount_discount
+#: model_terms:ir.ui.view,arch_db:sales_amount_discount.sale_order_invoice
+msgid "<span>TRN</span>"
+msgstr "ضريبة القيمة المضافة"
+
 #. modules: account_accountant, sales_amount_discount
 #: model:ir.model,name:sales_amount_discount.model_account_tax
 #: model:ir.model.fields,field_description:account_accountant.field_bank_rec_widget_line__tax_ids
@@ -2500,3 +2512,7 @@ msgstr "Proforma Invoice"
 msgid "Invoice"
 msgstr "Invoice"
 
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "Order #"
+msgstr "رقم أمر البيع "

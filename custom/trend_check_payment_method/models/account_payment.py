@@ -9,6 +9,7 @@ class AccountPayment(models.Model):
     check_no = fields.Char('Check No.')
     bank_id = fields.Many2one('res.bank')
     check_date = fields.Date()
+    check_image = fields.Binary()
 
     def _prepare_move_line_default_vals(self, write_off_line_vals=None):
         res = super()._prepare_move_line_default_vals(write_off_line_vals=write_off_line_vals)

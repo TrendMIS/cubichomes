@@ -5,9 +5,6 @@ from num2words import num2words
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
-    amount_total_words = fields.Char(compute="_get_words")
-    amount_total_words_english = fields.Char(compute="_get_words")
-
     project_id = fields.Many2one(
         comodel_name='project.project',
         compute='_compute_project_id',
@@ -21,13 +18,6 @@ class SaleOrder(models.Model):
                 rec.project_id = project.id
             else:
                 rec.project_id = False
-
-
-    @api.depends("amount_total")
-    def _get_words(self):
-        for record in self:
-            record.amount_total_words = num2words(record.amount_total, lang="ar")
-            record.amount_total_words_english = num2words(record.amount_total, lang="en")
 
 
 class SaleOrderLine(models.Model):
