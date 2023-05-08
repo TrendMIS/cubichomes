@@ -11,5 +11,6 @@
     # always loaded
     'data': [
         'views/sale_order.xml',
+        'views/product_template_views.xml',
     ],
 }

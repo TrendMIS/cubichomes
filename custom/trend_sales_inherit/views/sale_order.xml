@@ -13,6 +13,18 @@
                     <field name="sale_id" invisible="1"/>
                     <field name="lock_final" invisible="1"/>
                     <field name="project_value" attrs="{'readonly': [('state', 'not in', ['sent', 'draft'])]}"/>
+                    <label for="design_percentage" string="Design"/>
+                    <div class="o_row">
+                        <field name="design_amount" attrs="{'readonly': [('lock_final', '=', True)]}"/>
+                        <field name="design_percentage" attrs="{'readonly': [('lock_final', '=', True)]}"/> %
+                        <br/>
+                    </div>
+                    <label for="supervision_percentage" string="Supervision"/>
+                    <div class="o_row">
+                        <field name="supervision_amount" attrs="{'readonly': [('lock_final', '=', True)]}"/>
+                        <field name="supervision_percentage" attrs="{'readonly': [('lock_final', '=', True)]}"/> %
+                        <br/>
+                    </div>
                     <label for="final_project_value"/>
                     <div class="o_row">
                         <field name="final_project_value" attrs="{'readonly': [('lock_final', '=', True)]}"/>
@@ -21,11 +33,8 @@
                     </div>
                 </xpath>
 
-                <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="attributes">
-                    <attribute name="readonly">1</attribute>
-                </xpath>
-
                 <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="before">
+                    <field name="internal_service_type"/>
                     <field name="percentage"/>
                 </xpath>
 
