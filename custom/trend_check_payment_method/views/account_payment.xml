@@ -10,6 +10,7 @@
 
                 <xpath expr="//field[@name='ref']" position="after">
                     <field name="check_no" attrs="{'invisible': [('payment_method_code', '!=', 'check_printing')]}"/>
+                    <field name="check_image" attrs="{'invisible': [('payment_method_code', '!=', 'check_printing')]}"/>
                     <field name="bank_id" attrs="{'invisible': [('payment_method_code', '!=', 'check_printing')]}"/>
                     <field name="check_date" attrs="{'invisible': [('payment_method_code', '!=', 'check_printing')],
                                                    'required': [('payment_method_code', '=', 'check_printing')]}"/>
