@@ -81,8 +81,9 @@ class SaleOrder(models.Model):
 
     @api.onchange("supervision_amount")
     def _onchange_supervision_amount(self):
-        percentage = self.supervision_amount * 100 / self.project_value
-        self.supervision_percentage = round(percentage, 2)
+        if self.project_value:
+            percentage = self.supervision_amount * 100 / self.project_value
+            self.supervision_percentage = round(percentage, 2)
 
     @api.onchange("design_percentage")
     def _onchange_design_percentage(self):
@@ -90,8 +91,9 @@ class SaleOrder(models.Model):
 
     @api.onchange("design_amount")
     def _onchange_design_amount(self):
-        percentage = self.design_amount * 100 / self.project_value
-        self.design_percentage = round(percentage, 2)
+        if self.project_value:
+            percentage = self.design_amount * 100 / self.project_value
+            self.design_percentage = round(percentage, 2)
 
     @api.constrains("design_amount", "percentage_amount", "order_line")
     def validate_total_service_amount(self):
@@ -122,7 +124,7 @@ class SaleOrderLine(models.Model):
                   'order_id.supervision_amount',
                   'order_id.design_amount')
     def _compute_price_unit(self):
-        if self.order_id.state == 'sale':
+        if not self.internal_service_type or self.order_id.state == 'sale':
             return
         amount = self._get_service_type_amount()
         self.price_unit = amount * (self.percentage / 100)
@@ -132,10 +134,11 @@ class SaleOrderLine(models.Model):
                   'order_id.supervision_amount',
                   'order_id.design_amount')
     def _compute_percentage(self):
-        if self.order_id.state == 'sale':
+        if not self.internal_service_type or self.order_id.state == 'sale':
             return
         amount = self._get_service_type_amount()
-        self.percentage = (self.price_unit / amount) * 100
+        if amount:
+            self.percentage = (self.price_unit / amount) * 100
 
     def _get_service_type_amount(self):
         if self.internal_service_type == "design":
