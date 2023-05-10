@@ -15,18 +15,18 @@
                     <field name="project_value" attrs="{'readonly': [('state', 'not in', ['sent', 'draft'])]}"/>
                     <label for="design_percentage" string="Design"/>
                     <div class="o_row">
-                        <field name="design_amount" attrs="{'readonly': [('lock_final', '=', True)]}"/>
-                        <field name="design_percentage" attrs="{'readonly': [('lock_final', '=', True)]}"/> %
+                        <field name="design_amount" attrs="{'readonly': ['|', ('lock_final', '=', True), ('state', 'not in', ['sent', 'draft'])]}"/>
+                        <field name="design_percentage" attrs="{'readonly': ['|', ('lock_final', '=', True), ('state', 'not in', ['sent', 'draft'])]}"/> %
                         <br/>
                     </div>
                     <label for="supervision_percentage" string="Supervision"/>
                     <div class="o_row">
-                        <field name="supervision_amount" attrs="{'readonly': [('lock_final', '=', True)]}"/>
-                        <field name="supervision_percentage" attrs="{'readonly': [('lock_final', '=', True)]}"/> %
+                        <field name="supervision_amount" attrs="{'readonly': ['|', ('lock_final', '=', True), ('state', 'not in', ['sent', 'draft'])]}"/>
+                        <field name="supervision_percentage" attrs="{'readonly': ['|', ('lock_final', '=', True), ('state', 'not in', ['sent', 'draft'])]}"/> %
                         <br/>
                     </div>
-                    <label for="final_project_value"/>
-                    <div class="o_row">
+                    <label for="final_project_value" attrs="{'invisible': [('state', 'in', ['sent', 'draft'])]}"/>
+                    <div class="o_row" attrs="{'invisible': [('state', 'in', ['sent', 'draft'])]}">
                         <field name="final_project_value" attrs="{'readonly': [('lock_final', '=', True)]}"/>
                         <button name="action_recompute_value" type="object" string="Recompute"
                                 attrs="{'invisible': ['|', ('show_recompute_button', '=', False), ('lock_final', '=', True)]}"/>
