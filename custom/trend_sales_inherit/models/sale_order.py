@@ -95,15 +95,16 @@ class SaleOrder(models.Model):
             percentage = self.design_amount * 100 / self.project_value
             self.design_percentage = round(percentage, 2)
 
-    @api.constrains("design_amount", "percentage_amount", "order_line")
+    @api.constrains("design_amount", "supervision_amount", "order_line")
     def validate_total_service_amount(self):
         for rec in self:
+            if rec.sale_id: return  # skip validation for child sales orders
             design_lines = rec.order_line.filtered(lambda l: l.internal_service_type == "design")
-            if sum(design_lines.mapped("price_total")) > rec.design_amount:
-                raise ValidationError("Design lines total price exceeds the total design amount")
+            if sum(design_lines.mapped("price_total")) != rec.design_amount:
+                raise ValidationError("Design lines total price is different than the total design amount")
             supervision_lines = rec.order_line.filtered(lambda l: l.internal_service_type == "supervision")
-            if sum(supervision_lines.mapped("price_total")) > rec.supervision_amount:
-                raise ValidationError("Supervision lines total price exceeds the total supervision amount")
+            if sum(supervision_lines.mapped("price_total")) != rec.supervision_amount:
+                raise ValidationError("Supervision lines total price is different than the total supervision amount")
 
 
 class SaleOrderLine(models.Model):
