@@ -12,5 +12,6 @@
     'data': [
         'views/sale_order.xml',
         'views/product_template_views.xml',
+        'report/sale_report.xml',
     ],
 }

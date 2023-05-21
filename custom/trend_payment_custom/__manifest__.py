@@ -11,5 +11,6 @@
     # always loaded
     'data': [
         'views/account_payment.xml',
+        'reports/payment_report.xml',
     ],
 }

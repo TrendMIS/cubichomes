@@ -16,6 +16,7 @@ class SaleOrder(models.Model):
     lock_final = fields.Boolean(default=False)
     eligible_order = fields.Boolean(default=False)
     sale_id = fields.Many2one('sale.order')
+    extra_notes = fields.Html()
 
     @api.depends('project_value', 'final_project_value')
     def _compute_show_recompute_button(self):

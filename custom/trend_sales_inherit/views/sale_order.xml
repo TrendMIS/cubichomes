@@ -52,6 +52,12 @@
                             attrs="{'invisible': [('sale_id', '=', False)]}"
                             string="Related orders/quotations"/>
                 </xpath>
+
+                <xpath expr="//group[@name='sale_header']" position="after">
+                    <group>
+                        <field name="extra_notes" string="Notes"/>
+                    </group>
+                </xpath>
             </field>
         </record>
 

@@ -23,7 +23,7 @@
                                 </td>
 
                                 <td t-att-class="'text-right' if doc.lang =='ar_001' else 'text-left'">
-                                    <span t-esc="doc.amount_to_text(doc.amount_total)"/>
+                                     <span t-esc="doc.amount_to_text(doc.amount_total, doc.currency_id, doc.lang)"/>
                                 </td>
                             </tr>
 
