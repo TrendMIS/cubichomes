@@ -1,0 +1,28 @@
+<odoo>
+
+    <template id="custom_external_layout_boxed" inherit_id="web.external_layout_boxed" primary="True">
+        <xpath expr="//div[hasclass('o_boxed_header')]" position="replace">
+            <div class="row">
+                <img src="/trend_report_layout/static/src/img/header.png"/>
+            </div>
+        </xpath>
+
+        <xpath expr="//div[contains(@t-attf-class, 'o_report_layout_boxed')]" position="attributes">
+            <attribute name="t-attf-style">
+                background-image: url({{ 'data:image/png;base64,%s' % company.layout_background_image.decode('utf-8') if company.layout_background_image and company.layout_background == 'Custom' else '' }});
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: 40%;
+            </attribute>
+        </xpath>
+
+
+        <xpath expr="//div[contains(@t-attf-class, 'o_report_layout_boxed')]" position="attributes">
+            <attribute name="style">border: 0;</attribute>
+        </xpath>
+
+        <xpath expr="div[@t-field='company.report_footer']" position="replace">
+            <img src="/trend_report_layout/static/src/img/footer.png" style="height:auto; max-width:100%"/>
+        </xpath>
+    </template>
+</odoo>

@@ -9,7 +9,7 @@
                         <strong></strong>
                     </td>
                     <td class="text-end" style="background-color:white;">
-                        <span t-esc="o.amount_to_text(o.amount_total)" style="color:black"/>
+                        <span t-esc="o.amount_to_text(o.amount_total, o.currency_id, o.lang)" style="color:black"/>
                     </td>
                 </tr>
             </xpath>

@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Trend Payment Custom",
+    'name': "Trend Reports Layout",
 
     'summary': """""",
 
     'author': "Trend Development Team",
+
     # any module necessary for this one to work correctly
-    'depends': ['account'],
+    'depends': ['web'],
 
     # always loaded
     'data': [
-        'views/account_payment.xml',
-        'reports/payment_report.xml',
+        'report/layout.xml'
     ],
 }

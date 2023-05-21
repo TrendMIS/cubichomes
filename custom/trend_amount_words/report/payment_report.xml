@@ -1,0 +1,10 @@
+<odoo>
+
+    <template id="report_payment_receipt_amount_words" inherit_id="account.report_payment_receipt_document">
+        <xpath expr="//span[@t-field='o.amount']" position="after">
+            (<span style="line-height: 100%;" t-att-class="'text-right' if 'ar' in lang else 'text-left'"
+                   t-esc="o.amount_to_text(o.amount, o.currency_id, lang)"/>)
+        </xpath>
+
+    </template>
+</odoo>

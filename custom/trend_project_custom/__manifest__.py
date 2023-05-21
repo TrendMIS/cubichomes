@@ -15,5 +15,6 @@
         'views/project_milestone.xml',
         'views/project_task.xml',
         'views/account_payment.xml',
+        'report/payment_receipt.xml',
     ],
 }
