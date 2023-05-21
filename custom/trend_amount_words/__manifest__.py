@@ -13,6 +13,7 @@
     'data': [
         'report/invoice_report.xml',
         'report/sale_report.xml',
+        'report/payment_report.xml',
         'views/account_move.xml',
         'views/sale_order.xml',
     ],
