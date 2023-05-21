@@ -1,0 +1,11 @@
+<odoo>
+
+    <template id="custome_external_layout_boxed" inherit_id="web.external_layout_boxed">
+        <xpath expr="//div[hasclass('o_boxed_header')]" position="replace">
+            <div class="row">
+                <img src="/trend_report_layout/static/src/img/header.png"/>
+            </div>
+        </xpath>
+
+    </template>
+</odoo>
