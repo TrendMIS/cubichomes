@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_saleorder_without_layout" inherit_id="sale.report_saleorder" primary="True"/>
+
+    <template id="report_saleorder_pro_forma_without_layout" inherit_id="sale.report_saleorder_pro_forma" primary="True"/>
+
+    <record id="action_report_saleorder_without_layout" model="ir.actions.report">
+        <field name="name">Quotation / Order without layout</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">trend_report_layout.report_saleorder_without_layout</field>
+        <field name="report_file">trend_report_layout.report_saleorder_without_layout</field>
+        <field name="print_report_name">(object.state in ('draft', 'sent') and 'Quotation - %s' % (object.name)) or 'Order - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="action_report_pro_forma_invoice_without_layout" model="ir.actions.report">
+        <field name="name">PRO-FORMA Invoice without layout</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">trend_report_layout.report_saleorder_pro_forma_without_layout</field>
+        <field name="report_file">trend_report_layout.report_saleorder_pro_forma_without_layout</field>
+        <field name="print_report_name">'PRO-FORMA - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_type">report</field>
+        <field name="groups_id" eval="[(4, ref('sale.group_proforma_sales'))]"/>
+    </record>
+
+</odoo>
