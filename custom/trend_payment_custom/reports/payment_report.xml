@@ -4,6 +4,11 @@
         <xpath expr="//div[hasclass('mb-4')]" position="attributes">
             <attribute name="style">line-height: 300%;</attribute>
         </xpath>
+    </template>
 
+    <template id="report_payment_receipt_hide_table" inherit_id="account.report_payment_receipt_document">
+        <xpath expr="//table" position="attributes">
+            <attribute name="t-if">invoices</attribute>
+        </xpath>
     </template>
 </odoo>
