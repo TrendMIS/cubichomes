@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-6">
                     Project:
-                    <span t-field="o.project_id"/>
+                    <span t-if="o.project_id" t-field="o.project_id"/>
                 </div>
             </div>
         </xpath>
