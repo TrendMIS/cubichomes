@@ -81,8 +81,13 @@
             </xpath>
 
             <xpath expr="//span[@t-field='line.quantity']" position="replace">
-                <span t-esc="line.quantity * 100"/>
-                <span>%</span>
+                <t t-if="o.is_percentage">
+                    <span t-esc="line.quantity * 100"/>
+                    <span>%</span>
+                </t>
+                <t t-else="">
+                     <span t-esc="line.quantity"/>
+                </t>
             </xpath>
 
             <t t-if="len(payments_vals) > 0" position="replace">
