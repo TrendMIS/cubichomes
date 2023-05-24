@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="dynamic_filter_template_attribute_icons"
+                  inherit_id="website_sale.dynamic_filter_template_product_product_borderless_1">
+
+            <xpath expr="//div[hasclass('o_carousel_product_card_body')]" position="inside">
+                <t t-set="bedroom" t-value="record.attribute_line_ids.filtered(lambda l:l.attribute_id.is_bedrooms)"/>
+                <t t-set="bathroom" t-value="record.attribute_line_ids.filtered(lambda l:l.attribute_id.is_bathrooms)"/>
+                <div>
+                    <t t-if="bedroom">
+                        <i class="fa fa-bed"/> <span t-esc="bedroom.value_ids.name"/>
+                    </t>
+
+                    <t t-if="bathroom">
+                        <i style="margin-left:5px;" class="fa fa-bath"/> <span t-esc="bathroom.value_ids.name"/>
+                    </t>
+
+                    <i style="margin-left:5px;" class="fa fa-map-o"/> <span t-esc="record.area"/> <span
+                        style="font-size:10px">Sq Ft</span>
+                </div>
+            </xpath>
+
+        </template>
+
+        <template id="product_price_label"
+                  inherit_id="website_sale.price_dynamic_filter_template_product_product">
+            <xpath expr="//del" position="after">
+                <span style="font-size: 15px; height: 20px; color: white !important; background: green; border-radius: 4px; display: inline-flex;">
+                    Estimated Price
+                </span>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>
