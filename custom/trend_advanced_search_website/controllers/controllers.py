@@ -27,7 +27,7 @@ class AdvancedSearch(Website):
         if product_attribute:
             values.update(product_attribute)
         values['min_area'] = 10
-        values['max_area'] = 1000000
+        values['max_area'] = 10000
         return http.request.render("website.homepage", values)
 
 
