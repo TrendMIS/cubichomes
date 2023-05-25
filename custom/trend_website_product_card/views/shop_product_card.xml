@@ -26,7 +26,7 @@
         <template id="product_card_shop_price_label"
                   inherit_id="website_sale.products_item">
             <xpath expr="//div[hasclass('product_price')]" position="inside">
-                <span style="font-size: 15px; height: 20px; color: white !important; background: green; border-radius: 4px; display: inline-flex;">
+                <span style="font-size: 13px;">
                     Estimated Price
                 </span>
             </xpath>
