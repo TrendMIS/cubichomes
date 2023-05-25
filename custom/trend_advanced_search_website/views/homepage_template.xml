@@ -59,15 +59,15 @@
                                                 </h6>
                                             </div>
 
-                                            <div class="carousel-content o_colored_level o_grid_item g-col-lg-6 o_cc o_cc4 rounded g-height-11 col-lg-6"
-                                                 style="background-color: rgba(0, 0, 0, 0); background-image: linear-gradient(135deg, rgba(210, 153, 50, 0.65) 0%, rgba(24, 21, 98, 0.78) 67%); grid-area: 1 / 1 / 12 / 7; z-index: 1; border-radius: 25px !important;">
+                                            <div class="carousel-content o_colored_level o_grid_item o_cc o_cc4 rounded g-height-10 g-col-lg-5 col-lg-5"
+                                                 style="background-color: rgba(0, 0, 0, 0); background-image: linear-gradient(135deg, rgba(210, 153, 50, 0.65) 0%, rgba(24, 21, 98, 0.78) 67%); grid-area: 1 / 1 / 11 / 6; z-index: 1; border-radius: 25px !important;">
                                                 <h2 style="text-align: center;">
                                                     <br/>
                                                 </h2>
-
                                                 <form method="POST" action="/shop">
-                                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                                    <section class="s_embed_code o_colored_level pt0 pb24 text-center"
+                                                    <input type="hidden" name="csrf_token"
+                                                           t-att-value="request.csrf_token()"/>
+                                                    <section class="s_embed_code o_colored_level pb24 text-center pt4"
                                                              data-snippet="s_embed_code" data-name="Embed Code"
                                                              style="background-image: none;">
                                                         <div class="s_embed_code_embedded o_not_editable container">
@@ -83,17 +83,17 @@
                                                             </t>
                                                             <br/><br/>
 
-                                                            <h5>Bathrooms</h5>
-                                                            <t t-foreach="bathrooms" t-as="bath">
-                                                                <input class="form-check-input" type="radio"
-                                                                       t-att-value="bath.id"
-                                                                       t-attf-id="bath_id-{{bath.id}}"
-                                                                       name="bathroom_id"/>
-                                                                <label t-attf-for="bath_id-{{bath.id}}">
-                                                                    <span t-esc="bath.name"/>
-                                                                </label> &amp;nbsp;
-                                                            </t>
-                                                            <br/><br/>
+                                                            <!--                                                            <h5>Bathrooms</h5>-->
+                                                            <!--                                                            <t t-foreach="bathrooms" t-as="bath">-->
+                                                            <!--                                                                <input class="form-check-input" type="radio"-->
+                                                            <!--                                                                       t-att-value="bath.id"-->
+                                                            <!--                                                                       t-attf-id="bath_id-{{bath.id}}"-->
+                                                            <!--                                                                       name="bathroom_id"/>-->
+                                                            <!--                                                                <label t-attf-for="bath_id-{{bath.id}}">-->
+                                                            <!--                                                                    <span t-esc="bath.name"/>-->
+                                                            <!--                                                                </label> &amp;nbsp;-->
+                                                            <!--                                                            </t>-->
+                                                            <!--                                                            <br/><br/>-->
 
                                                             <h5>Floors</h5>
                                                             <t t-foreach="floors" t-as="floor">
@@ -111,20 +111,35 @@
                                                             <input type="hidden" name="min_area"/>
                                                             <input type="hidden" name="max_area"/>
                                                             <input type="range" multiple="multiple"
+                                                                   style="width:50%"
                                                                    onchange="OnchangeRange()"
                                                                    t-attf-class="form-range range-with-input"
                                                                    t-att-min="'%f' % min_area"
                                                                    t-att-max="'%f' % max_area"
                                                                    t-att-value="'%f,%f' % (min_area, max_area)"/>
                                                             <script>
-                                                                let min_area = document.querySelector('input[name="min_area"]');
-                                                                let max_area = document.querySelector('input[name="max_area"]');
+                                                                let min_area =
+                                                                document.querySelector('input[name="min_area"]');
+                                                                let max_area =
+                                                                document.querySelector('input[name="max_area"]');
                                                                 function OnchangeRange(){
-                                                                    min_area.value = document.querySelector('.multirange-min').textContent;
-                                                                    max_area.value = document.querySelector('.multirange-max').textContent;
+                                                                min_area.value =
+                                                                document.querySelector('.multirange-min').textContent;
+                                                                max_area.value =
+                                                                document.querySelector('.multirange-max').textContent;
                                                                 }
 
                                                             </script>
+                                                            <style>
+                                                                input.w-100 {
+                                                                    width:50% !important;
+                                                                }
+
+                                                                small > span.mt-1 {
+                                                                    margin-left:80px;
+                                                                    margin-right:80px;
+                                                                }
+                                                            </style>
 
                                                             <h5>Design Style</h5>
                                                             <select class="designstyle" id="style" name="style">
