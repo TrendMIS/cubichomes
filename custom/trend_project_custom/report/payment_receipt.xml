@@ -2,11 +2,9 @@
 
     <template id="report_cheque_receipt_document" inherit_id="account.report_payment_receipt_document">
         <xpath expr="//div[hasclass('row')]" position="after">
-            <div class="row">
-                <div class="col-6">
-                    Project:
-                    <span t-if="o.project_id" t-field="o.project_id"/>
-                </div>
+            <div class="col-12">
+                Project:
+                <span t-if="o.project_id" t-field="o.project_id"/>
             </div>
         </xpath>
 
