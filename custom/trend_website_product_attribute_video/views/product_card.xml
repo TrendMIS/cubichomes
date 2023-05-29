@@ -56,10 +56,10 @@
                 <section class="s_features o_colored_level pt0 pb0" data-snippet="s_features" data-name="Features"
                          style="background-image: none;">
                     <div class="container">
-                        <div class="row">
+                        <div style="text-align: center;">
                             <t t-if="bedroom">
-                                <div class="text-center o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
-                                     style="z-index: 1; grid-area: 2 / 2 / 6 / 4;">
+                                <div class="o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
+                                     style="z-index: 1; grid-area: 2 / 2 / 6 / 4;display: inline-block;">
                                     <img src="https://trendmis-cubichomes.odoo.com/web/image/1299-9de51757/sleeping%20%282%29.png?access_token=e31c7d65-54ff-41ed-8741-496298684ea3"
                                          alt=""
                                          class="rounded m-3 img img-fluid o_we_custom_image o_animate o_anim_slide_in o_anim_from_left o_animate_both_scroll o_visible o_animated"
@@ -73,8 +73,8 @@
                                 </div>
                             </t>
                             <t t-if="bathroom">
-                                <div class="text-center o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
-                                     style="z-index: 3; grid-area: 2 / 6 / 6 / 8;">
+                                <div class="o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
+                                     style="z-index: 3; grid-area: 2 / 6 / 6 / 8;display: inline-block;">
                                     <img src="/web/image/1808-d973a4c3/bath%20%281%29.png?access_token=3bd0c72c-f8fa-49d9-91db-e9e207f25a39"
                                          alt=""
                                          class="rounded m-3 img img-fluid o_we_custom_image o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_top o_visible o_animated"
