@@ -5,9 +5,9 @@
 
             <div class="row" position="replace">
                 <xpath expr="//h2" position="move"/>
-                <div class="row" name="dates_and_reference">
+                <div name="dates_and_reference">
                     <div t-if="o.invoice_date">
-                        <strong>Invoice Date:</strong>
+                        <b>Invoice Date:</b>
                         <span t-field="o.invoice_date_due"/>
                     </div>
                     <div t-if="o.invoice_date_due">
@@ -15,7 +15,7 @@
                         <span t-field="o.invoice_date_due"/>
                     </div>
                     <div t-if="o.payment_reference">
-                        <strong>Ref:</strong>
+                        <strong>Reference:</strong>
                         <span t-field="o.payment_reference"/>
                     </div>
                     <br/>
@@ -104,6 +104,7 @@
             <xpath expr="//td[contains(@t-attf-class, 'text-end')]" position="attributes">
                 <attribute name="t-attf-class" add="text-center" separator=" "/>
             </xpath>
+            <xpath expr="//div[@id='informations']" position="replace"/>
         </template>
 
         <template id="l10n_ae_report_invoice_document_inherit" inherit_id="l10n_ae.report_invoice_document">
