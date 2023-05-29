@@ -56,10 +56,10 @@
                 <section class="s_features o_colored_level pt0 pb0" data-snippet="s_features" data-name="Features"
                          style="background-image: none;">
                     <div class="container">
-                        <div class="row o_grid_mode" style="" data-row-count="5">
+                        <div style="text-align: center;">
                             <t t-if="bedroom">
-                                <div class="text-center o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
-                                     style="z-index: 1; grid-area: 2 / 2 / 6 / 4;">
+                                <div class="o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
+                                     style="z-index: 1; grid-area: 2 / 2 / 6 / 4;display: inline-block;">
                                     <img src="https://trendmis-cubichomes.odoo.com/web/image/1299-9de51757/sleeping%20%282%29.png?access_token=e31c7d65-54ff-41ed-8741-496298684ea3"
                                          alt=""
                                          class="rounded m-3 img img-fluid o_we_custom_image o_animate o_anim_slide_in o_anim_from_left o_animate_both_scroll o_visible o_animated"
@@ -73,8 +73,8 @@
                                 </div>
                             </t>
                             <t t-if="bathroom">
-                                <div class="text-center o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
-                                     style="z-index: 3; grid-area: 2 / 6 / 6 / 8;">
+                                <div class="o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
+                                     style="z-index: 3; grid-area: 2 / 6 / 6 / 8;display: inline-block;">
                                     <img src="/web/image/1808-d973a4c3/bath%20%281%29.png?access_token=3bd0c72c-f8fa-49d9-91db-e9e207f25a39"
                                          alt=""
                                          class="rounded m-3 img img-fluid o_we_custom_image o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_top o_visible o_animated"
@@ -88,7 +88,7 @@
                             </t>
                             <t t-if="garage">
                                 <div class="text-center o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
-                                     style="z-index: 5; grid-area: 2 / 10 / 6 / 12;">
+                                     style="z-index: 5; grid-area: 2 / 10 / 6 / 12;display: inline-block;">
                                     <img src="https://trendmis-cubichomes.odoo.com/web/image/1295-80101e7d/garage.png?access_token=16bbd445-a27e-460b-96af-7af45666b818"
                                          alt=""
                                          class="rounded m-3 img img-fluid o_we_custom_image o_animate o_anim_slide_in o_anim_from_right o_animate_both_scroll o_visible o_animated"
@@ -102,7 +102,7 @@
                             </t>
                             <t t-if="floors">
                                 <div class="text-center o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
-                                     style="z-index: 4; grid-area: 2 / 8 / 6 / 10;">
+                                     style="z-index: 4; grid-area: 2 / 8 / 6 / 10;display: inline-block;">
                                     <img src="https://trendmis-cubichomes.odoo.com/web/image/1298-4168615d/underfloor-heating.png?access_token=ad795332-b267-4aad-9e79-b02b458a9c09"
                                          alt=""
                                          class="rounded m-3 img img-fluid o_we_custom_image o_animate o_anim_bounce_in o_visible o_animated"
@@ -117,7 +117,7 @@
                             </t>
                             <t t-if="product.area > 0">
                                 <div class="text-center o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2 o_animate o_anim_bounce_in o_animate_both_scroll o_visible o_animated"
-                                     style="z-index: 2; grid-area: 2 / 4 / 6 / 6; animation-duration: 2s; animation-name: o_anim_bounce_in; visibility: visible; animation-play-state: running;">
+                                     style="z-index: 2; grid-area: 2 / 4 / 6 / 6; animation-duration: 2s; animation-name: o_anim_bounce_in; visibility: visible; animation-play-state: running;display: inline-block;">
                                     <img src="https://trendmis-cubichomes.odoo.com/web/image/1296-1bda4689/meter%20%281%29.png?access_token=0f18ab04-345f-4684-b538-a5ccf5ab3045"
                                          alt="" class="rounded m-3 img img-fluid o_we_custom_image"
                                          data-original-id="1287"
