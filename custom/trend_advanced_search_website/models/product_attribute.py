@@ -10,3 +10,4 @@ class ProductAttribute(models.Model):
     is_bedrooms = fields.Boolean()
     is_bathrooms = fields.Boolean()
     is_floors = fields.Boolean()
+    is_garage = fields.Boolean()
