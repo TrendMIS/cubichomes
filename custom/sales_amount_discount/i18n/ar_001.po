@@ -107,7 +107,7 @@ msgstr ""
 #. module: sales_amount_discount
 #: model_terms:ir.ui.view,arch_db:sales_amount_discount.report_invoice_document_inherit
 msgid "Invoice"
-msgstr ""
+msgstr "فاتورة"
 
 #. module: sales_amount_discount
 #: model:ir.model.fields,field_description:sales_amount_discount.field_account_bank_statement_line__is_percentage
@@ -130,7 +130,7 @@ msgstr "عنصر اليومية"
 #. module: sales_amount_discount
 #: model_terms:ir.ui.view,arch_db:sales_amount_discount.report_invoice_document_inherit
 msgid "Proforma Invoice"
-msgstr ""
+msgstr "فاتورة"
 
 #. module: sales_amount_discount
 #: model:ir.model.fields,field_description:sales_amount_discount.field_account_bank_statement_line__project_id
