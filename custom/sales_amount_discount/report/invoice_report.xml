@@ -7,7 +7,7 @@
                 <xpath expr="//h2" position="move"/>
                 <div name="dates_and_reference">
                     <div t-if="o.invoice_date">
-                        <b>Invoice Date:</b>
+                        <strong>Invoice Date:</strong>
                         <span t-field="o.invoice_date_due"/>
                     </div>
                     <div t-if="o.invoice_date_due">
