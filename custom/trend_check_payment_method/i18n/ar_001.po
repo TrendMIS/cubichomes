@@ -1,0 +1,79 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* trend_check_payment_method
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-07 11:01+0000\n"
+"PO-Revision-Date: 2023-06-07 11:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: trend_check_payment_method
+#: model:ir.actions.report,print_report_name:trend_check_payment_method.action_check_report
+msgid ""
+"\n"
+"            'Cheque - %s - %s' % (object.check_no, (object.bank_id and object.bank_id.name or ''))\n"
+"        "
+msgstr ""
+
+#. module: trend_check_payment_method
+#: model:ir.model.fields,field_description:trend_check_payment_method.field_account_payment__bank_id
+msgid "Bank"
+msgstr "البنك"
+
+#. module: trend_check_payment_method
+#: model:ir.model.fields,field_description:trend_check_payment_method.field_account_payment__check_date
+msgid "Check Date"
+msgstr "تاريخ استحقاق الشيك"
+
+#. module: trend_check_payment_method
+#: model:ir.model.fields,field_description:trend_check_payment_method.field_account_payment__check_image
+msgid "Check Image"
+msgstr ""
+
+#. module: trend_check_payment_method
+#: model:ir.model.fields,field_description:trend_check_payment_method.field_account_payment__check_no
+msgid "Check No."
+msgstr "رقم الشيك"
+
+#. module: trend_check_payment_method
+#: model:account.payment.method,name:trend_check_payment_method.account_payment_method_check_inbound
+msgid "Checks"
+msgstr "شيكات"
+
+#. module: trend_check_payment_method
+#: model_terms:ir.ui.view,arch_db:trend_check_payment_method.report_cheque_receipt_document
+msgid "Cheque Bank:"
+msgstr "البنك مصدر الشيك:"
+
+#. module: trend_check_payment_method
+#: model_terms:ir.ui.view,arch_db:trend_check_payment_method.report_cheque_receipt_document
+msgid "Cheque Date:"
+msgstr "تاريخ الشيك:"
+
+#. module: trend_check_payment_method
+#: model_terms:ir.ui.view,arch_db:trend_check_payment_method.report_cheque_receipt_document
+msgid "Cheque Number:"
+msgstr "رقم الشيك:"
+
+#. module: trend_check_payment_method
+#: model:ir.model,name:trend_check_payment_method.model_account_payment_method
+msgid "Payment Methods"
+msgstr "طرق الدفع "
+
+#. module: trend_check_payment_method
+#: model:ir.actions.report,name:trend_check_payment_method.action_check_report
+msgid "Payment Receipt with Cheque Details"
+msgstr ""
+
+#. module: trend_check_payment_method
+#: model:ir.model,name:trend_check_payment_method.model_account_payment
+msgid "Payments"
+msgstr "الدفعات"
