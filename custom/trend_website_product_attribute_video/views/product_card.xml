@@ -80,7 +80,7 @@
                             <t t-if="bathroom">
                                 <div class="o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
                                      style="z-index: 3; grid-area: 2 / 6 / 6 / 8;display: inline-block;">
-                                    <img src="/web/image/1808-d973a4c3/bath%20%281%29.png?access_token=3bd0c72c-f8fa-49d9-91db-e9e207f25a39"
+                                    <img src="/web/image/2724-5fb699fe/bath%20%281%29.png"
                                          alt=""
                                          class="rounded m-3 img img-fluid o_we_custom_image o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_top o_visible o_animated"
                                          style="animation-name: o_anim_slide_in_down; visibility: visible; animation-play-state: running;"
