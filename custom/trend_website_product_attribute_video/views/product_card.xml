@@ -16,8 +16,8 @@
                         <div class="container">
                             <div class="row align-items-center">
                                 <div class="col-lg-6 pt16 pb16 o_colored_level">
-                                    <h2>Take a tour in the Muailah Shopping Center</h2>
-                                    <p>Watch this video to take a tour in the muailah shopping center to go deeper in
+                                    <h2>Take a tour in <span t-esc="product.name"/></h2>
+                                    <p>Watch this video to take a tour in <span t-esc="product.name"/> to go deeper in
                                         the
                                         detail of the plan.</p>
                                     <p class="o_default_snippet_text"><br/></p>
