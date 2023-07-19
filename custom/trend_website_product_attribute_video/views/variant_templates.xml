@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="product_attributes_simple_inherit" inherit_id="website_sale.product">
+            <xpath expr="//div[@id='product_attributes_simple']" position="after">
+
+                <t t-if="product.layout_plan_ids">
+                    <div>
+                        <t t-set="count" t-value="0"/>
+                        <table class="text-muted">
+                            <tr>
+                                <td>
+                                    <span>Layout/Plan</span>:
+                                    <t t-foreach="product.layout_plan_ids" t-as="layout">
+                                        <t t-set="count" t-value="count + 1"/>
+                                        <span t-field="layout.name"/>
+                                         <t t-if="count &lt; len(product.layout_plan_ids)">
+                                             <span>
+                                                 <strong>-</strong>
+                                             </span>
+                                         </t>
+                                        <t t-else="">
+                                            <span></span>
+                                        </t>
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

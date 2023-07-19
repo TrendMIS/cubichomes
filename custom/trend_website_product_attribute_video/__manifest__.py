@@ -10,7 +10,10 @@
 
     # always loaded
     'data': [
+        'security/ir.model.access.csv',
         'views/product_card.xml',
         'views/product_template.xml',
+        'views/layout_plan.xml',
+        'views/variant_templates.xml',
     ],
 }
