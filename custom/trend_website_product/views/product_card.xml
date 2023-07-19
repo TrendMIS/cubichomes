@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="product_price_inherit_key_specs" inherit_id="website_sale.product_price">
+            <xpath expr="//div[@id='product_unavailable']" position="before">
+                <t t-set="bedroom" t-value="product.attribute_line_ids.filtered(lambda l:l.attribute_id.is_bedrooms)"/>
+                <t t-set="bathroom"
+                   t-value="product.attribute_line_ids.filtered(lambda l:l.attribute_id.is_bathrooms)"/>
+                <t t-set="garage" t-value="product.attribute_line_ids.filtered(lambda l:l.attribute_id.is_garage)"/>
+                <t t-set="floors" t-value="product.attribute_line_ids.filtered(lambda l:l.attribute_id.is_floors)"/>
+                <t t-if="bedroom or bathroom or garage or floors">
+                    <section class="s_title o_colored_level pb0 pt16" data-vcss="001" data-snippet="s_title"
+                         data-name="Title" style="background-image: none;">
+                    <div class="s_allow_columns container">
+                        <div class="row align-items-start" style="--grid-item-padding-y:-20px;">
+                            <div class="g- g-height-2 o_colored_level col-lg-12 rounded pb0 pt8 o_animate o_anim_flip_in_y o_animate_both_scroll o_visible o_animated"
+                                 style="animation-duration: 2s; border-radius: 11px !important; animation-name: o_anim_flip_in_y; visibility: visible; animation-play-state: running;">
+                                <h1 style="text-align: center;">
+                                    <span style="font-size: 36px;">
+                                        <font class="text-o-color-1">KEY SPECS</font>
+                                    </span>
+                                    <br/>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </t>
+
+                <section class="s_features o_colored_level pt0 pb0" data-snippet="s_features" data-name="Features"
+                         style="background-image: none;">
+                    <div class="container">
+                        <div style="text-align: center;">
+                            <t t-if="bedroom">
+                                <div class="o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
+                                     style="z-index: 1; grid-area: 2 / 2 / 6 / 4;display: inline-block;">
+                                    <img src="https://trendmis-cubichomes.odoo.com/web/image/1299-9de51757/sleeping%20%282%29.png?access_token=e31c7d65-54ff-41ed-8741-496298684ea3"
+                                         alt=""
+                                         class="rounded m-3 img img-fluid o_we_custom_image o_animate o_anim_slide_in o_anim_from_left o_animate_both_scroll o_visible o_animated"
+                                         data-original-id="1286"
+                                         data-original-src="/web/image/1286-a34f894c/sleeping%20%282%29.png"
+                                         data-mimetype="image/png" data-resize-width="64" loading="eager"
+                                         style="animation-duration: 2s; animation-name: o_anim_slide_in_left; visibility: visible; animation-play-state: running;"
+                                         data-bs-original-title="" title="" aria-describedby="tooltip496661"/>
+                                    <h3><span t-esc="bedroom.value_ids.name"/></h3>
+                                    <p>Beds</p>
+                                </div>
+                            </t>
+                            <t t-if="bathroom">
+                                <div class="o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
+                                     style="z-index: 3; grid-area: 2 / 6 / 6 / 8;display: inline-block;">
+                                    <img src="/web/image/2724-5fb699fe/bath%20%281%29.png"
+                                         alt=""
+                                         class="rounded m-3 img img-fluid o_we_custom_image o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_top o_visible o_animated"
+                                         style="animation-name: o_anim_slide_in_down; visibility: visible; animation-play-state: running;"
+                                         data-original-id="1807"
+                                         data-original-src="/web/image/1807-8c104270/bath%20%281%29.png"
+                                         data-mimetype="image/png" data-resize-width="64" loading="eager"/>
+                                    <h3><span t-esc="bathroom.value_ids.name"/></h3>
+                                    <p>Baths</p>
+                                </div>
+                            </t>
+                            <t t-if="garage">
+                                <div class="text-center o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
+                                     style="z-index: 5; grid-area: 2 / 10 / 6 / 12;display: inline-block;">
+                                    <img src="https://trendmis-cubichomes.odoo.com/web/image/1295-80101e7d/garage.png?access_token=16bbd445-a27e-460b-96af-7af45666b818"
+                                         alt=""
+                                         class="rounded m-3 img img-fluid o_we_custom_image o_animate o_anim_slide_in o_anim_from_right o_animate_both_scroll o_visible o_animated"
+                                         data-original-id="1294" data-original-src="/web/image/1294-3983eb92/garage.png"
+                                         data-mimetype="image/png" data-resize-width="64" loading="eager"
+                                         style="animation-duration: 2s; animation-name: o_anim_slide_in_right; visibility: visible; animation-play-state: running;"
+                                         data-bs-original-title="" title="" aria-describedby="tooltip599267"/>
+                                    <h3><span t-esc="garage.value_ids.name"/></h3>
+                                    <p>Garage</p>
+                                </div>
+                            </t>
+                            <t t-if="floors">
+                                <div class="text-center o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2"
+                                     style="z-index: 4; grid-area: 2 / 8 / 6 / 10;display: inline-block;">
+                                    <img src="https://trendmis-cubichomes.odoo.com/web/image/1298-4168615d/underfloor-heating.png?access_token=ad795332-b267-4aad-9e79-b02b458a9c09"
+                                         alt=""
+                                         class="rounded m-3 img img-fluid o_we_custom_image o_animate o_anim_bounce_in o_visible o_animated"
+                                         data-original-id="1292"
+                                         data-original-src="/web/image/1292-fff0bb4e/underfloor-heating.png"
+                                         data-mimetype="image/png" data-resize-width="64" loading="eager"
+                                         style="animation-duration: 2s; animation-name: o_anim_bounce_in; animation-play-state: running; visibility: visible;"
+                                         data-bs-original-title="" title="" aria-describedby="tooltip94471"/>
+                                    <h3><span t-esc="floors.value_ids.name"/></h3>
+                                    <p>Floors</p>
+                                </div>
+                            </t>
+                            <t t-if="product.area > 0">
+                                <div class="text-center o_colored_level o_grid_item g-col-lg-2 g-height-4 col-lg-2 o_animate o_anim_bounce_in o_animate_both_scroll o_visible o_animated"
+                                     style="z-index: 2; grid-area: 2 / 4 / 6 / 6; animation-duration: 2s; animation-name: o_anim_bounce_in; visibility: visible; animation-play-state: running;display: inline-block;">
+                                    <img src="https://trendmis-cubichomes.odoo.com/web/image/1296-1bda4689/meter%20%281%29.png?access_token=0f18ab04-345f-4684-b538-a5ccf5ab3045"
+                                         alt="" class="rounded m-3 img img-fluid o_we_custom_image"
+                                         data-original-id="1287"
+                                         data-original-src="/web/image/1287-00c3b12e/meter%20%281%29.png"
+                                         data-mimetype="image/png" data-resize-width="64" loading="eager"
+                                         style="transform: translateX(-3.1%) translateY(25%);" data-bs-original-title=""
+                                         title="" aria-describedby="tooltip621804"/>
+                                    <h3><span t-esc="product.area"/></h3>
+                                    <p>Sq. ft.</p>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </section>
+
+            </xpath>
+        </template>
+
+
+    </data>
+</odoo>
