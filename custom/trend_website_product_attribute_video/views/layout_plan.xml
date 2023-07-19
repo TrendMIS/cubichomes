@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="layout_plan_view_tree" model="ir.ui.view">
+            <field name="name">layout.plan.view.tree</field>
+            <field name="model">layout.plan</field>
+            <field name="arch" type="xml">
+                <tree string="Layout Plan" editable="bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="layout_plan_action" model="ir.actions.act_window">
+            <field name="name">Layout Plan</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">layout.plan</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+                id="layout_plan_menu"
+                name="Layout Plan"
+                parent="website_sale.menu_catalog"
+                action="layout_plan_action"
+                sequence="6"
+        />
+
+    </data>
+</odoo>

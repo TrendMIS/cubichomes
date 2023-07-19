@@ -8,7 +8,7 @@ class ProductTemplate(models.Model):
 
     video_url = fields.Char()
     video_code = fields.Char(compute='_compute_video_code')
-
+    layout_plan_ids = fields.Many2many('layout.plan')
     @api.depends('video_url')
     def _compute_video_code(self):
         for rec in self:
