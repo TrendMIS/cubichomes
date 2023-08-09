@@ -153,54 +153,53 @@
                 <div class="oe_structure oe_empty oe_structure_not_nearest mt16">
                     <t t-if="product.product_gallery_ids">
                         <section
-                                class="s_image_gallery o_colored_level s_image_gallery_indicators_arrows_boxed pt0 o_slideshow s_image_gallery_cover"
+                                class="s_image_gallery o_colored_level pt0 o_slideshow s_image_gallery_cover s_image_gallery_indicators_arrows_boxed s_image_gallery_show_indicators"
                                 data-vcss="001" data-columns="3"
-                                style="overflow: hidden; background-image: none; height: 480px;"
-                                data-snippet="s_image_gallery">
-                            <div class="container-fluid">
-                                <div id="slideshow_1690463969698"
-                                     class="carousel slide"
+                                style="overflow: hidden; background-image: none; height: 528px;"
+                                data-snippet="s_image_gallery" data-name="Image Gallery">
+                            <div class="container">
+                                <div id="slideshow_1690461504538" class="carousel slide"
                                      data-bs-ride="carousel"
                                      data-bs-interval="3000"
                                      style="margin: 0 12px;">
-                                    <div class="carousel-inner"
-                                         style="padding: 0;">
-                                        <t t-foreach="product.product_gallery_ids"
-                                           t-as="image">
+                                    <div class="carousel-inner" style="padding: 0;">
+                                        <t t-foreach="product.product_gallery_ids" t-as="image">
                                             <div t-attf-class="carousel-item #{'active ' if image_index == 0 else ''}">
                                                 <img t-if="image.image"
                                                      style="width: 100% !important; border-radius: 28px !important;"
                                                      class="img img-fluid d-block"
                                                      t-att-src="image_data_uri(image.image)"
                                                      data-name="Image"
-                                                     data-index="0"
+                                                     t-attf-data-index="{{image_index}}"
                                                      loading="lazy"/>
                                             </div>
                                         </t>
-
                                     </div>
 
+                                    <ul class="carousel-indicators">
+                                        <t t-foreach="product.product_gallery_ids" t-as="image">
+                                            <li data-bs-target="#slideshow_1690461504538"
+                                                t-attf-data-bs-slide-to="{{image_index}}"
+                                                t-attf-class="#{'active ' if image_index == 1 else ''}"
+                                                t-attf-aria-current="#{'true ' if image_index == 1 else ''}"
+                                                t-attf-style="background-image: url({{'data:image/png;base64,%s' % image.image.decode('utf-8')}});">
+                                            </li>
+                                        </t>
+                                    </ul>
+
                                     <a class="carousel-control-prev o_we_no_overlay o_not_editable"
-                                       href="#slideshow_1690463969698"
-                                       data-bs-slide="prev"
-                                       aria-label="Previous" title="Previous"
-                                       contenteditable="false">
-                                        <span class="fa fa-chevron-left fa-2x text-white"
-                                              contenteditable="false"/>
-                                        <span class="visually-hidden">
-                                            Previous</span>
+                                       href="#slideshow_1690461504538" data-bs-slide="prev" aria-label="Previous"
+                                       title="Previous">
+                                        <span class="fa fa-chevron-left fa-2x text-white"></span>
+                                        <span class="visually-hidden">Previous</span>
                                     </a>
                                     <a class="carousel-control-next o_we_no_overlay o_not_editable"
-                                       href="#slideshow_1690463969698"
-                                       data-bs-slide="next" aria-label="Next"
-                                       title="Next" contenteditable="false">
-                                        <span class="fa fa-chevron-right fa-2x text-white"
-                                              contenteditable="false"/>
-                                        <span class="visually-hidden">
-                                            Next</span>
+                                       href="#slideshow_1690461504538" data-bs-slide="next" aria-label="Next"
+                                       title="Next">
+                                        <span class="fa fa-chevron-right fa-2x text-white"></span>
+                                        <span class="visually-hidden">Next</span>
                                     </a>
-                                </div>
-                            </div>
+                                </div></div>
                         </section>
                     </t>
                     <t t-if="layout_plan">
