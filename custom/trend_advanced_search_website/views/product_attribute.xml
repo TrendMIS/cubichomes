@@ -17,6 +17,8 @@
                                 <field name="is_bathrooms"/>
                                 <field name="is_floors"/>
                                 <field name="is_garage"/>
+                                <field name="is_house_use"/>
+                                <field name="is_layout_plan"/>
                             </group>
                         </group>
                     </page>
