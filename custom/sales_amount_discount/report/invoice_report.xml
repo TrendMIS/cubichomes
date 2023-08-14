@@ -5,6 +5,9 @@
 
             <div class="row" position="replace">
                 <xpath expr="//h2" position="move"/>
+                <t t-if="'ar' in lang">
+                    <link rel="stylesheet" href="/sales_amount_discount/static/src/css/style.css"/>
+                </t>
                 <div name="dates_and_reference">
                     <div t-if="o.invoice_date">
                         <strong>Invoice Date:</strong>
@@ -78,8 +81,9 @@
                     <span>Quantity</span>
                 </t>
             </xpath>
+            <span t-if="o.company_id.country_id.code == 'AE' and o.move_type in ['out_invoice', 'out_refund']" position="replace"/>
             <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'" position="replace">
-                <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">Invoice</span>
+                <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">TAX Invoice</span>
             </span>
 
             <xpath expr="//th[@name='th_quantity']" position="attributes">

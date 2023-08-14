@@ -192,3 +192,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:sales_amount_discount.field_account_tax__name
 msgid "Tax Name"
 msgstr "اسم الضريبة"
+
+#. module: sales_amount_discount
+#: model_terms:ir.ui.view,arch_db:sales_amount_discount.report_invoice_document_inherit
+msgid "TAX Invoice"
+msgstr "فاتورة ضريبية"
