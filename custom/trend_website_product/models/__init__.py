@@ -2,4 +2,6 @@
 
 from . import product_template
 from . import layout_plan
+from . import product_attribute_value
+
 
