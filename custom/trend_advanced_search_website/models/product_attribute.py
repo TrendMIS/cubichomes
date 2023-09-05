@@ -11,3 +11,5 @@ class ProductAttribute(models.Model):
     is_bathrooms = fields.Boolean()
     is_floors = fields.Boolean()
     is_garage = fields.Boolean()
+    is_house_use = fields.Boolean()
+    is_layout_plan = fields.Boolean()

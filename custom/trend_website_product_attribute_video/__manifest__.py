@@ -6,7 +6,7 @@
 
     'author': "Trend Development Team",
     # any module necessary for this one to work correctly
-    'depends': ['trend_advanced_search_website'],
+    'depends': ['website_sale'],
 
     # always loaded
     'data': [

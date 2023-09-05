@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="product_attribute_image_layout_website_inherit" model="ir.ui.view">
+            <field name="name">product.attribute.image.layout.website.inherit</field>
+            <field name="model">product.attribute</field>
+            <field name="inherit_id" ref="product.product_attribute_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[@name='attribute_values']/field[@name='value_ids']/tree" position="inside">
+                    <field name="layout_icon" widget="binary"
+                           groups="base.group_no_one"
+                           attrs="{'column_invisible': [('parent.is_layout_plan', '=', False)]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

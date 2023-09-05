@@ -1,0 +1,9 @@
+@font-face {
+    font-family: majalla;
+    src: url('/sales_amount_discount/static/src/fonts/majalla.ttf');
+}
+
+body {
+    font-family: majalla;
+    font-size: 200%; important!;
+}
