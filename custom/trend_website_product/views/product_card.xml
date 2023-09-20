@@ -166,7 +166,7 @@
                                         <t t-foreach="product.product_gallery_ids" t-as="image">
                                             <div t-attf-class="carousel-item #{'active ' if image_index == 0 else ''}">
                                                 <img t-if="image.image"
-                                                     style="width: 100% !important; border-radius: 28px !important;"
+                                                     style="width: 100% !important; border-radius: 28px !important;object-fit:contain;"
                                                      class="img img-fluid d-block"
                                                      t-att-src="image_data_uri(image.image)"
                                                      data-name="Image"
