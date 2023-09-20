@@ -14,7 +14,7 @@
                 <t t-set="styles" t-value="product.attribute_line_ids.filtered(lambda l:l.attribute_id.is_styles)"/>
                 <t t-set="layout_plan"
                    t-value="product.attribute_line_ids.filtered(lambda l:l.attribute_id.is_layout_plan)"/>
-                <t t-if="bedroom or bathroom or garage or floors">
+                <t t-if="bedroom or bathroom or garage or floors or house_use or styles or product.area > 0">
                     <section class="s_title o_colored_level pb0 pt16" data-vcss="001" data-snippet="s_title"
                              data-name="Title" style="background-image: none;">
                         <div class="s_allow_columns container">
@@ -23,7 +23,7 @@
                                      style="animation-duration: 2s; border-radius: 11px !important; animation-name: o_anim_flip_in_y; visibility: visible; animation-play-state: running;">
                                     <h1 style="text-align: center;">
                                         <span style="font-size: 24px;">
-                                            <font class="text-o-color-1">KEY SPECS</font>
+                                            <font class="text-o-color-1">key Specs</font>
                                         </span>
                                         <br/>
                                     </h1>
@@ -35,7 +35,7 @@
                 <section class="s_features o_colored_level pt0 pb0" data-snippet="s_features" data-name="Features"
                          style="background-image: none;">
                     <div class="container">
-                        <div class="row">
+                        <div class="row" style="justify-content: center;align-items: center;display: flex;">
                             <t t-if="bedroom">
                                 <div class="text-center o_colored_level col-lg-2"
                                      style="z-index: 1; grid-area: 2 / 2 / 6 / 4;display: inline-block;">
@@ -226,7 +226,7 @@
                         <section class="s_features o_colored_level pt0 pb0" data-snippet="s_features"
                                  style="background-image: none;" data-name="Layout line 1">
                             <div class="container">
-                                <div class="row">
+                                <div class="row" style="justify-content: center;align-items: center;display: flex;">
                                     <t t-foreach="layout_plan.value_ids" t-as="value">
                                         <div class="text-center o_colored_level col-lg-2">
                                             <img t-att-src="image_data_uri(value.layout_icon)"
