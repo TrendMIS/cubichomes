@@ -23,7 +23,8 @@
                                      style="animation-duration: 2s; border-radius: 11px !important; animation-name: o_anim_flip_in_y; visibility: visible; animation-play-state: running;">
                                     <h1 style="text-align: center;">
                                         <span style="font-size: 24px;">
-                                            <font class="text-o-color-1">key Specs</font>
+                                            <font style="background-image: linear-gradient(135deg, rgb(55, 38, 73) 25%, rgb(187, 146, 81) 100%);"
+                                                  class="text-gradient o_default_snippet_text">key Specs</font>
                                         </span>
                                         <br/>
                                     </h1>
@@ -152,6 +153,24 @@
 
                 <div class="oe_structure oe_empty oe_structure_not_nearest mt16">
                     <t t-if="product.product_gallery_ids">
+                        <section class="s_title o_colored_level pb0 pt16" data-vcss="001" data-snippet="s_title"
+                                 data-name="Title" style="background-image: none;">
+                            <div class="s_allow_columns container">
+                                <div class="row align-items-start" style="--grid-item-padding-y:-20px;">
+                                    <div class="g- g-height-2 o_colored_level col-lg-12 rounded pb0 pt8 o_animate o_anim_flip_in_y o_animate_both_scroll o_visible o_animated"
+                                         style="animation-duration: 2s; border-radius: 11px !important; animation-name: o_anim_flip_in_y; visibility: visible; animation-play-state: running;">
+                                        <h1 style="text-align: center;">
+                                            <span style="font-size: 24px;">
+                                                <font style="background-image: linear-gradient(135deg, rgb(55, 38, 73) 25%, rgb(187, 146, 81) 100%);"
+                                                      class="text-gradient o_default_snippet_text">Interior
+                                                    Design</font>
+                                            </span>
+                                            <br/>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                         <section
                                 class="s_image_gallery o_colored_level pt0 o_slideshow s_image_gallery_cover s_image_gallery_indicators_arrows_boxed s_image_gallery_show_indicators"
                                 data-vcss="001" data-columns="3"
@@ -211,7 +230,8 @@
                                          style="border-radius: 11px !important;">
                                         <h1 style="text-align: center;">
                                             <span style="font-size: 36px;">
-                                                <font class="text-o-color-1">
+                                                <font style="background-image: linear-gradient(135deg, rgb(55, 38, 73) 25%, rgb(187, 146, 81) 100%);"
+                                                      class="text-gradient o_default_snippet_text">
                                                     <span style="font-size: 24px;">
                                                         Layout / Plan
                                                     </span>
