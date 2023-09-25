@@ -126,23 +126,26 @@ class SaleOrderLine(models.Model):
                   'order_id.supervision_amount',
                   'order_id.design_amount')
     def _compute_price_unit(self):
-        if not self.internal_service_type or self.order_id.state == 'sale':
-            return
-        amount = self._get_service_type_amount()
-        self.price_unit = amount * (self.percentage / 100)
+        for rec in self:
+            if not rec.internal_service_type or rec.order_id.state == 'sale':
+                return
+            amount = rec._get_service_type_amount()
+            rec.price_unit = amount * (rec.percentage / 100)
 
     @api.onchange('price_unit',
                   "internal_service_type",
                   'order_id.supervision_amount',
                   'order_id.design_amount')
     def _compute_percentage(self):
-        if not self.internal_service_type or self.order_id.state == 'sale':
-            return
-        amount = self._get_service_type_amount()
-        if amount:
-            self.percentage = (self.price_unit / amount) * 100
+        for rec in self:
+            if not rec.internal_service_type or rec.order_id.state == 'sale':
+                return
+            amount = rec._get_service_type_amount()
+            if amount:
+                rec.percentage = (rec.price_unit / amount) * 100
 
     def _get_service_type_amount(self):
-        if self.internal_service_type == "design":
-            return self.order_id.design_amount
-        return self.order_id.supervision_amount
+        for rec in self:
+            if rec.internal_service_type == "design":
+                return rec.order_id.design_amount
+            return rec.order_id.supervision_amount
