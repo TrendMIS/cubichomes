@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="contact" inherit_id="base.contact" name="Forum Contact Widget">
+            <xpath expr="//address/div" position="after">
+                <div t-if="object.arabic_name and 'arabic_name' in fields"
+                     class='css_editable_mode_hidden'>
+                    <div itemprop="arabic_name" t-esc="object.arabic_name"/>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>
