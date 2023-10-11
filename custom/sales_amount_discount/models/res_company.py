@@ -3,7 +3,7 @@
 from odoo import models, fields
 
 
-class Partner(models.Model):
-    _inherit = 'res.partner'
+class Company(models.Model):
+    _inherit = 'res.company'
 
     arabic_name = fields.Char()

@@ -23,6 +23,7 @@
         'views/sale_order_inherit.xml',
         'views/account_move.xml',
         'views/res_partner.xml',
+        'views/res_company.xml',
         'report/contact.xml',
         'report/sale_quotation_inherit.xml',
         'report/invoice_report.xml',
