@@ -10,6 +10,7 @@ class SaleOrder(models.Model):
         compute='_compute_project_id',
         string='Project',
         required=False)
+    arabic_name = fields.Char(related='partner_id.arabic_name', store=True)
 
     def _compute_project_id(self):
         for rec in self:

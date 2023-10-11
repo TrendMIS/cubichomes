@@ -13,7 +13,7 @@
                         <strong>Invoice Date:</strong>
                         <span t-field="o.invoice_date_due"/>
                     </div>
-                    <div t-if="o.invoice_date_due">
+                    <div t-if="o.show_due_date_in_print">
                         <strong>Due Date:</strong>
                         <span t-field="o.invoice_date_due"/>
                     </div>
@@ -25,13 +25,25 @@
                 </div>
                 <br/>
                 <div class="row" name="addresses">
-                    <div class="col-6">
-                        <address t-field="o.partner_id"
-                                 t-options='{"widget": "contact", "fields": ["address", "name", "vat"], "no_marker": True}'/>
+                    <div class="col-6" name="partner">
+                        <t t-if="o.partner_id.lang=='ar_001'">
+                            <address t-field="o.partner_id"
+                                     t-options='{"widget": "contact", "fields": ["address", "arabic_name", "vat"], "no_marker": True}'/>
+                        </t>
+                        <t t-else="">
+                            <address t-field="o.partner_id"
+                                     t-options='{"widget": "contact", "fields": ["address", "name", "vat"], "no_marker": True}'/>
+                        </t>
                     </div>
-                    <div class="col-6">
-                        <address t-field="o.company_id"
-                                 t-options='{"widget": "contact", "fields": ["address", "name", "vat"], "no_marker": True}'/>
+                    <div class="col-6" name="company">
+                        <t t-if="o.partner_id.lang=='ar_001'">
+                            <address t-field="o.company_id"
+                                     t-options='{"widget": "contact", "fields": ["address", "arabic_name", "vat"], "no_marker": True}'/>
+                        </t>
+                        <t t-else="">
+                            <address t-field="o.company_id"
+                                     t-options='{"widget": "contact", "fields": ["address", "name", "vat"], "no_marker": True}'/>
+                        </t>
                     </div>
                 </div>
                 <br/>
@@ -81,7 +93,8 @@
                     <span>Quantity</span>
                 </t>
             </xpath>
-            <span t-if="o.company_id.country_id.code == 'AE' and o.move_type in ['out_invoice', 'out_refund']" position="replace"/>
+            <span t-if="o.company_id.country_id.code == 'AE' and o.move_type in ['out_invoice', 'out_refund']"
+                  position="replace"/>
             <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'" position="replace">
                 <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">TAX Invoice</span>
             </span>
@@ -138,7 +151,7 @@
                 <t t-set="sequence" t-value="1"/>
             </xpath>
             <xpath expr="//th[@name='th_description']" position="before">
-                <th name="th_sequence" class="text-center">Seq</th>
+                <th name="th_sequence" class="text-center">Serial Number</th>
             </xpath>
             <xpath expr="//td[@name='account_invoice_line_name']" position="before">
                 <td name="td_seq">

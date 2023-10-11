@@ -13,6 +13,13 @@
                     <attribute name="label">TRN</attribute>
                 </xpath>
 
+                <xpath expr="//h1" position="after">
+                    <h3>
+                        <field name="arabic_name" placeholder="The name in arabic........."/>
+                    </h3>
+                </xpath>
+
+
             </field>
         </record>
     </data>

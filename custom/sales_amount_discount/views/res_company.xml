@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="res_company_arabic_name" model="ir.ui.view">
+            <field name="name">res.company.arabic.name</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//h1" position="after">
+                    <h3>
+                        <field name="arabic_name" placeholder="The name in arabic........."/>
+                    </h3>
+                </xpath>
+
+
+            </field>
+        </record>
+    </data>
+</odoo>
