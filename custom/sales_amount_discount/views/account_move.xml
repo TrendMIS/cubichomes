@@ -11,6 +11,9 @@
                     <field name="project_id"/>
                     <field name="is_percentage" invisible="1" />
                 </xpath>
+                <xpath expr="//label[@for='journal_id']" position="before">
+                    <field name="show_due_date_in_print"/>
+                </xpath>
                 <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='discount']" position="before">
                     <field name="discount_amount"/>
                     <field name="full_discount" string="Disc.%"/>

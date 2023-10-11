@@ -10,6 +10,7 @@ class AccountMove(models.Model):
         string='Is_percentage',
         compute='_compute_is_percentage',
         required=False)
+    show_due_date_in_print = fields.Boolean(default=False, help='show in print')
 
     @api.depends('invoice_line_ids')
     def _compute_is_percentage(self):

@@ -13,7 +13,7 @@
                         <strong>Invoice Date:</strong>
                         <span t-field="o.invoice_date_due"/>
                     </div>
-                    <div t-if="o.invoice_date_due">
+                    <div t-if="o.show_due_date_in_print">
                         <strong>Due Date:</strong>
                         <span t-field="o.invoice_date_due"/>
                     </div>
