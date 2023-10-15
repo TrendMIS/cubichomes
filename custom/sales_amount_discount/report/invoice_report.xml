@@ -37,11 +37,11 @@
                     </div>
                     <div class="col-6" name="company">
                         <t t-if="o.partner_id.lang=='ar_001'">
-                            <address t-field="o.company_id"
+                            <address t-field="o.company_id.partner_id"
                                      t-options='{"widget": "contact", "fields": ["address", "arabic_name", "vat"], "no_marker": True}'/>
                         </t>
                         <t t-else="">
-                            <address t-field="o.company_id"
+                            <address t-field="o.company_id.partner_id"
                                      t-options='{"widget": "contact", "fields": ["address", "name", "vat"], "no_marker": True}'/>
                         </t>
                     </div>
@@ -151,7 +151,7 @@
                 <t t-set="sequence" t-value="1"/>
             </xpath>
             <xpath expr="//th[@name='th_description']" position="before">
-                <th name="th_sequence" class="text-center">Serial Number</th>
+                <th name="th_sequence" class="text-center">No.</th>
             </xpath>
             <xpath expr="//td[@name='account_invoice_line_name']" position="before">
                 <td name="td_seq">
