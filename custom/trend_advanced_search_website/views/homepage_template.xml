@@ -7,7 +7,8 @@
                     <section class="s_carousel_wrapper" data-vxml="001" data-snippet="s_carousel" data-name="Carousel"
                              style="">
                         <div class="s_carousel s_carousel_default carousel slide o_background_video"
-                             data-bs-interval="10000" id="myCarousel1676819863031" style="background-image: none;"
+                             data-bs-interval="10000"
+                             id="myCarousel1676819863031" style="background-image: none;"
                              data-bg-video-src="https://www.youtube.com/embed/fBHzYEiYafU?rel=0&amp;autoplay=1&amp;mute=1&amp;enablejsapi=1&amp;controls=0&amp;loop=1&amp;playlist=fBHzYEiYafU&amp;fs=0&amp;modestbranding=1">
                             <ol class="carousel-indicators o_we_no_overlay d-none">
                                 <li data-bs-slide-to="0" data-bs-target="#myCarousel1676819863031" aria-current="true"
@@ -27,15 +28,17 @@
                                                  style="z-index: 4; grid-area: 3 / 8 / 10 / 12;"><img
                                                     src="https://trendmis-cubichomes.odoo.com/web/image/548-4b7606c2/3D-Building-Plan.png"
                                                     alt=""
-                                                    class="img img-fluid mx-auto o_we_custom_image o_animate o_animate_both_scroll o_anim_flip_in_y"
+                                                    class="img img-fluid mx-auto o_we_custom_image o_animate o_animate_both_scroll o_anim_flip_in_y o_visible"
                                                     data-original-id="528"
                                                     data-original-src="/web/image/528-4ae97537/3D-Building-Plan.png"
                                                     data-mimetype="image/png" data-resize-width="600"
-                                                    data-bs-original-title="" title="" aria-describedby="tooltip286920"
-                                                    loading="eager" style=""/>​
+                                                    data-bs-original-title=""
+                                                    title="" aria-describedby="tooltip286920" loading="eager" style=""/>
+                                                ​
                                                 <font class="text-gradient"
                                                       style="background-image: linear-gradient(135deg, rgb(255, 204, 51) 0%, rgb(226, 51, 255) 100%);">
-                                                    ​</font>
+                                                    ​
+                                                </font>
                                             </div>
                                             <div class="o_grid_item o_colored_level g-col-lg-6 g-height-1 col-lg-6"
                                                  style="z-index: 5; grid-area: 1 / 7 / 2 / 13;">
@@ -43,7 +46,8 @@
                                                     <strong>
                                                         <font class="text-gradient"
                                                               style="background-image: linear-gradient(135deg, rgb(255, 204, 51) 0%, rgb(255, 255, 255) 35%, rgb(231, 172, 52) 59%, rgb(255, 255, 255) 87%);">
-                                                            Find your dream home plan!</font>
+                                                            Find your dream home plan!
+                                                        </font>
                                                     </strong>
                                                 </h1>
                                                 <div class="oe_unremovable container"/>
@@ -81,7 +85,8 @@
                                                                     <span t-esc="bed.name"/>
                                                                 </label> &amp;nbsp;
                                                             </t>
-                                                            <br/><br/>
+                                                            <br/>
+                                                            <br/>
 
                                                             <!--                                                            <h5>Bathrooms</h5>-->
                                                             <!--                                                            <t t-foreach="bathrooms" t-as="bath">-->
@@ -105,13 +110,13 @@
                                                                     <span t-esc="floor.name"/>
                                                                 </label> &amp;nbsp;
                                                             </t>
-                                                            <br/><br/>
+                                                            <br/>
+                                                            <br/>
 
                                                             <h5>Total Built-up Area</h5>
                                                             <input type="hidden" name="min_area"/>
                                                             <input type="hidden" name="max_area"/>
-                                                            <input type="range" multiple="multiple"
-                                                                   style="width:50%"
+                                                            <input type="range" multiple="multiple" style="width:50%"
                                                                    onchange="OnchangeRange()"
                                                                    t-attf-class="form-range range-with-input"
                                                                    t-att-min="'%f' % min_area"
@@ -135,7 +140,7 @@
                                                                 width:50% !important;
                                                                 }
 
-                                                                small > span.mt-1 {
+                                                                small &gt; span.mt-1 {
                                                                 margin-left:80px;
                                                                 margin-right:80px;
                                                                 }
@@ -168,7 +173,8 @@
                         </div>
                     </section>
                     <section class="s_title o_colored_level pt0 pb0" data-vcss="001" data-snippet="s_title"
-                             data-name="Title" style="background-image: none; position: relative;"
+                             data-name="Title"
+                             style="background-image: none; position: relative;"
                              data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Zigs/03&quot;,&quot;flip&quot;:[&quot;y&quot;]}">
                         <div class="o_we_shape o_web_editor_Zigs_03"
                              style="background-image: url(&quot;/web_editor/shape/web_editor/Zigs/03.svg?c1=%23171562&amp;flip=y&quot;); background-position: 50% 100%;"/>
@@ -196,10 +202,98 @@
                             <div class="css_non_editable_mode_hidden">
                                 <div class="missing_option_warning alert alert-info rounded-0 fade show d-none d-print-none o_default_snippet_text">
                                     Your Dynamic Snippet will be displayed here... This message is displayed because you
-                                    did not provided both a filter and a template to use.<br/>
+                                    did not provided both a filter and a template to use.
+                                    <br/>
                                 </div>
                             </div>
                             <div class="dynamic_snippet_template"/>
+                        </div>
+                    </section>
+                    <section class="a_numbers pt24 pb24 o_colored_level" data-vcss="001" data-snippet="s_title"
+                             style="background-color: rgb(255, 255, 255); background-image: none; position: relative;"
+                             data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Zigs/03&quot;,&quot;flip&quot;:[&quot;y&quot;]}"
+                             data-oe-model="ir.ui.view" data-oe-id="2878" data-oe-field="arch"
+                             data-oe-xpath="/data/xpath/div/section[5]" data-name="Custom Title">
+                        <div class="o_we_shape o_web_editor_Zigs_03" style=""/>
+                        <div class="container">
+                            <div class="row">
+                                <div id="a_number" class="col-lg-3 text-center pt24 pb24 a_number1 o_colored_level"
+                                     style="">
+                                    <span class="display-4">
+                                        <font class="text-o-color-1">
+                                            <span style="font-weight: bolder; font-size: 48px;">125</span>
+                                        </font>
+                                    </span>
+                                    <br/>
+                                    <h6>Completed Projects</h6>
+                                    <p>
+                                        <img src="/web/image/5285-f0cce3a5/completed-task%20%281%29.png" alt=""
+                                             class="img img-fluid o_we_custom_image" data-original-id="5284"
+                                             data-original-src="/web/image/5284-f16809ea/completed-task%20%281%29.png"
+                                             data-mimetype="image/png" data-resize-width="128" data-bs-original-title=""
+                                             title="" aria-describedby="tooltip352620" style="width: 25% !important;"
+                                             loading="lazy"/>
+                                        <br/>
+                                    </p>
+                                </div>
+                                <div id="a_number" class="col-lg-3 text-center pt24 pb24 a_number2 o_colored_level"
+                                     style="">
+                                    <span class="display-4">
+                                        <span style="font-weight: bolder; font-size: 48px;">
+                                            <font class="text-o-color-1">100</font>
+                                        </span>
+                                    </span>
+                                    <br/>
+                                    <h6>Happy Clients</h6>
+                                    <p>
+                                        <img src="/web/image/5278-508a49b6/costumer.png" alt=""
+                                             class="img img-fluid o_we_custom_image" data-original-id="5278"
+                                             data-original-src="/web/image/5278-508a49b6/costumer.png"
+                                             data-mimetype="image/png" data-bs-original-title="" title=""
+                                             aria-describedby="tooltip452768" style="width: 25% !important;"
+                                             loading="lazy"/>
+                                        <br/>
+                                    </p>
+                                </div>
+                                <div id="a_number" class="col-lg-3 text-center pt24 pb24 a_number3 o_colored_level"
+                                     style="">
+                                    <span class="display-4">
+                                        <font class="text-o-color-1">
+                                            <span style="font-weight: bolder; font-size: 48px;">8</span>
+                                        </font>
+                                    </span>
+                                    <br/>
+                                    <h6>Awards Win</h6>
+                                    <p>
+                                        <img src="/web/image/5268-dcbcfce8/illus.png" alt=""
+                                             class="img img-fluid o_we_custom_image" data-original-id="5268"
+                                             data-original-src="/web/image/5268-dcbcfce8/illus.png"
+                                             data-mimetype="image/png" style="width: 25% !important;"
+                                             data-bs-original-title="" title="" aria-describedby="tooltip115125"
+                                             loading="lazy"/>
+                                        <br/>
+                                    </p>
+                                </div>
+                                <div id="a_number" class="col-lg-3 text-center pt24 pb24 a_number4 o_colored_level"
+                                     style="">
+                                    <span class="display-4">
+                                        <span style="font-weight: bolder; font-size: 48px;">
+                                            <font class="text-o-color-1">10</font>
+                                        </span>
+                                    </span>
+                                    <br/>
+                                    <h6>Years Experience</h6>
+                                    <p>
+                                        <img src="/web/image/5286-5d927fd7/experience%20%281%29.png" alt=""
+                                             class="img img-fluid o_we_custom_image" data-original-id="5277"
+                                             data-original-src="/web/image/5277-344d9b10/experience%20%281%29.png"
+                                             data-mimetype="image/png" data-resize-width="128" data-bs-original-title=""
+                                             title="" aria-describedby="tooltip985704" style="width: 25% !important;"
+                                             loading="lazy"/>
+                                        <br/>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <section class="s_text_image pt32 pb32 o_colored_level o_cc o_cc4" data-snippet="s_text_image"
@@ -208,14 +302,31 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 pb16 o_colored_level border pt40"
                                      style="border-width: 1px !important; border-color: rgb(246, 246, 246) !important;">
-                                    <p style="text-align: center;"><strong><span style="font-size: 24px;">Design Your
-                                        Own Home</span></strong><br/><span style="font-size: 12px;">CUSTOMIZATION
-                                        SERVICES</span><br/><br/>Need a special design? Our designers can create fully
-                                        specified blueprints from a simple sketch or written description.<br/><br/>
-                                        Getting a quote is fast, easy, and FREE!<br/><br/></p>
                                     <p style="text-align: center;">
-                                        <a href="#" class="btn btn-primary mb-2" data-bs-original-title="" title="">
-                                            Request a quote​</a>
+                                        <strong>
+                                            <span style="font-size: 24px;">Design Your
+                                                Own Home
+                                            </span>
+                                        </strong>
+                                        <br/>
+                                        <span style="font-size: 12px;">CUSTOMIZATION
+                                            SERVICES
+                                        </span>
+                                        <br/>
+                                        <br/>Need a special design? Our designers can create fully
+                                        specified blueprints from a simple sketch or written description.
+                                        <br/>
+                                        <br/>
+                                        Getting a quote is fast, easy, and FREE!
+                                        <br/>
+                                        <br/>
+                                    </p>
+                                    <p style="text-align: center;">
+                                        <a href="/request-a-quote" class="mb-2 btn btn-primary"
+                                           data-bs-original-title=""
+                                           title="">
+                                            Request a quote​
+                                        </a>
                                         <br/>
                                     </p>
                                 </div>
@@ -223,27 +334,11 @@
                                     <img src="/web/image/976-10446c06/architect1.jpg" alt=""
                                          class="img img-fluid mx-auto o_we_custom_image" data-original-id="969"
                                          data-original-src="/web/image/969-93976dfe/architect1.jpg"
-                                         data-mimetype="image/jpeg" data-resize-width="690" data-bs-original-title=""
-                                         title="" aria-describedby="tooltip154370" loading="lazy" style=""/>
+                                         data-mimetype="image/jpeg"
+                                         data-resize-width="690" data-bs-original-title="" title=""
+                                         aria-describedby="tooltip154370" loading="lazy" style=""/>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                    <section class="s_title o_colored_level pt0 pb0" data-vcss="001" data-snippet="s_title"
-                             data-name="Title" style="background-image: none; position: relative;"
-                             data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Zigs/03&quot;,&quot;flip&quot;:[&quot;y&quot;]}">
-                        <div class="o_we_shape o_web_editor_Zigs_03"
-                             style="background-image: url(&quot;/web_editor/shape/web_editor/Zigs/03.svg?c1=%23171562&amp;flip=y&quot;); background-position: 50% 100%;"/>
-                        <div class="s_allow_columns container">
-                            <h2 style="text-align: center;">
-                                <font class="text-o-color-1">
-                                    <strong>Specific Category plans</strong>
-                                </font>
-                                <font style="font-size: 62px;" class="text-o-color-1">
-                                    <strong/>
-                                </font>
-                                <br/>
-                            </h2>
                         </div>
                     </section>
                     <section data-snippet="s_dynamic_snippet"
@@ -258,7 +353,8 @@
                             <div class="css_non_editable_mode_hidden">
                                 <div class="missing_option_warning alert alert-info rounded-0 fade show d-none d-print-none o_default_snippet_text">
                                     Your Dynamic Snippet will be displayed here... This message is displayed because you
-                                    did not provided both a filter and a template to use.<br/>
+                                    did not provided both a filter and a template to use.
+                                    <br/>
                                 </div>
                             </div>
                             <div class="dynamic_snippet_template"/>
@@ -280,20 +376,25 @@
                     </section>
                     <section class="s_features pb48 o_colored_level o_cc o_cc4 pt0"
                              data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Floats/12&quot;}"
-                             data-snippet="s_features" data-name="Features" style="background-image: none;">
+                             data-snippet="s_features"
+                             data-name="Features" style="background-image: none;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-4 pt32 pb32 text-center o_colored_level">
                                     <img src="/web/image/975-36fc7460/drafting.png" alt=""
                                          class="rounded m-3 img img-fluid o_we_custom_image" data-original-id="974"
                                          data-original-src="/web/image/974-eaa402e8/drafting.png"
-                                         data-mimetype="image/png" data-resize-width="64" loading="lazy" style=""/>
-                                    <h4><span class="oe-tabs" style="width: 36.0156px;"/>​Customize your home
-                                        plan<br/></h4>
+                                         data-mimetype="image/png"
+                                         data-resize-width="64" loading="lazy" style=""/>
+                                    <h4><span class="oe-tabs" style="width: 1.9875px;"/>​Customize your home
+                                        plan
+                                        <br/>
+                                    </h4>
                                     <p>
                                         <span style="font-size: 14px;">We will work with you to make small or large
                                             changes so you get the house design of your dreams. Tailor your house
-                                            blueprints with our modification service.</span>
+                                            blueprints with our modification service.
+                                        </span>
                                     </p>
                                     <p>Call us now</p>
                                 </div>
@@ -301,12 +402,14 @@
                                     <img src="/web/image/977-b60b6139/money-bag.png" alt=""
                                          class="rounded m-3 img img-fluid o_we_custom_image" data-original-id="972"
                                          data-original-src="/web/image/972-cea74b29/money-bag.png"
-                                         data-mimetype="image/png" data-resize-width="64" loading="lazy" style=""/>
+                                         data-mimetype="image/png"
+                                         data-resize-width="64" loading="lazy" style=""/>
                                     <h4>Stay in budget / low price guarantee</h4>
                                     <p>
                                         <span style="font-size: 14px;">Get a Cost to Build report for any house plan. We
                                             also offer a low price guarantee for home plans and will beat the
-                                            competition’s regularly published price by 5%.</span>
+                                            competition’s regularly published price by 5%.
+                                        </span>
                                     </p>
                                     <p>
                                         <span style="font-size: 14px;">call us now</span>
@@ -319,11 +422,14 @@
                                          data-original-src="/web/image/971-15b5a09f/help%20%281%29.png"
                                          data-mimetype="image/png" data-resize-width="64" loading="lazy" style=""/>
                                     <h4>
-                                        Get personalized help&amp;nbsp;<br/></h4>
+                                        Get personalized help&amp;nbsp;
+                                        <br/>
+                                    </h4>
                                     <p>
                                         <span style="font-size: 14px;">Shopping for house designs can feel overwhelming.
                                             Our experienced house blueprint experts are ready to help you find the house
-                                            plans that are just right for you.</span>
+                                            plans that are just right for you.
+                                        </span>
                                     </p>
                                     <p>Call us now</p>
                                 </div>
@@ -340,132 +446,140 @@
                             <div class="css_non_editable_mode_hidden">
                                 <div class="missing_option_warning alert alert-info rounded-0 fade show d-none d-print-none o_default_snippet_text">
                                     Your Dynamic Snippet will be displayed here... This message is displayed because you
-                                    did not provided both a filter and a template to use.<br/>
+                                    did not provided both a filter and a template to use.
+                                    <br/>
                                 </div>
                             </div>
                             <div class="dynamic_snippet_template"/>
                         </div>
                     </section>
-                    <section
-                            class="s_references o_colored_level o_cc o_cc1 pb0 d-md-block d-none o_snippet_mobile_invisible pt32"
-                            data-snippet="s_references" data-name="References" style="background-image: none;"
-                            data-invisible="1">
-                        <div class="container">
-                            <h2 style="text-align: center;">
-                                <strong>
-                                    <font class="text-o-color-1">Our&amp;nbsp;Clients</font>
-                                </strong>
-                            </h2>
-                            <p style="text-align: center;">We are in good company.</p>
-                            <div class="row">
-                                <div class="col-lg-2 pb16 o_colored_level pt0">
-                                    <img src="/web/image/1040-689759db/10.jpg" alt=""
-                                         class="img img-fluid mx-auto o_we_custom_image" data-original-id="1025"
-                                         data-original-src="/web/image/1025-1c70f663/10.jpg" data-mimetype="image/jpeg"
-                                         data-resize-width="181" data-bs-original-title="" title=""
-                                         aria-describedby="tooltip549688" loading="lazy"
-                                         style="transform: translateX(4.4%) translateY(5.2%) scaleX(0.79) scaleY(0.79); animation-play-state: paused; transition: none 0s ease 0s;"/>
+                    <section class="s_quotes_carousel_wrapper o_colored_level" data-vcss="001" data-snippet="s_title"
+                             data-name="Title" style="background-image: none;"
+                             data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Zigs/03&quot;,&quot;flip&quot;:[&quot;y&quot;]}">
+                        <div class="s_quotes_carousel s_carousel_default carousel slide o_cc o_cc2"
+                             data-bs-interval="10000"
+                             id="myQuoteCarousel745473" style="background-image: none;">
+                            <ol class="carousel-indicators o_we_no_overlay">
+
+                                <li data-bs-slide-to="0" data-bs-target="#myQuoteCarousel745473" class="active"/>
+
+                                <li data-bs-target="#myQuoteCarousel745473" data-bs-slide-to="1" aria-current="true"/>
+                            </ol>
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item pt80 pb80 o_colored_level oe_img_bg o_bg_img_center active"
+                                     style="background-image: url(&quot;/web/image/5300-cfada903/analog-landscape-city-with-buildings.jpg&quot;); background-position: 50% 50%; position: relative;"
+                                     data-name="Slide"
+                                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/18&quot;,&quot;flip&quot;:[],&quot;animated&quot;:&quot;true&quot;}"
+                                     data-original-id="5293"
+                                     data-original-src="/web/image/5293-02375be2/analog-landscape-city-with-buildings.jpg"
+                                     data-mimetype="image/jpeg" data-resize-width="1920">
+                                    <div class="o_we_shape o_web_editor_Origins_18 o_we_animated" style=""/>
+                                    <div class="container">
+                                        <blockquote class="s_blockquote s_blockquote_classic blockquote w-50 mx-auto"
+                                                    data-name="Blockquote">
+                                            <i class="fa fa-quote-left rounded float-start s_blockquote_icon fa-1x bg-o-color-1"
+                                               data-bs-original-title="" title="" aria-describedby="tooltip921396"/>
+                                            <div class="s_blockquote_content o_cc1" style="background-image: none;">
+                                                <p>Through this website I can get a house plan with the type and
+                                                    specifications
+                                                    I want very easily, without a complicated process to be able to find
+                                                    information on the house plan we want.
+                                                    <br/>
+                                                </p>
+                                                <footer class="blockquote-footer">
+                                                    <img src="/web/image/website.s_quotes_carousel_demo_image_4"
+                                                         class="s_blockquote_avatar img rounded-circle me-2" alt=""
+                                                         loading="lazy" style=""/>
+                                                    <span class="s_blockquote_author">
+                                                        <b>Faisal abdelaziz&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            <img src="/web/image/5297-0d28a874/star%20%282%29.png"
+                                                                 alt=""
+                                                                 class="img img-fluid o_we_custom_image"
+                                                                 data-original-id="5297"
+                                                                 data-original-src="/web/image/5297-0d28a874/star%20%282%29.png"
+                                                                 data-mimetype="image/png" data-bs-original-title=""
+                                                                 title=""
+                                                                 aria-describedby="tooltip832552"
+                                                                 style="transform: translateX(12.5%) translateY(-4.7%) scaleX(0.43) scaleY(0.43);"
+                                                                 loading="lazy"/>4.6
+
+                                                        </b>
+                                                    </span>
+                                                </footer>
+                                            </div>
+                                        </blockquote>
+                                    </div>
                                 </div>
-                                <div class="col-lg-2 pb16 o_colored_level pt0">
-                                    <img src="/web/image/1041-8b925033/awqaf-sharjah.jpg" alt=""
-                                         class="img img-fluid mx-auto o_we_custom_image" data-original-id="1026"
-                                         data-original-src="/web/image/1026-039bdb8e/awqaf-sharjah.jpg"
-                                         data-mimetype="image/jpeg" data-resize-width="186" data-bs-original-title=""
-                                         title="" aria-describedby="tooltip207672"
-                                         style="transform: translateX(5.6%) translateY(-20.8%) scaleX(0.58) scaleY(0.58);"
-                                         loading="lazy"/>
+                                <div class="carousel-item pt80 pb80 o_colored_level oe_img_bg o_bg_img_center"
+                                     style="background-image: url(&quot;/web/image/5301-cfada903/analog-landscape-city-with-buildings.jpg&quot;); background-position: 50% 50%; position: relative;"
+                                     data-name="Slide"
+                                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/18&quot;,&quot;flip&quot;:[],&quot;animated&quot;:&quot;true&quot;}"
+                                     data-original-id="5293"
+                                     data-original-src="/web/image/5293-02375be2/analog-landscape-city-with-buildings.jpg"
+                                     data-mimetype="image/jpeg" data-resize-width="1920">
+                                    <div class="o_we_shape o_web_editor_Origins_18 o_we_animated" style=""/>
+                                    <div class="container">
+                                        <blockquote class="s_blockquote s_blockquote_classic blockquote w-50 mx-auto"
+                                                    data-name="Blockquote">
+                                            <i class="fa fa-quote-left rounded float-start s_blockquote_icon fa-1x bg-o-color-1"
+                                               data-bs-original-title="" title="" aria-describedby="tooltip921396"/>
+                                            <div class="s_blockquote_content o_cc1" style="background-image: none;">
+                                                <p>By looking for information about what kind of house plan we want, we
+                                                    managed
+                                                    to get the house plan we wanted very quickly, and directly connected
+                                                    with
+                                                    cubic&amp;nbsp;to be able to ask about the details, very helpful!
+                                                    <br/>
+                                                </p>
+                                                <footer class="blockquote-footer">
+                                                    <img src="/web/image/5299-1ee05980/portrait-man-blue-suit-red-tie.jpg"
+                                                         alt=""
+                                                         class="s_blockquote_avatar img rounded-circle me-2 img-fluid o_we_custom_image"
+                                                         data-original-id="5298"
+                                                         data-original-src="/web/image/5298-3dee14b8/portrait-man-blue-suit-red-tie.jpg"
+                                                         data-mimetype="image/jpeg" data-resize-width="690"
+                                                         loading="lazy"
+                                                         style=""/>
+                                                    <span class="s_blockquote_author">
+                                                        <b>Ahmed abdelaziz&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            <img src="/web/image/5297-0d28a874/star%20%282%29.png"
+                                                                 alt=""
+                                                                 class="img img-fluid o_we_custom_image"
+                                                                 data-original-id="5297"
+                                                                 data-original-src="/web/image/5297-0d28a874/star%20%282%29.png"
+                                                                 data-mimetype="image/png" data-bs-original-title=""
+                                                                 title=""
+                                                                 aria-describedby="tooltip832552"
+                                                                 style="transform: translateX(12.5%) translateY(-4.7%) scaleX(0.39) scaleY(0.39);"
+                                                                 loading="lazy"/>4.6
+
+                                                        </b>
+                                                    </span>
+                                                </footer>
+                                            </div>
+                                        </blockquote>
+                                    </div>
                                 </div>
-                                <div class="col-lg-2 o_colored_level pb0 pt0">
-                                    <img src="/web/image/1042-9b2845fe/c7a5435e901dd0806f902b1a4dc5f2a8.jpg" alt=""
-                                         class="img img-fluid mx-auto o_we_custom_image" data-original-id="1027"
-                                         data-original-src="/web/image/1027-d958978f/c7a5435e901dd0806f902b1a4dc5f2a8.jpg"
-                                         data-mimetype="image/jpeg" data-resize-width="493" loading="lazy"
-                                         style="transform: translateX(1.9%) translateY(-4.9%) scaleX(0.8) scaleY(0.8);"
-                                         data-bs-original-title="" title="" aria-describedby="tooltip516041"/>
-                                </div>
-                                <div class="col-lg-2 pb16 o_colored_level pt0">
-                                    <img src="/web/image/1043-60e84085/Gems-Education-300x210.jpg" alt=""
-                                         class="img img-fluid mx-auto o_we_custom_image" data-original-id="1028"
-                                         data-original-src="/web/image/1028-db7f00ec/Gems-Education-300x210.jpg"
-                                         data-mimetype="image/jpeg" data-resize-width="300" data-bs-original-title=""
-                                         title="" aria-describedby="tooltip18716"
-                                         style="transform: translateX(3.1%) translateY(-10.7%) scaleX(0.64) scaleY(0.64);"
-                                         loading="lazy"/>
-                                </div>
-                                <div class="col-lg-2 pb16 o_colored_level pt0">
-                                    <img src="/web/image/1044-7f824e8f/images-2.png" alt=""
-                                         class="img img-fluid mx-auto o_we_custom_image" data-original-id="1029"
-                                         data-original-src="/web/image/1029-1c03a918/images-2.png"
-                                         data-mimetype="image/png" data-resize-width="264"
-                                         style="transform: translateY(-18.1%) scaleX(0.56) scaleY(0.56);"
-                                         data-bs-original-title="" title="" aria-describedby="tooltip33544"
-                                         loading="lazy"/>
-                                </div>
-                                <div class="col-lg-2 o_colored_level pt0 pb0">
-                                    <img src="/web/image/1045-b821b565/log_-Neuro-hospital.png" alt=""
-                                         class="img img-fluid mx-auto o_we_custom_image" data-original-id="1030"
-                                         data-original-src="/web/image/1030-36356dde/log_-Neuro-hospital.png"
-                                         data-mimetype="image/png" data-resize-width="208" data-bs-original-title=""
-                                         title="" aria-describedby="tooltip480340" loading="lazy"
-                                         style="transform: translateY(13.3%) scaleX(0.75) scaleY(0.75);"/>
-                                </div>
+
                             </div>
-                        </div>
-                    </section>
-                    <section
-                            class="s_references o_colored_level o_cc o_cc1 pt0 pb0 d-md-block d-none o_snippet_mobile_invisible"
-                            data-snippet="s_references" data-name="References" style="background-image: none;"
-                            data-invisible="1">
-                        <div class="container">
-                            <h2 style="text-align: center;"/>
-                            <div class="row">
-                                <div class="col-lg-2 pb16 o_colored_level pt0">
-                                    <img src="/web/image/1046-314d1626/logo_shj_co-cob.png" alt=""
-                                         class="img img-fluid mx-auto o_we_custom_image" data-original-id="1033"
-                                         data-original-src="/web/image/1033-d688b089/logo_shj_co-cob.png"
-                                         data-mimetype="image/png" data-resize-width="208" loading="lazy" style=""/>
-                                </div>
-                                <div class="col-lg-2 pb16 o_colored_level pt0">
-                                    <img src="/web/image/1047-779dd834/logo_shj_humanitian%20%281%29.png" alt=""
-                                         class="img img-fluid mx-auto o_we_custom_image"
-                                         style="transform: translateY(-5.3%) scaleX(0.97) scaleY(0.97);"
-                                         data-original-id="1034"
-                                         data-original-src="/web/image/1034-2df3038d/logo_shj_humanitian%20%281%29.png"
-                                         data-mimetype="image/png" data-resize-width="208" loading="lazy"
-                                         data-bs-original-title="" title="" aria-describedby="tooltip843834"/>
-                                </div>
-                                <div class="col-lg-2 pb16 o_colored_level pt8">
-                                    <img src="/web/image/1055-25b86c59/logo_alhanoo.png" alt=""
-                                         class="img img-fluid mx-auto o_we_custom_image"
-                                         style="transform: translateX(1.9%) translateY(-2.7%) scaleX(0.71) scaleY(0.71);"
-                                         data-original-id="1054"
-                                         data-original-src="/web/image/1054-49522c60/logo_alhanoo.png"
-                                         data-mimetype="image/png" data-resize-width="208" loading="lazy"/>
-                                </div>
-                                <div class="col-lg-2 pb16 o_colored_level pt0">
-                                    <img src="/web/image/1049-04d472eb/thumb_5a0bfdf3eeb53.jpg" alt=""
-                                         class="img img-fluid mx-auto o_we_custom_image"
-                                         style="transform: translateX(-0.6%) translateY(11.8%) scaleX(0.89) scaleY(0.89);"
-                                         data-original-id="1036"
-                                         data-original-src="/web/image/1036-a85c798e/thumb_5a0bfdf3eeb53.jpg"
-                                         data-mimetype="image/jpeg" data-resize-width="690" loading="lazy"
-                                         data-bs-original-title="" title="" aria-describedby="tooltip602162"/>
-                                </div>
-                                <div class="col-lg-2 pb16 o_colored_level pt0">
-                                    <img src="/web/image/1050-c08e7d9b/logo_dar-al-ber.png" alt=""
-                                         class="img img-fluid mx-auto o_we_custom_image" data-original-id="1038"
-                                         data-original-src="/web/image/1038-f5c63aaa/logo_dar-al-ber.png"
-                                         data-mimetype="image/png" data-resize-width="208" data-bs-original-title=""
-                                         title="" aria-describedby="tooltip895060" style="" loading="lazy"/>
-                                </div>
-                                <div class="col-lg-2 pb16 o_colored_level pt0">
-                                    <img src="/web/image/1051-87372151/02_1.jpg" alt=""
-                                         class="img img-fluid mx-auto o_we_custom_image" data-original-id="1039"
-                                         data-original-src="/web/image/1039-07a67c24/02_1.jpg"
-                                         data-mimetype="image/jpeg" data-resize-width="120" data-bs-original-title=""
-                                         title="" aria-describedby="tooltip772380" style="width: 50% !important;"
-                                         loading="lazy"/>
-                                </div>
+                            <div class="carousel-control-prev o_not_editable o_we_no_overlay" data-bs-slide="prev"
+                                 role="img"
+                                 aria-label="Previous" title="Previous" data-bs-target="#myQuoteCarousel745473">
+                                <span class="carousel-control-prev-icon"/>
+                                <span class="visually-hidden">Previous</span>
+                            </div>
+                            <div class="carousel-control-next o_not_editable o_we_no_overlay" data-bs-slide="next"
+                                 role="img"
+                                 aria-label="Next" title="Next" data-bs-target="#myQuoteCarousel745473">
+                                <span class="carousel-control-next-icon"/>
+                                <span class="visually-hidden">Next</span>
                             </div>
                         </div>
                     </section>
@@ -495,12 +609,14 @@
                                     </h3>
                                     <h3 style="text-align: center;">
                                         <font style="background-color: rgba(0, 0, 0, 0);">for more information about our
-                                            services, projects and much more!!</font>
+                                            services, projects and much more!!
+                                        </font>
                                     </h3>
                                     <p style="text-align: center;">
                                         <u>
                                             <a href="https://cubicec.com/En/cubic.pdf" data-bs-original-title=""
-                                               title="">
+                                               title=""
+                                               target="_blank">
                                                 <font class="text-o-color-4">Download it From here</font>
                                             </a>
                                         </u>
@@ -510,7 +626,8 @@
                             </section>
                         </div>
                     </section>
-                </div></xpath>
+                </div>
+            </xpath>
         </template>
     </data>
 </odoo>
