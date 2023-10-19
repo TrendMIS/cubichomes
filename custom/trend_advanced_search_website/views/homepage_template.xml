@@ -227,7 +227,8 @@
                                     <br/>
                                     <h6>Completed Projects</h6>
                                     <p>
-                                        <img src="/trend_advanced_search_website/static/src/img/completed_task.png" alt=""
+                                        <img src="/trend_advanced_search_website/static/src/img/completed_task.png"
+                                             alt=""
                                              class="img img-fluid o_we_custom_image" data-original-id="5284"
                                              data-original-src="/web/image/5284-f16809ea/completed-task%20%281%29.png"
                                              data-mimetype="image/png" data-resize-width="128" data-bs-original-title=""
@@ -454,120 +455,135 @@
                         </div>
                     </section>
                     <section class="s_quotes_carousel_wrapper o_colored_level" data-vcss="001" data-snippet="s_title"
-                     data-name="Title" style="background-image: none;"
-                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Zigs/03&quot;,&quot;flip&quot;:[&quot;y&quot;]}">
-                <div class="s_quotes_carousel s_carousel_default carousel slide o_cc o_cc2" data-bs-interval="10000"
-                     id="myQuoteCarousel745473" style="background-image: none;">
-                    <ol class="carousel-indicators o_we_no_overlay">
+                             data-name="Title" style="background-image: none;"
+                             data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Zigs/03&quot;,&quot;flip&quot;:[&quot;y&quot;]}">
+                        <div class="s_quotes_carousel s_carousel_default carousel slide o_cc o_cc2"
+                             data-bs-interval="10000"
+                             id="myQuoteCarousel745473" style="background-image: none;">
+                            <ol class="carousel-indicators o_we_no_overlay">
 
-                        <li data-bs-slide-to="0" data-bs-target="#myQuoteCarousel745473" class="active"/>
+                                <li data-bs-slide-to="0" data-bs-target="#myQuoteCarousel745473" class="active"/>
 
-                        <li data-bs-target="#myQuoteCarousel745473" data-bs-slide-to="1" aria-current="true"/>
-                    </ol>
-                    <div class="carousel-inner">
+                                <li data-bs-target="#myQuoteCarousel745473" data-bs-slide-to="1" aria-current="true"/>
+                            </ol>
+                            <div class="carousel-inner">
 
-                        <div class="carousel-item pt80 pb80 o_colored_level oe_img_bg o_bg_img_center active"
-                             style="background-image: url(&quot;/web/image/5300-cfada903/analog-landscape-city-with-buildings.jpg&quot;); background-position: 50% 50%; position: relative;"
-                             data-name="Slide"
-                             data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/18&quot;,&quot;flip&quot;:[],&quot;animated&quot;:&quot;true&quot;}"
-                             data-original-id="5293"
-                             data-original-src="/web/image/5293-02375be2/analog-landscape-city-with-buildings.jpg"
-                             data-mimetype="image/jpeg" data-resize-width="1920">
-                            <div class="o_we_shape o_web_editor_Origins_18 o_we_animated" style=""/>
-                            <div class="container">
-                                <blockquote class="s_blockquote s_blockquote_classic blockquote w-50 mx-auto"
-                                            data-name="Blockquote">
-                                    <i class="fa fa-quote-left rounded float-start s_blockquote_icon fa-1x bg-o-color-1"
-                                       data-bs-original-title="" title="" aria-describedby="tooltip921396"/>
-                                    <div class="s_blockquote_content o_cc1" style="background-image: none;">
-                                        <p>Through this website I can get a house plan with the type and specifications
-                                            I want very easily, without a complicated process to be able to find
-                                            information on the house plan we want.
-                                            <br/>
-                                        </p>
-                                        <footer class="blockquote-footer">
-                                            <img src="/web/image/website.s_quotes_carousel_demo_image_4"
-                                                 class="s_blockquote_avatar img rounded-circle me-2" alt=""
-                                                 loading="lazy" style=""/>
-                                            <span class="s_blockquote_author">
-                                                <b>Faisal abdelaziz&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
-                                                    &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
-                                                    &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
-                                                    <img src="/web/image/5297-0d28a874/star%20%282%29.png" alt=""
-                                                         class="img img-fluid o_we_custom_image" data-original-id="5297"
-                                                         data-original-src="/web/image/5297-0d28a874/star%20%282%29.png"
-                                                         data-mimetype="image/png" data-bs-original-title="" title=""
-                                                         aria-describedby="tooltip832552"
-                                                         style="transform: translateX(12.5%) translateY(-4.7%) scaleX(0.43) scaleY(0.43);"
-                                                         loading="lazy"/>4.6
+                                <div class="carousel-item pt80 pb80 o_colored_level oe_img_bg o_bg_img_center active"
+                                     style="background-image: url(&quot;/web/image/5300-cfada903/analog-landscape-city-with-buildings.jpg&quot;); background-position: 50% 50%; position: relative;"
+                                     data-name="Slide"
+                                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/18&quot;,&quot;flip&quot;:[],&quot;animated&quot;:&quot;true&quot;}"
+                                     data-original-id="5293"
+                                     data-original-src="/web/image/5293-02375be2/analog-landscape-city-with-buildings.jpg"
+                                     data-mimetype="image/jpeg" data-resize-width="1920">
+                                    <div class="o_we_shape o_web_editor_Origins_18 o_we_animated" style=""/>
+                                    <div class="container">
+                                        <blockquote class="s_blockquote s_blockquote_classic blockquote w-50 mx-auto"
+                                                    data-name="Blockquote">
+                                            <i class="fa fa-quote-left rounded float-start s_blockquote_icon fa-1x bg-o-color-1"
+                                               data-bs-original-title="" title="" aria-describedby="tooltip921396"/>
+                                            <div class="s_blockquote_content o_cc1" style="background-image: none;">
+                                                <p>Through this website I can get a house plan with the type and
+                                                    specifications
+                                                    I want very easily, without a complicated process to be able to find
+                                                    information on the house plan we want.
+                                                    <br/>
+                                                </p>
+                                                <footer class="blockquote-footer">
+                                                    <img src="/web/image/website.s_quotes_carousel_demo_image_4"
+                                                         class="s_blockquote_avatar img rounded-circle me-2" alt=""
+                                                         loading="lazy" style=""/>
+                                                    <span class="s_blockquote_author">
+                                                        <b>Faisal abdelaziz&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            <img src="/web/image/5297-0d28a874/star%20%282%29.png"
+                                                                 alt=""
+                                                                 class="img img-fluid o_we_custom_image"
+                                                                 data-original-id="5297"
+                                                                 data-original-src="/web/image/5297-0d28a874/star%20%282%29.png"
+                                                                 data-mimetype="image/png" data-bs-original-title=""
+                                                                 title=""
+                                                                 aria-describedby="tooltip832552"
+                                                                 style="transform: translateX(12.5%) translateY(-4.7%) scaleX(0.43) scaleY(0.43);"
+                                                                 loading="lazy"/>4.6
 
-                                                </b>
-                                            </span>
-                                        </footer>
+                                                        </b>
+                                                    </span>
+                                                </footer>
+                                            </div>
+                                        </blockquote>
                                     </div>
-                                </blockquote>
+                                </div>
+                                <div class="carousel-item pt80 pb80 o_colored_level oe_img_bg o_bg_img_center"
+                                     style="background-image: url(&quot;/web/image/5301-cfada903/analog-landscape-city-with-buildings.jpg&quot;); background-position: 50% 50%; position: relative;"
+                                     data-name="Slide"
+                                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/18&quot;,&quot;flip&quot;:[],&quot;animated&quot;:&quot;true&quot;}"
+                                     data-original-id="5293"
+                                     data-original-src="/web/image/5293-02375be2/analog-landscape-city-with-buildings.jpg"
+                                     data-mimetype="image/jpeg" data-resize-width="1920">
+                                    <div class="o_we_shape o_web_editor_Origins_18 o_we_animated" style=""/>
+                                    <div class="container">
+                                        <blockquote class="s_blockquote s_blockquote_classic blockquote w-50 mx-auto"
+                                                    data-name="Blockquote">
+                                            <i class="fa fa-quote-left rounded float-start s_blockquote_icon fa-1x bg-o-color-1"
+                                               data-bs-original-title="" title="" aria-describedby="tooltip921396"/>
+                                            <div class="s_blockquote_content o_cc1" style="background-image: none;">
+                                                <p>By looking for information about what kind of house plan we want, we
+                                                    managed
+                                                    to get the house plan we wanted very quickly, and directly connected
+                                                    with
+                                                    cubic&amp;nbsp;to be able to ask about the details, very helpful!
+                                                    <br/>
+                                                </p>
+                                                <footer class="blockquote-footer">
+                                                    <img src="/web/image/5299-1ee05980/portrait-man-blue-suit-red-tie.jpg"
+                                                         alt=""
+                                                         class="s_blockquote_avatar img rounded-circle me-2 img-fluid o_we_custom_image"
+                                                         data-original-id="5298"
+                                                         data-original-src="/web/image/5298-3dee14b8/portrait-man-blue-suit-red-tie.jpg"
+                                                         data-mimetype="image/jpeg" data-resize-width="690"
+                                                         loading="lazy"
+                                                         style=""/>
+                                                    <span class="s_blockquote_author">
+                                                        <b>Ahmed abdelaziz&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                                            <img src="/web/image/5297-0d28a874/star%20%282%29.png"
+                                                                 alt=""
+                                                                 class="img img-fluid o_we_custom_image"
+                                                                 data-original-id="5297"
+                                                                 data-original-src="/web/image/5297-0d28a874/star%20%282%29.png"
+                                                                 data-mimetype="image/png" data-bs-original-title=""
+                                                                 title=""
+                                                                 aria-describedby="tooltip832552"
+                                                                 style="transform: translateX(12.5%) translateY(-4.7%) scaleX(0.39) scaleY(0.39);"
+                                                                 loading="lazy"/>4.6
+
+                                                        </b>
+                                                    </span>
+                                                </footer>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="carousel-control-prev o_not_editable o_we_no_overlay" data-bs-slide="prev"
+                                 role="img"
+                                 aria-label="Previous" title="Previous" data-bs-target="#myQuoteCarousel745473">
+                                <span class="carousel-control-prev-icon"/>
+                                <span class="visually-hidden">Previous</span>
+                            </div>
+                            <div class="carousel-control-next o_not_editable o_we_no_overlay" data-bs-slide="next"
+                                 role="img"
+                                 aria-label="Next" title="Next" data-bs-target="#myQuoteCarousel745473">
+                                <span class="carousel-control-next-icon"/>
+                                <span class="visually-hidden">Next</span>
                             </div>
                         </div>
-                        <div class="carousel-item pt80 pb80 o_colored_level oe_img_bg o_bg_img_center"
-                             style="background-image: url(&quot;/web/image/5301-cfada903/analog-landscape-city-with-buildings.jpg&quot;); background-position: 50% 50%; position: relative;"
-                             data-name="Slide"
-                             data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/18&quot;,&quot;flip&quot;:[],&quot;animated&quot;:&quot;true&quot;}"
-                             data-original-id="5293"
-                             data-original-src="/web/image/5293-02375be2/analog-landscape-city-with-buildings.jpg"
-                             data-mimetype="image/jpeg" data-resize-width="1920">
-                            <div class="o_we_shape o_web_editor_Origins_18 o_we_animated" style=""/>
-                            <div class="container">
-                                <blockquote class="s_blockquote s_blockquote_classic blockquote w-50 mx-auto"
-                                            data-name="Blockquote">
-                                    <i class="fa fa-quote-left rounded float-start s_blockquote_icon fa-1x bg-o-color-1"
-                                       data-bs-original-title="" title="" aria-describedby="tooltip921396"/>
-                                    <div class="s_blockquote_content o_cc1" style="background-image: none;">
-                                        <p>By looking for information about what kind of house plan we want, we managed
-                                            to get the house plan we wanted very quickly, and directly connected with
-                                            cubic&amp;nbsp;to be able to ask about the details, very helpful!
-                                            <br/>
-                                        </p>
-                                        <footer class="blockquote-footer">
-                                            <img src="/web/image/5299-1ee05980/portrait-man-blue-suit-red-tie.jpg"
-                                                 alt=""
-                                                 class="s_blockquote_avatar img rounded-circle me-2 img-fluid o_we_custom_image"
-                                                 data-original-id="5298"
-                                                 data-original-src="/web/image/5298-3dee14b8/portrait-man-blue-suit-red-tie.jpg"
-                                                 data-mimetype="image/jpeg" data-resize-width="690" loading="lazy"
-                                                 style=""/>
-                                            <span class="s_blockquote_author">
-                                                <b>Ahmed abdelaziz&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
-                                                    &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
-                                                    &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
-                                                    <img src="/web/image/5297-0d28a874/star%20%282%29.png" alt=""
-                                                         class="img img-fluid o_we_custom_image" data-original-id="5297"
-                                                         data-original-src="/web/image/5297-0d28a874/star%20%282%29.png"
-                                                         data-mimetype="image/png" data-bs-original-title="" title=""
-                                                         aria-describedby="tooltip832552"
-                                                         style="transform: translateX(12.5%) translateY(-4.7%) scaleX(0.39) scaleY(0.39);"
-                                                         loading="lazy"/>4.6
-
-                                                </b>
-                                            </span>
-                                        </footer>
-                                    </div>
-                                </blockquote>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="carousel-control-prev o_not_editable o_we_no_overlay" data-bs-slide="prev" role="img"
-                         aria-label="Previous" title="Previous" data-bs-target="#myQuoteCarousel745473">
-                        <span class="carousel-control-prev-icon"/>
-                        <span class="visually-hidden">Previous</span>
-                    </div>
-                    <div class="carousel-control-next o_not_editable o_we_no_overlay" data-bs-slide="next" role="img"
-                         aria-label="Next" title="Next" data-bs-target="#myQuoteCarousel745473">
-                        <span class="carousel-control-next-icon"/>
-                        <span class="visually-hidden">Next</span>
-                    </div>
-                </div>
-            </section>
+                    </section>
                     <section
                             class="s_parallax parallax s_parallax_is_fixed bg-black-50 pt48 pb48 o_colored_level o_half_screen_height"
                             data-scroll-background-ratio="1"
