@@ -16,17 +16,18 @@
                         </ol>
 
                         <div class="carousel-inner">
-                            <div class="carousel-item o_colored_level pt256 oe_img_bg o_bg_img_center pb256 active"
+                            <div class="carousel-item o_colored_level pt256 pb256 oe_img_bg o_bg_img_center active"
                                  t-attf-style="background-image: url({{ 'data:image/png;base64,%s' % product.image_1920.decode('utf-8')}}); position: relative;"
                                  data-name="Slide"
                                  data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/18&quot;,&quot;flip&quot;:[],&quot;animated&quot;:&quot;true&quot;}"
                                  data-original-id="5293"
                                  data-original-src="/web/image/5293-02375be2/analog-landscape-city-with-buildings.jpg"
                                  data-mimetype="image/jpeg" data-resize-width="1920">
-                                <div class="o_we_shape o_web_editor_Origins_18 o_we_animated"/>
+                                <div class="o_we_shape o_web_editor_Origins_18 o_we_animated"
+                                     style="background-image: url(&quot;/web_editor/shape/web_editor%2FOrigins%2F18.svg?c1=%23171562&amp;flip=x&quot;); background-position: 50% 50%;"/>
                                 <div class="oe_unremovable container">
                                     <div class="row content">
-                                        <div class="carousel-content o_colored_level col-lg-10" style="">
+                                        <div class="carousel-content o_colored_level col-lg-10">
                                             <h2>
                                                 <font class="text-o-color-3">
                                                     <span style="font-size: 36px;" t-esc="product.name"/>
@@ -39,7 +40,8 @@
                                                 <div class="text-o-color-3">
                                                     <ol class="breadcrumb text-o-color-3" style="color:white;">
                                                         <li class="breadcrumb-item o_not_editable text-o-color-3">
-                                                            <a style="color:white;" t-att-href="keep(category=0)">All Units</a>
+                                                            <a style="color:white;" t-att-href="keep(category=0)">All
+                                                                Units</a>
                                                         </li>
                                                         <li t-if="category" class="breadcrumb-item">
                                                             <a t-att-href="keep('/shop/category/%s' % slug(category), category=0)"
