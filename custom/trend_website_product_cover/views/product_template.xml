@@ -2,7 +2,7 @@
 <odoo>
     <data>
 
-        <template id="product_cover" inherit_id="website_sale.product" priority="1">
+        <template id="product_cover" inherit_id="website_sale.product" priority="1" name="Product Cover">
 
             <xpath expr="//div[@id='oe_structure_website_sale_product_1']" position="after">
                 <section class="s_carousel_wrapper o_full_screen_height" data-vxml="001" data-snippet="s_carousel"
