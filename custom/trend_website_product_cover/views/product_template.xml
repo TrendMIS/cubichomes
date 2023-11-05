@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="product_cover" inherit_id="website_sale.product" priority="1">
+
+            <xpath expr="//div[@id='oe_structure_website_sale_product_1']" position="after">
+                <section class="s_carousel_wrapper o_full_screen_height" data-vxml="001" data-snippet="s_carousel"
+                         style="margin-top:-143px;"
+                         data-name="Carousel">
+                    <div class="s_carousel s_carousel_default carousel slide" data-bs-interval="10000"
+                         id="myCarousel1697614094365" style="background-image: none;">
+                        <ol class="carousel-indicators o_we_no_overlay d-none">
+                            <li data-bs-slide-to="0" class="active" data-bs-target="#myCarousel1697614094365"
+                                aria-current="true"/>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item o_colored_level pt256 oe_img_bg o_bg_img_center pb256 active"
+                                 t-attf-style="background-image: url({{ 'data:image/png;base64,%s' % product.image_1920.decode('utf-8')}}); position: relative;"
+                                 data-name="Slide"
+                                 data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/18&quot;,&quot;flip&quot;:[],&quot;animated&quot;:&quot;true&quot;}"
+                                 data-original-id="5293"
+                                 data-original-src="/web/image/5293-02375be2/analog-landscape-city-with-buildings.jpg"
+                                 data-mimetype="image/jpeg" data-resize-width="1920">
+                                <div class="o_we_shape o_web_editor_Origins_18 o_we_animated"/>
+                                <div class="oe_unremovable container">
+                                    <div class="row content">
+                                        <div class="carousel-content o_colored_level col-lg-10" style="">
+                                            <h2>
+                                                <font class="text-o-color-3">
+                                                    <span style="font-size: 36px;" t-esc="product.name"/>
+                                                </font>
+                                            </h2>
+                                            <p>
+                                                <br/>
+                                            </p>
+                                            <p class="lead" style="margin-bottom: 0px;">
+                                                <div class="text-o-color-3">
+                                                    <ol class="breadcrumb text-o-color-3" style="color:white;">
+                                                        <li class="breadcrumb-item o_not_editable text-o-color-3">
+                                                            <a style="color:white;" t-att-href="keep(category=0)">All Units</a>
+                                                        </li>
+                                                        <li t-if="category" class="breadcrumb-item">
+                                                            <a t-att-href="keep('/shop/category/%s' % slug(category), category=0)"
+                                                               t-field="category.name"/>
+                                                        </li>
+                                                        <li class="breadcrumb-item active text-o-color-3">
+                                                            <span t-field="product.name"/>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </p>
+                                            <p class="lead" style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                            <p>&amp;nbsp;
+                                                <br/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="o_scroll_button mb-3 rounded-circle align-items-center justify-content-center mx-auto o_not_editable text-o-color-3"
+                       href="#" title="Scroll down to next section"
+                       style="background-color: rgb(3, 11, 58) !important;display:none!important;">
+                        <i class="fa fa-angle-down fa-3x"/>
+                    </a>
+                </section>
+            </xpath>
+
+        </template>
+
+
+    </data>
+</odoo>
