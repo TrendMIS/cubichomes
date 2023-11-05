@@ -2,9 +2,9 @@
 <odoo>
     <data>
 
-        <template id="product_inspiration" inherit_id="website_sale.product" priority="2" name="Product Inspiration">
+        <template id="product_inspiration" inherit_id="trend_website_product_page.product_page" priority="2" name="Product Inspiration">
 
-            <xpath expr="//div[@id='oe_structure_website_sale_product_1']" position="after">
+            <xpath expr="//div" position="inside">
                 <t t-if="product.first_inspiration_title and product.first_inspiration_ids">
                     <section class="s_title o_colored_level pb0 pt16" data-vcss="001" data-snippet="s_title"
                              style="position: relative; background-image: none;" data-name="Master room  Title">
