@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="product_section_hidden" inherit_id="website_sale.product">
+
+            <xpath expr="//div[hasclass('align-items-center')]" position="attributes">
+                <attribute name="style">display:none!important;</attribute>
+            </xpath>
+
+            <xpath expr="//div[@id='product_detail_main']/div[1]" position="attributes">
+                <attribute name="style">display:none!important;</attribute>
+            </xpath>
+
+            <xpath expr="//div[@id='product_details']/h1" position="attributes">
+                <attribute name="style">display:none!important;</attribute>
+            </xpath>
+
+            <xpath expr="//div[@id='product_details']/p" position="attributes">
+                <attribute name="style">display:none!important;</attribute>
+            </xpath>
+
+            <xpath expr="//div[@id='product_details']/form" position="attributes">
+                <attribute name="style">display:none!important;</attribute>
+            </xpath>
+
+            <xpath expr="//div[@id='o_product_terms_and_share']" position="attributes">
+                <attribute name="style">display:none!important;</attribute>
+            </xpath>
+
+        </template>
+
+
+    </data>
+</odoo>
