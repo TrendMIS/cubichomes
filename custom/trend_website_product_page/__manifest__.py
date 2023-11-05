@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Trend Website Product Cover",
+    'name': "Trend Website Product Page",
 
     'summary': """""",
 
     'author': "Trend Development Team",
     # any module necessary for this one to work correctly
-    'depends': ['trend_website_product_page'],
+    'depends': ['website_sale'],
 
     # always loaded
     'data': [
-        'views/template.xml',
+        'views/product_template.xml',
     ],
 }

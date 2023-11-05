@@ -6,7 +6,7 @@
 
     'author': "Trend Development Team",
     # any module necessary for this one to work correctly
-    'depends': ['website_sale'],
+    'depends': ['trend_website_product_page'],
 
     # always loaded
     'data': [
