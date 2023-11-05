@@ -4,7 +4,11 @@
 
         <template id="product_section_hidden" inherit_id="website_sale.product">
 
-            <xpath expr="//div[hasclass('align-items-center')]" position="attributes">
+            <xpath expr="//div[hasclass('align-items-center')]/div/div" position="attributes">
+                <attribute name="style">display:none!important;</attribute>
+            </xpath>
+
+            <xpath expr="//div[hasclass('align-items-center')]/div[2]/ol" position="attributes">
                 <attribute name="style">display:none!important;</attribute>
             </xpath>
 
