@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="product_template_facilities" model="ir.ui.view">
+            <field name="name">product.template.facilities</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//notebook" position="inside">
+
+                    <page string="Facilities" name="facilities">
+                        <group>
+                            <group>
+                                <field name="facilities_title"/>
+                            </group>
+                        </group>
+                        <field name="facilities_line_ids">
+                            <tree editable="bottom">
+                                <field name="content" required="True"/>
+                                <field name="image" widget="binary" required="True"/>
+                            </tree>
+                        </field>
+                    </page>
+
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
