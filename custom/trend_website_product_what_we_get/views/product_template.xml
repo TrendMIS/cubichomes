@@ -23,9 +23,10 @@
                             <tree editable="bottom">
                                 <field name="icon" widget="binary" required="True"/>
                                 <field name="title" required="True"/>
+                                <field name="attachment_name" force_save="1" invisible="True"/>
                                 <field name="paragraph" required="True"/>
                                 <field name="attachment_sentence" required="True"/>
-                                <field name="attachment" filename="title" widget="binary" required="True"/>
+                                <field name="attachment" filename="attachment_name" widget="binary" required="True"/>
                             </tree>
                         </field>
                     </page>
