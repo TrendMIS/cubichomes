@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
+from odoo import models, fields, api
 
 
 class ProductTemplate(models.Model):
@@ -20,4 +20,9 @@ class ProductWhatWeGet(models.Model):
     title = fields.Char()
     paragraph = fields.Char()
     attachment = fields.Binary()
+    attachment_name = fields.Char()
     attachment_sentence = fields.Char()
+
+    @api.onchange('title')
+    def _set_attachment_name(self):
+        self.attachment_name = self.title
