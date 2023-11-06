@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="product_what_we_get" inherit_id="trend_website_product_page.product_page" priority="3"
+                  name="Product What We Get">
+
+            <xpath expr="//div" position="inside">
+                <t t-if="product.what_we_get_line_ids">
+                    <section class="a_features_02 o_spc-small o_masonry pt24 pb24 o_colored_level o_cc o_cc2"
+                             style="overflow: hidden; background-image: none;" data-snippet="a_features_02"
+                             data-name="Features 02">
+                        <div class="container">
+                            <h1 class="text-center">
+                                <font style="font-size: 42px;margin-bottom: 25px;"
+                                      t-esc="product.what_we_get_main_title"/>
+                                <br/>
+                            </h1>
+                            <p class="p_004" t-esc="product.what_we_get_sub_title"/>
+                            <div class="row o_snippet_004" style="justify-content: center;display: flex;">
+                                <t t-foreach="product.what_we_get_line_ids" t-as="line">
+                                    <div class="col-lg-3 pt32 pb32 text-center o_box_004 o_colored_level">
+                                        <div class="arc">
+                                            <img t-att-src="image_data_uri(line.icon)"
+                                                 class="m-3 a_snippet_004 img img-fluid o_we_custom_image"
+                                                 data-original-id="5445"
+                                                 t-att-data-original-src="image_data_uri(line.icon)"
+                                                 data-mimetype="image/png" data-resize-width="64" loading="lazy"/>
+                                        </div>
+                                        <h3 t-esc="line.title"/>
+                                        <p t-esc="line.paragraph"/>
+                                        <p>
+                                            <a t-attf-href="/web/content/product.what.we.get/#{line.id}/attachment?download=true" target="_blank" t-esc="line.attachment_sentence"/>
+                                            <br/>
+                                        </p>
+                                        <p class="p_004 o_default_snippet_text">
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </section>
+                </t>
+            </xpath>
+
+        </template>
+
+
+    </data>
+</odoo>
