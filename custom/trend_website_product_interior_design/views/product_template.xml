@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="product_template_interior_design" model="ir.ui.view">
+            <field name="name">product.template.interior.design</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//notebook" position="inside">
+
+                    <page string="Interior Design" name="interior_design">
+                        <field name="interior_design_line_ids">
+                            <tree editable="bottom">
+                                <field name="image_count"/>
+                                <field name="image_1" widget="binary" required="True"/>
+                                <field name="image_2" widget="binary"
+                                       attrs="{'required': [('image_count', '=', 'image_2')],
+                                               'invisible': [('image_count', '!=', 'image_2')]}"/>
+                                <field name="title" required="True"/>
+                                <field name="content" required="True"/>
+                                <field name="is_decoration"/>
+                            </tree>
+                        </field>
+                    </page>
+
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
