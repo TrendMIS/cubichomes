@@ -2,7 +2,7 @@
 <odoo>
     <data>
 
-        <template id="product_kitchen" inherit_id="trend_website_product_page.product_page" priority="6"
+        <template id="product_kitchen" inherit_id="trend_website_product_page.product_page" priority="7"
                   name="Product Kitchen">
 
             <xpath expr="//div" position="inside">
