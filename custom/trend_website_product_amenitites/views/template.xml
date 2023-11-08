@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="product_amenities" inherit_id="trend_website_product_page.product_page" priority="5"
+                  name="Product Amenities">
+
+            <xpath expr="//div" position="inside">
+                <t t-if="product.amenities_line_ids">
+                    <section class="a_features_03 o_spc-small o_masonry o_cc2 pt24 pb24 o_colored_level"
+                             style="overflow: hidden; background-image: none;" data-snippet="a_features_03"
+                             data-name="Features 03">
+                        <div class="container">
+                            <t t-if="product.amenities_title">
+                                <h1 class="text-center">
+                                    <font style="font-size: 42px;" t-esc="product.amenities_title"/>
+                                    <br/>
+                                </h1>
+                            </t>
+                            <t t-else="">
+                                <h1 class="text-center">
+                                    <font style="font-size: 42px;">Our Amenities</font>&amp;nbsp;
+                                    <br/>
+                                </h1>
+                            </t>
+                            <t t-if="product.amenities_sub_title">
+                                <p style="text-align: center;" t-esc="product.amenities_sub_title"/>
+                            </t>
+                            <t t-else="">
+                                <p style="text-align: center;">Check our amenities for this plan</p>
+                            </t>
+                            <div class="row o_snippet_005" style="justify-content: center;display: flex;">
+                                <t t-foreach="product.amenities_line_ids" t-as="amenities">
+                                    <div class="col pb32 text-center o_box_005 o_colored_level col-lg-3">
+                                        <img t-att-src="image_data_uri(amenities.image)"
+                                             class="m-3 a_snippet_005 img img-fluid o_we_custom_image"
+                                             data-original-id="5471"
+                                             t-att-data-original-src="image_data_uri(amenities.image)"
+                                             data-mimetype="image/jpeg" data-resize-width="690"
+                                             style="animation-play-state: paused; transition: none 0s ease 0s; transform: translateX(-6.8%) translateY(-44%) scaleX(1.02) scaleY(0.87);"
+                                             loading="lazy" aria-describedby="tooltip444188"/>
+                                        <div class="a_header">
+                                            <h4 t-esc="amenities.title"/>
+                                        </div>
+                                        <div class="line bg-o-color-5"/>
+                                        <p class="p_005">
+                                            <span t-field="amenities.content"/>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </section>
+                </t>
+            </xpath>
+
+        </template>
+
+
+    </data>
+</odoo>
