@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="product_design_area" inherit_id="trend_website_product_page.product_page" priority="9"
+                  name="Product Design Area">
+
+            <xpath expr="//div" position="inside">
+                <t t-if="product.design_area_title and product.design_area_content">
+                    <section class="s_call_to_action o_cc o_cc3 pt48 o_colored_level pb0 oe_img_bg o_bg_img_center"
+                             data-snippet="s_call_to_action" data-name="Call to Action"
+                             style="background-image: url(&quot;/web/image/5501-89b854b2/family-life-inside-house-top-view-generative-ai.jpg&quot;); position: relative;"
+                             data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Wavy/24&quot;,&quot;colors&quot;:{&quot;c1&quot;:&quot;#FFFFFF&quot;,&quot;c2&quot;:&quot;#D29932&quot;},&quot;flip&quot;:[],&quot;animated&quot;:&quot;true&quot;}"
+                             data-original-id="5500"
+                             data-original-src="/web/image/5500-4b33b311/family-life-inside-house-top-view-generative-ai.jpg"
+                             data-mimetype="image/jpeg" data-resize-width="1920">
+                        <div class="o_we_shape o_web_editor_Wavy_24 o_we_animated"
+                             style="background-image: url(&quot;/web_editor/shape/web_editor%2FWavy%2F24.svg?c1=%23FFFFFF&amp;c2=%23D29932&quot;);"/>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-9 pb16 o_colored_level">
+                                    <h3>
+                                        <b>
+                                            <font class="text-o-color-1" t-field="product.design_area_title"/>
+                                        </b>
+                                    </h3>
+                                    <p>
+                                        <font class="text-black" t-field="product.design_area_content"/>
+                                    </p>
+                                </div>
+                                <div class="pt8 o_colored_level col-lg-3">
+                                    <p style="text-align: right;">
+                                        <a class="btn btn-primary btn-lg mb-2 o_default_snippet_text" href="/contactus">
+                                            Contact
+                                            us
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </t>
+            </xpath>
+
+        </template>
+
+    </data>
+</odoo>
