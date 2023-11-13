@@ -23,7 +23,7 @@
                             <tree editable="bottom">
                                 <field name="title" required="True"/>
                                 <field name="content" widget="html" required="True"/>
-                                <field name="image" widget="binary" required="True"/>
+                                <field name="image_1920" widget="image" class="oe_avatar" required="1" options="{'preview_image': 'image_128'}"/>
                             </tree>
                         </field>
                     </page>

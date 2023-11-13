@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
+from odoo import models, fields, api, tools
 
 
 class ProductTemplate(models.Model):
@@ -13,10 +13,9 @@ class ProductTemplate(models.Model):
 
 class ProductFloorPlans(models.Model):
     _name = 'product.floor.plans'
+    _inherit = 'image.mixin'
     _description = 'Product Floor Plans'
 
     product_template_id = fields.Many2one(comodel_name='product.template')
     title = fields.Char()
     content = fields.Html()
-    image = fields.Image()
-
