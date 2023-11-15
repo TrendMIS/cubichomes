@@ -30,7 +30,7 @@
                             <section class="s_text_image o_colored_level pt0 pb48" data-snippet="s_text_image"
                                      data-name="Text - Image" style="background-image: none; position: relative;">
                                 <div class="container">
-                                    <div class="row align-items-end">
+                                    <div class="row align-items-end" style="align-items: center !important;">
                                         <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_left">
                                             <p style="margin-bottom: 0px;" t-esc="inspiration.content"/>
                                         </div>
