@@ -7,7 +7,7 @@
 
             <xpath expr="//div" position="inside">
                 <t t-if="product.amenities_line_ids">
-                    <section class="a_features_03 o_spc-small o_masonry o_cc2 pt24 pb24 o_colored_level"
+                    <section class="a_features_03 o_spc-small o_masonry pt24 pb24 o_colored_level o_cc o_cc1"
                              style="overflow: hidden; background-image: none;" data-snippet="a_features_03"
                              data-name="Features 03">
                         <div class="container">
@@ -37,7 +37,7 @@
                                              data-original-id="5471"
                                              t-att-data-original-src="image_data_uri(amenities.image)"
                                              data-mimetype="image/jpeg" data-resize-width="690"
-                                             style="animation-play-state: paused; transition: none 0s ease 0s; transform: translateX(-6.8%) translateY(-44%) scaleX(1.02) scaleY(0.87);"
+                                             style="transform: translateX(-5.8%) translateY(-40.3%);"
                                              loading="lazy" aria-describedby="tooltip444188"/>
                                         <div class="a_header">
                                             <h4 t-esc="amenities.title"/>
