@@ -5,10 +5,11 @@
         <record id="product_template_floor_plans" model="ir.ui.view">
             <field name="name">product.template.floor.plans</field>
             <field name="model">product.template</field>
-            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="priority" eval="7"/>
+            <field name="inherit_id" ref="trend_website_product_page.product_template_product_page"/>
             <field name="arch" type="xml">
 
-                <xpath expr="//notebook" position="inside">
+                <xpath expr="//notebook[@name='product_page']" position="inside">
 
                     <page string="Floor Plans" name="floor_plans">
                         <group>
