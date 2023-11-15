@@ -13,7 +13,7 @@
                 </xpath>
 
                 <xpath expr="//notebook" position="inside">
-                    <page string="Gallery Images" name="gallery_images">
+                    <page string="Gallery Images" name="gallery_images" invisible="True">
                         <field name="product_gallery_ids" mode="kanban"
                                context="{'default_name': name, 'default_product_template_id': active_id}">
                             <kanban string="Product Images">
@@ -39,7 +39,7 @@
                             </kanban>
                         </field>
                     </page>
-                    <page string="Off Plan" name="off_plan">
+                    <page string="Off Plan" name="off_plan" invisible="True">
                         <group>
                             <group>
                                 <field name="first_plan_image" widget="binary"/>
