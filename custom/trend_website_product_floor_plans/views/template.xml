@@ -90,7 +90,8 @@
                                                             <div t-attf-style="background-image: url({{image_data_uri(plan.image_1024)}})"
                                                                  onmousemove="zoom(event)"
                                                                  class="zoom col-lg-6 pb16 o_colored_level pt0">
-                                                                <img t-att-src="image_data_uri(plan.image_1024)"
+                                                                <img t-if="plan.image_1024"
+                                                                     t-att-src="image_data_uri(plan.image_1024)"
                                                                      t-att-data-original-src="image_data_uri(plan.image_1024)"
                                                                      class="img img-fluid mx-auto o_we_custom_image"
                                                                      data-original-id="2557"
