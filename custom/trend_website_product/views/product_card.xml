@@ -16,7 +16,7 @@
                    t-value="product.attribute_line_ids.filtered(lambda l:l.attribute_id.is_layout_plan)"/>
                 <t t-if="bedroom or bathroom or garage or floors or house_use or styles or product.area > 0">
                     <section class="s_title o_colored_level pb0 pt16" data-vcss="001" data-snippet="s_title"
-                             data-name="Title" style="background-image: none;">
+                             data-name="Title" style="background-image: none;display:none;">
                         <div class="s_allow_columns container">
                             <div class="row align-items-start" style="--grid-item-padding-y:-20px;">
                                 <div class="g- g-height-2 o_colored_level col-lg-12 rounded pb0 pt8 o_animate o_anim_flip_in_y o_animate_both_scroll o_visible o_animated"
@@ -34,7 +34,7 @@
                     </section>
                 </t>
                 <section class="s_features o_colored_level pt0 pb0" data-snippet="s_features" data-name="Features"
-                         style="background-image: none;">
+                         style="background-image: none;display:none;">
                     <div class="container">
                         <div class="row" style="justify-content: center;align-items: center;display: flex;">
                             <t t-if="bedroom">
@@ -223,7 +223,7 @@
                     </t>
                     <t t-if="layout_plan">
                         <section class="s_title o_colored_level pb0 pt16" data-vcss="001" data-snippet="s_title"
-                                 style="background-image: none;">
+                                 style="background-image: none;display:none;">
                             <div class="s_allow_columns container">
                                 <div class="row align-items-start" style="--grid-item-padding-y:-20px;">
                                     <div class="g- g-height-2 o_colored_level col-lg-12 rounded pb0 pt8"
