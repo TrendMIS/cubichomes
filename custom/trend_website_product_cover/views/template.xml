@@ -41,7 +41,7 @@
                                                     <ol class="breadcrumb text-o-color-3" style="color:white;">
                                                         <li class="breadcrumb-item o_not_editable text-o-color-3">
                                                             <a style="color:white;" t-att-href="keep(category=0)">All
-                                                                Units</a>
+                                                                Plans</a>
                                                         </li>
                                                         <li t-if="category" class="breadcrumb-item">
                                                             <a t-att-href="keep('/shop/category/%s' % slug(category), category=0)"
