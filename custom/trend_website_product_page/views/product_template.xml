@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="product_page" inherit_id="website_sale.product" priority="00" name="Product Page">
+
+            <xpath expr="//div" position="before">
+                <div name="product_page"/>
+            </xpath>
+
+        </template>
+
+
+    </data>
+</odoo>

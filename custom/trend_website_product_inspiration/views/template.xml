@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="product_inspiration" inherit_id="trend_website_product_page.product_page" priority="2" name="Product Inspiration">
+
+            <xpath expr="//div" position="inside">
+                <t t-if="product.first_inspiration_title and product.first_inspiration_ids">
+                    <section class="s_title o_colored_level pb0 pt16" data-vcss="001" data-snippet="s_title"
+                             style="position: relative; background-image: none;" data-name="Master room  Title">
+                        <div class="s_allow_columns container">
+                            <div class="row align-items-start" style="--grid-item-padding-y:-20px;">
+                                <div class="g- g-height-2 o_colored_level col-lg-12 rounded pb0 pt8"
+                                     style="border-radius: 11px !important;">
+                                    <h2 style="text-align: center;">
+                                        <span style="font-size: 36px;">
+                                            <font class="text-o-color-3">
+                                                <font class="text-o-color-1">
+                                                    <strong t-esc="product.first_inspiration_title"/>
+                                                </font>
+                                            </font>
+                                        </span>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <t t-foreach="product.first_inspiration_ids" t-as="inspiration">
+                        <t t-if="(inspiration_index % 2) == 0">
+                            <section class="s_text_image o_colored_level pt0 pb48" data-snippet="s_text_image"
+                                     data-name="Text - Image" style="background-image: none; position: relative;">
+                                <div class="container">
+                                    <div class="row align-items-end" style="align-items: center !important;">
+                                        <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_left">
+                                            <p style="margin-bottom: 0px;" t-esc="inspiration.content"/>
+                                        </div>
+                                        <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_anim_slide_in o_anim_from_right o_animate_both_scroll">
+                                            <img t-att-src="image_data_uri(inspiration.image)"
+                                                 t-att-data-original-src="image_data_uri(inspiration.image)"
+                                                 class="img img-fluid mx-auto o_we_custom_image"
+                                                 data-original-id="5424"
+                                                 data-mimetype="image/jpeg" data-resize-width="690"
+                                                 aria-describedby="tooltip650699" loading="eager"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </t>
+                        <t t-if="(inspiration_index % 2) == 1">
+                            <section class="s_text_image o_colored_level pt0 pb48" data-snippet="s_text_image"
+                                     data-name="Text - Image"
+                                     style="background-image: none; position: relative;">
+                                <div class="container">
+                                    <div class="row align-items-end">
+                                        <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_anim_slide_in o_anim_from_right o_animate_both_scroll">
+                                            <img t-att-src="image_data_uri(inspiration.image)"
+                                                 t-att-data-original-src="image_data_uri(inspiration.image)"
+                                                 class="img img-fluid mx-auto o_we_custom_image"
+                                                 data-original-id="5424"
+                                                 data-mimetype="image/jpeg" data-resize-width="690"
+                                                 aria-describedby="tooltip650699" loading="eager"/>
+                                        </div>
+                                        <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_left">
+                                            <p style="margin-bottom: 0px;" t-esc="inspiration.content"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </t>
+                    </t>
+                </t>
+
+                <t t-if="product.second_inspiration_title">
+                    <section class="s_title o_colored_level pb0 o_cc o_cc4 pt224" data-vcss="001" data-snippet="s_title"
+                             style="position: relative; background-image: none;" data-name="Master room  Title"
+                             data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/02_001&quot;,&quot;colors&quot;:{&quot;c4&quot;:&quot;#171562&quot;,&quot;c5&quot;:&quot;#FFFFFF&quot;},&quot;flip&quot;:[]}">
+                        <div class="o_we_shape o_web_editor_Origins_02_001"
+                             style="background-image: url(&quot;/web_editor/shape/web_editor%2FOrigins%2F02_001.svg?c4=%23171562&amp;c5=%23FFFFFF&quot;); background-color: rgb(255, 255, 255);"/>
+                        <div class="s_allow_columns container">
+                            <div class="row align-items-start" style="--grid-item-padding-y:-20px;">
+                                <div class="g- g-height-2 o_colored_level col-lg-12 rounded pb0 pt8"
+                                     style="border-radius: 11px !important;">
+                                    <h2 style="text-align: center;">
+                                        <span style="font-size: 36px;">
+                                            <font class="text-o-color-3" t-esc="product.second_inspiration_title"/>
+                                        </span>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </t>
+
+                <t t-if="product.second_inspiration_content and product.second_inspiration_image">
+                    <section class="s_text_image pt32 pb32 o_colored_level o_cc o_cc4" data-snippet="s_text_image"
+                             data-name="Text - Image" style="position: relative; background-image: none;">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_left">
+                                    <img t-att-src="image_data_uri(product.second_inspiration_image)"
+                                         t-att-data-original-src="image_data_uri(product.second_inspiration_image)"
+                                         class="img img-fluid mx-auto o_we_custom_image" data-original-id="5427"
+                                         data-mimetype="image/jpeg" data-resize-width="690" loading="eager"
+                                         aria-describedby="tooltip546402"/>
+                                </div>
+                                <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_right">
+                                    <p style="margin-bottom: 0px;" t-esc="product.second_inspiration_content"/>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </t>
+
+                <t t-if="product.second_inspiration_ids">
+                    <t t-foreach="product.second_inspiration_ids" t-as="inspiration">
+                        <t t-if="(inspiration_index % 2) == 0">
+                            <section class="s_text_image pt32 pb32 o_colored_level o_cc o_cc2"
+                                     data-snippet="s_text_image"
+                                     data-name="Text - Image" style="position: relative; background-image: none;">
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_left">
+                                            <p style="margin-bottom: 0px;" t-esc="inspiration.content"/>
+                                            <p style="margin-bottom: 0px;">
+                                                <a href="#" class="btn btn-primary">Register an interest</a>
+                                                <br/>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_right">
+                                            <img t-att-src="image_data_uri(inspiration.image)"
+                                                 t-att-data-original-src="image_data_uri(inspiration.image)"
+                                                 class="img img-fluid mx-auto o_we_custom_image" data-original-id="5440"
+                                                 data-mimetype="image/jpeg" data-resize-width="690"
+                                                 aria-describedby="tooltip57256" loading="eager"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </t>
+                        <t t-if="(inspiration_index % 2) == 1">
+                            <section class="s_text_image pt32 pb32 o_colored_level o_cc o_cc2"
+                                     data-snippet="s_text_image"
+                                     data-name="Text - Image" style="position: relative; background-image: none;">
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_right o_visible">
+                                            <img t-att-src="image_data_uri(inspiration.image)"
+                                                 t-att-data-original-src="image_data_uri(inspiration.image)"
+                                                 class="img img-fluid mx-auto o_we_custom_image" data-original-id="5440"
+                                                 data-mimetype="image/jpeg"
+                                                 data-resize-width="690"
+                                                 aria-describedby="tooltip57256" loading="eager"/>
+                                        </div>
+                                        <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_left o_visible">
+                                            <p style="margin-bottom: 0px;" t-esc="inspiration.content"/>
+                                            <p style="margin-bottom: 0px;">
+                                                <a href="#" class="btn btn-primary">Register an interest</a>
+                                                <br/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </t>
+                    </t>
+                </t>
+            </xpath>
+
+        </template>
+
+
+    </data>
+</odoo>

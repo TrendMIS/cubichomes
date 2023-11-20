@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="product_interior_design" inherit_id="trend_website_product_page.product_page" priority="6"
+                  name="Product Interior Design">
+
+            <xpath expr="//div" position="inside">
+
+                <t t-if="product.interior_design_line_ids">
+                    <t t-foreach="product.interior_design_line_ids" t-as="interior">
+                        <t t-if="interior.image_count == 'image_2' and not interior.is_decoration">
+                            <section class="s_text_image pt32 pb32 o_colored_level o_cc o_cc1"
+                                     data-snippet="s_text_image" data-name="Text - Image"
+                                     style="position: relative; background-image: none;">
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_left col-lg-4 o_visible">
+                                            <h2 style="margin-bottom: 0px;">
+                                                <font class="text-o-color-1" t-field="interior.title"/>
+                                            </h2>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <span t-field="interior.content"/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                        </div>
+                                        <div class="pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_right col-lg-4 o_visible">
+                                            <img t-att-src="image_data_uri(interior.image_1)"
+                                                 t-att-data-original-src="image_data_uri(interior.image_1)"
+                                                 class="img img-fluid mx-auto o_we_custom_image" data-original-id="5483"
+                                                 data-mimetype="image/jpeg"
+                                                 data-resize-width="690" loading="eager"/>
+                                        </div>
+                                        <div class="pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_right col-lg-4 o_visible">
+                                            <img t-att-src="image_data_uri(interior.image_2)"
+                                                 t-att-data-original-src="image_data_uri(interior.image_2)"
+                                                 class="img img-fluid mx-auto o_we_custom_image" data-original-id="5484"
+                                                 data-mimetype="image/jpeg"
+                                                 data-resize-width="690" loading="eager"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </t>
+                        <t t-if="interior.image_count == 'image_1'">
+                            <section class="s_text_image pt32 pb32 o_colored_level o_cc o_cc1"
+                                     data-snippet="s_text_image" data-name="Text - Image" style="position: relative;">
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_right">
+                                            <img t-att-src="image_data_uri(interior.image_1)"
+                                                 t-att-data-original-src="image_data_uri(interior.image_1)"
+                                                 class="img img-fluid mx-auto o_we_custom_image" data-original-id="5487"
+                                                 data-mimetype="image/jpeg"
+                                                 data-resize-width="690" loading="eager"/>
+                                        </div>
+                                        <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_left">
+                                            <h2 style="margin-bottom: 0px;">
+                                                <font class="text-o-color-1" t-field="interior.title"/>
+                                            </h2>
+                                            <p style="margin-bottom: 0px;">
+                                                <span t-field="interior.content"/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <a href="#" class="btn btn-primary">Register an interest</a>
+                                                <br/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </t>
+                        <t t-if="interior.image_count == 'image_2' and interior.is_decoration">
+                            <section class="s_text_image pt32 pb32 o_colored_level o_cc o_cc1"
+                                     data-snippet="s_text_image" data-name="Text - Image" style="position: relative;">
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_right col-lg-4">
+                                            <img t-att-src="image_data_uri(interior.image_1)"
+                                                 t-att-data-original-src="image_data_uri(interior.image_1)"
+                                                 class="img img-fluid mx-auto o_we_custom_image" data-original-id="5492"
+                                                 data-mimetype="image/jpeg"
+                                                 data-resize-width="690" loading="eager"/>
+                                        </div>
+                                        <div class="pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_left col-lg-4">
+                                            <h2 style="margin-bottom: 0px; text-align: center;">
+                                                <font class="text-o-color-1" t-field="interior.title"/>
+                                            </h2>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                            <p style="margin-bottom: 0px; text-align: center;">
+                                                <span t-field="interior.content"/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                            <p style="margin-bottom: 0px;">
+                                                <br/>
+                                            </p>
+                                        </div>
+                                        <div class="pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_right col-lg-4">
+                                            <img t-att-src="image_data_uri(interior.image_2)"
+                                                 t-att-data-original-src="image_data_uri(interior.image_2)"
+                                                 class="img img-fluid mx-auto o_we_custom_image" data-original-id="5490"
+                                                 data-mimetype="image/jpeg"
+                                                 data-resize-width="690" loading="eager"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </t>
+                    </t>
+                </t>
+
+            </xpath>
+
+        </template>
+
+
+    </data>
+</odoo>

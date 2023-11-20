@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="product_floor_plans" inherit_id="trend_website_product_page.product_page" priority="8"
+                  name="Product Floor Plans">
+
+            <xpath expr="//div" position="inside">
+                <t t-if="product.floor_plans_line_ids">
+                    <style media="screen">
+                        div.zoom {
+                        background-position: 50% 50%;
+                        position: relative;
+                        margin-bottom: 50px auto;
+                        border: 1px solid white;
+                        box-shadow: -1px 5px 15px black;
+                        height: 600px;
+                        width: 500px;
+                        overflow: hidden;
+                        cursor: zoom-in;
+                        }
+
+                        div.zoom img:hover {
+                        opacity: 0;
+                        }
+
+                        div.zoom img {
+                        transition: opacity 0.5s;
+                        display: block;
+                        width: 100%;
+                        }
+                    </style>
+                    <section class="a_features_03 o_spc-small o_masonry o_colored_level o_cc o_cc1 pt0 pb0"
+                             style="overflow: hidden; background-image: none;" data-snippet="a_features_03"
+                             data-name="Features 03">
+                        <div class="container">
+                            <h2 class="text-center">
+                                <t t-if="product.floor_plans_title">
+                                    <font style="font-size: 42px;" class="text-o-color-1"
+                                          t-field="product.floor_plans_title"/>
+                                </t>
+                                <t t-else="">
+                                    <font style="font-size: 42px;" class="text-o-color-1">Our Floor Plans</font>
+                                </t>
+                            </h2>
+                            <t t-if="product.floor_plans_sub_title">
+                                <p style="text-align: center;" t-field="product.floor_plans_sub_title"/>
+                            </t>
+                            <t t-else="">
+                                <p style="text-align: center;">discover our floor plans</p>
+                            </t>
+                        </div>
+                    </section>
+                    <section class="s_tabs pt48 o_colored_level pb0" data-vcss="001" data-snippet="s_tabs"
+                             style="background-image: none;" data-name="Floor plan tabs">
+                        <div class="container">
+                            <div class="s_tabs_main row s_col_no_resize s_col_no_bgcolor">
+                                <div class="s_tabs_nav mb-3 col-md-3">
+                                    <ul class="nav nav-pills flex-column" role="tablist">
+                                        <t t-foreach="product.floor_plans_line_ids" t-as="plan">
+                                            <li class="nav-item">
+                                                <a t-attf-class="nav-link #{'active ' if plan_index == 0 else ''}"
+                                                   t-attf-id="nav_tabs_link_{{plan_index}}"
+                                                   t-attf-href="#nav_tabs_content_{{plan_index}}"
+                                                   t-attf-aria-controls="nav_tabs_content_{{plan_index}}"
+                                                   aria-selected="true" role="tab" data-bs-toggle="tab">
+                                                    <span t-field="plan.title"/>
+                                                </a>
+                                                <br/>
+                                            </li>
+                                        </t>
+                                    </ul>
+                                </div>
+                                <div class="s_tabs_content tab-content col-md-9">
+                                    <t t-foreach="product.floor_plans_line_ids" t-as="plan">
+                                        <div t-attf-class="tab-pane fade #{'active show' if plan_index == 0 else ''}"
+                                             role="tabpanel"
+                                             t-attf-id="nav_tabs_content_{{plan_index}}"
+                                             t-attf-aria-labelledby="nav_tabs_link_{{plan_index}}">
+                                            <div class="oe_structure oe_empty" data-editor-message-default="true"
+                                                 data-editor-message="DRAG BUILDING BLOCKS HERE">
+                                                <section class="s_text_image pt0 pb0" data-snippet="s_text_image"
+                                                         data-name="Text - Image" style="background-image: none;">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="pb16 o_colored_level pt0 col-lg-5">
+                                                                <p class="o_default_snippet_text"
+                                                                   t-field="plan.content"/>
+                                                            </div>
+                                                            <div t-if="plan.image_1024" t-attf-style="background-image: url({{image_data_uri(plan.image_1024)}})"
+                                                                 onmousemove="zoom(event)"
+                                                                 class="zoom col-lg-6 pb16 o_colored_level pt0">
+                                                                <img t-if="plan.image_1024"
+                                                                     t-att-src="image_data_uri(plan.image_1024)"
+                                                                     t-att-data-original-src="image_data_uri(plan.image_1024)"
+                                                                     class="img img-fluid mx-auto o_we_custom_image"
+                                                                     data-original-id="2557"
+                                                                     data-mimetype="image/jpeg" data-resize-width="690"
+                                                                     loading="lazy" aria-describedby="tooltip375048"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+
+                                            </div>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            function zoom(e) {
+                            var zoomer = e.currentTarget;
+                            x = e.offsetX / zoomer.offsetWidth * 100
+                            y = e.offsetY / zoomer.offsetHeight * 100
+                            zoomer.style.backgroundPosition = x + '% ' + y + '%';
+                            }
+                        </script>
+                    </section>
+                </t>
+            </xpath>
+
+        </template>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_first_product_inspiration,access.first.product.inspiration,model_first_product_inspiration,,1,1,1,1
+access_second_product_inspiration,access.second.product.inspiration,model_second_product_inspiration,,1,1,1,1

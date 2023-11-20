@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="product_kitchen" inherit_id="trend_website_product_page.product_page" priority="7"
+                  name="Product Kitchen">
+
+            <xpath expr="//div" position="inside">
+                <t t-if="product.kitchen_title and product.kitchen_image and product.kitchen_content">
+                    <section class="s_title pt40 o_colored_level pb0" data-vcss="001" data-snippet="s_title"
+                             data-name="Title"
+                             style="position: relative; background-image: linear-gradient(135deg, rgba(255, 204, 51, 0.3) 0%, rgba(23, 21, 97, 0.38) 69%);">
+                        <div class="s_allow_columns container">
+                            <h2 style="text-align: center;">
+                                <font class="text-o-color-1">
+                                    <span style="font-size: 36px;" t-esc="product.kitchen_title"/>
+                                </font>
+                            </h2>
+                            <p style="text-align: center;">
+                                <br/>
+                            </p>
+                        </div>
+                    </section>
+                    <section class="s_text_image o_colored_level o_cc o_cc1 pt0 pb0" data-snippet="s_text_image"
+                             data-name="Text - Image" style="position: relative; background-image: none;">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_left o_visible">
+                                    <h2 style="margin-bottom: 0px;">
+                                        <br/>
+                                    </h2>
+                                    <p style="margin-bottom: 0px;"/>
+                                    <div class="container">
+                                        <div class="row align-items-center">
+                                            <div class="pt16 o_colored_level o_animate o_anim_slide_in o_anim_from_left o_animate_both_scroll pb0 col-lg-9 o_visible">
+                                                <p style="margin-bottom: 0px;" t-esc="product.kitchen_content"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p style="margin-bottom: 0px;">
+                                        <br/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;">
+                                        <br/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;">
+                                        <a href="#" class="btn btn-primary">Register an interest</a>
+                                        <br/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;">
+                                        <br/>
+                                    </p>
+                                </div>
+                                <div class="col-lg-6 pt16 pb16 o_colored_level o_animate o_animate_both_scroll o_anim_slide_in o_anim_from_right o_visible"
+                                     style="">
+                                    <img t-att-src="image_data_uri(product.kitchen_image)"
+                                         t-att-data-original-src="image_data_uri(product.kitchen_image)"
+                                         class="img img-fluid mx-auto o_we_custom_image" data-original-id="5498"
+                                         data-mimetype="image/jpeg"
+                                         data-resize-width="690" loading="eager"
+                                         aria-describedby="tooltip777696"/>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </t>
+            </xpath>
+
+        </template>
+
+
+    </data>
+</odoo>
