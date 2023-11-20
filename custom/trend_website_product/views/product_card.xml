@@ -244,7 +244,7 @@
                             </div>
                         </section>
                         <section class="s_features o_colored_level pt0 pb0" data-snippet="s_features"
-                                 style="background-image: none;" data-name="Layout line 1">
+                                 style="background-image: none;display:none;" data-name="Layout line 1">
                             <div class="container">
                                 <div class="row" style="justify-content: center;align-items: center;display: flex;">
                                     <t t-foreach="layout_plan.value_ids" t-as="value">
