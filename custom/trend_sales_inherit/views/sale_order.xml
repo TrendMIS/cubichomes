@@ -13,6 +13,9 @@
                     <field name="sale_id" invisible="1"/>
                     <field name="lock_final" invisible="1"/>
                     <field name="project_value" attrs="{'readonly': [('state', 'not in', ['sent', 'draft'])]}"/>
+                    <field name="tax_id" domain="[('type_tax_use', '=', 'sale'), ('company_id', '=', company_id)]"
+                           options="{'no_create': True,'no_create_edit': True, 'no_open': True}"/>
+                    <field name="taxed_project_value"/>
                     <label for="design_percentage" string="Design"/>
                     <div class="o_row">
                         <field name="design_amount" attrs="{'readonly': ['|', ('lock_final', '=', True), ('state', 'not in', ['sent', 'draft'])]}"/>

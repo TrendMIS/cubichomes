@@ -17,6 +17,15 @@ class SaleOrder(models.Model):
     eligible_order = fields.Boolean(default=False)
     sale_id = fields.Many2one('sale.order')
     extra_notes = fields.Html()
+    tax_id = fields.Many2one(comodel_name='account.tax', string='VAT')
+    taxed_project_value = fields.Monetary(compute='_compute_taxed_project_value', store=True)
+
+    @api.depends('tax_id', 'project_value')
+    def _compute_taxed_project_value(self):
+        for sale in self:
+            sale.taxed_project_value = 0.0
+            if sale.tax_id and sale.project_value:
+                sale.taxed_project_value = sale.project_value + (sale.project_value * (sale.tax_id.amount / 100))
 
     @api.depends('project_value', 'final_project_value')
     def _compute_show_recompute_button(self):
@@ -76,9 +85,9 @@ class SaleOrder(models.Model):
         self._onchange_supervision_percentage()
         self._onchange_design_percentage()
 
-    @api.onchange("supervision_percentage")
+    @api.onchange("supervision_percentage", 'taxed_project_value')
     def _onchange_supervision_percentage(self):
-        self.supervision_amount = self.project_value * self.supervision_percentage / 100
+        self.supervision_amount = self.taxed_project_value * self.supervision_percentage / 100
 
     @api.onchange("supervision_amount")
     def _onchange_supervision_amount(self):
@@ -86,9 +95,9 @@ class SaleOrder(models.Model):
             percentage = self.supervision_amount * 100 / self.project_value
             self.supervision_percentage = round(percentage, 2)
 
-    @api.onchange("design_percentage")
+    @api.onchange("design_percentage", 'taxed_project_value')
     def _onchange_design_percentage(self):
-        self.design_amount = self.project_value * self.design_percentage / 100
+        self.design_amount = self.taxed_project_value * self.design_percentage / 100
 
     @api.onchange("design_amount")
     def _onchange_design_amount(self):
