@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Trend Website Product What We Get",
+    'name': "Trend Website Product Facilities",
 
     'summary': """""",
 
