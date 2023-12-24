@@ -112,8 +112,6 @@ class SaleOrder(models.Model):
     def validate_total_service_amount(self):
         if self.sale_id: return  # skip validation for child sales orders
         design_lines = self.order_line.filtered(lambda l: l.internal_service_type == "design")
-        print('design_amount', int(self.design_amount))
-        print('price_total', int(sum(design_lines.mapped("price_total"))))
         if int(sum(design_lines.mapped("price_total"))) != int(self.design_amount):
             raise ValidationError("Design lines total price is different than the total design amount")
         supervision_lines = self.order_line.filtered(lambda l: l.internal_service_type == "supervision")
